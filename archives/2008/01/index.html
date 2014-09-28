@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2008/1 | XPeng&#39;s Dream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="scorpion studio's blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XPeng's Dream">
+<meta property="og:url" content="http://blog.scorpionstudio.com/archives/2008/01/">
+<meta property="og:site_name" content="XPeng's Dream">
+<meta property="og:description" content="scorpion studio's blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XPeng's Dream">
+<meta name="twitter:description" content="scorpion studio's blog">
+
+  
+    <link rel="alternative" href="/atom.xml" title="XPeng&#39;s Dream" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XPeng&#39;s Dream</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scorpion studio&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://blog.scorpionstudio.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-20080108" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/01/08/20080108/" class="article-date">
+  <time datetime="2008-01-08T13:28:58.000Z" itemprop="datePublished">1月 8 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/01/08/20080108/">新的编码阶段中。。。。</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　这段时间我在编制新的代码，因此没有多少东西来写博。面对大家提出的一些问题，大多数我在评论中直接讨论过，因此博客上评论文字可能比正文更长^-^。之前在“功能器官（输入输出结构）的进化”上遇到了阻碍，近期大家和我一样关于这点也有不少疑问，为此我做了一些新的计划，明确了一些具体的过程。<br>　　包含输入输出节点以及感受器效应器本身结构（以下简称IO结构）的进化我之前做了试验，效果不怎么好。一是在理论上目前还没有合适的方法并且计算量不可避免的庞大；二是我采用的算法模型还不能很好的延续进化结果，这点解释起来比较困难，简单说就是进化出一个较好的NN结构后，如果不在相同（至少相似）的IO结构上面交叉（即染色体交叉遗传），后代的新结构几乎就没有意义！我之前开过玩笑，做猪还是做人，这种情况下就变成了人和猪的杂交，自然界的规则和我的结果一样，结构保存失败！<br>　　对新IO结构的进化我前面做了些估算，无论如何，基于随机的进化算法在这上面计算量极大，在目前的硬件水平上，我决定要暂时放弃这条好高骛远的路子，换之以另外一个折中的方案。方案类似NNRG的项目，现在我预先设定好个体的IO结构，让基因在该结构上进化，和NNRG及其系列论文中不一样的是，我可以在现有进化结果上增加新的IO结构，然后让它继续进化。比如现在的拥有5个感受器的个体，进化过程到达停滞不前时，它的行为明显还可以更“聪明一点”，那么我用基因编辑器增加它的感受器或者效应器以及对应的输入输出神经元，然后让它进一步进化。结果就是，可以构造出不同潜力身体结构的多样物种。另外由于我的系统走的是分布式模拟路子，因此可以让不同IO结构的物种（即猪和人$!#%$#$%$），在同一个环境中交互发展，就应用上来说，我们仍然可以在场景中看到丰富多变的物种。  </p>
+<p>　　实际上，我现在就正在编码一个分布式模拟的“坦克大战”网络版用于试验这个方案。低级坦克、快速坦克、装甲坦克、红色坦克（非常聪明的）分属于不同的IO结构物种，也就是说它们本身在身体结构上就是不同的，快速坦克可以拥有两个以上驱动效应器，红色坦克则可以拥有高度发达的视觉感受器（十多个吧）。这样，他们进化的行为必然适应于它们自身结构。<br>　　群体智能或者说协作模式也是本次项目的研究目标之一，希望能够被观测到。  </p>
+<p>　　我选择“坦克大战”游戏来做还有另外几个原因：<br>　　- 游戏规模不大，规则统一简洁<br>　　- 环境元素简单单纯，但是种类丰富<br>　　- 坦克行为简单，攻击实时性要求不高<br>　　- 与环境交互上，可以增加新的形状感受器，碰撞感受器，碰撞在“坦克大战”这样的2D轴向场景中也较易实现<br>　　- 易于观测群体行为  </p>
+<pre><code>    （<span class="keyword">Re</span> <span class="number">23105612</span>的问题）：我以前说到结构，可能有些片面甚至有些误导。目前能有效进化的结构主要是指神经网络本身的结构，在输入输出节点（数目、类型）固定的情况下，“生物结构”仅指神经网络的拓扑结构。  
+
+    在此基础上，我们来谈“最优”这个问题，由于之前的Demo仅是用来观察和统计，因此没有一个求出“最优”结果或者说“进化结束”的需求。如果有这个需求时，则可以考虑进化次数（时间）或者在适应度到达某个预定值时结束，这有点像迭代法解方程，可以考虑误差也可以考虑迭代次数。可以看出，实际上无论怎么作，应用上我们并没有要求必须要有个“最优”，适应就行了。我们用在动态的环境上，这个环境和这个世界是一样的，没有结束的时间。
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/01/08/20080108/" data-id="lbflpokooao6mh2t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">58</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/article/">article</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">29</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game-engine/">game engine</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/newworld/">newworld</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/simulation/">simulation</a><span class="tag-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/article/" style="font-size: 20.00px;">article</a><a href="/tags/blog/" style="font-size: 20.00px;">blog</a><a href="/tags/dev/" style="font-size: 16.67px;">dev</a><a href="/tags/game-engine/" style="font-size: 10.00px;">game engine</a><a href="/tags/newworld/" style="font-size: 10.00px;">newworld</a><a href="/tags/simulation/" style="font-size: 13.33px;">simulation</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/06/">June 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/08/">August 2004</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/07/">July 2004</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/06/">June 2002</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/05/">May 2002</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/09/13/20140913/">终于，我们的新产品Fotor Slideshow Maker上线了！！</a>
+          </li>
+        
+          <li>
+            <a href="/2012/05/14/20120514/">一切为了好照片</a>
+          </li>
+        
+          <li>
+            <a href="/2012/02/27/20130227/">总结了一下新手学习Windows 8 Metro App 开发的捷径</a>
+          </li>
+        
+          <li>
+            <a href="/2011/08/08/20110808/">治水</a>
+          </li>
+        
+          <li>
+            <a href="/2011/07/28/20110728/">社交网络完成后的4项重要网络应用元素</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Thromas Pang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2008 | XPeng&#39;s Dream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="scorpion studio's blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XPeng's Dream">
+<meta property="og:url" content="http://blog.scorpionstudio.com/archives/2008/">
+<meta property="og:site_name" content="XPeng's Dream">
+<meta property="og:description" content="scorpion studio's blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XPeng's Dream">
+<meta name="twitter:description" content="scorpion studio's blog">
+
+  
+    <link rel="alternative" href="/atom.xml" title="XPeng&#39;s Dream" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XPeng&#39;s Dream</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scorpion studio&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://blog.scorpionstudio.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-20081025" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/10/25/20081025/" class="article-date">
+  <time datetime="2008-10-24T17:13:34.000Z" itemprop="datePublished">10月 25 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/10/25/20081025/">Tao Project Prototype 0.2.0</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.youtube.com/v/yL_QeM0VAPY" target="_blank" rel="external">星际环境和漫游演示视频</a></p>
+<p>　　该阶段为降落、漫游到星球表面做准备。在当前的天文学体系上，实现基于“Sean O’Neil”的“Real-Time Procedural Universe Project”的星球渲染引擎，主要应用在客户端图形上，并尝试用于模拟服务器的碰撞检测问题上。<br>　　主要内容如下：<br>　　- 过程星球（恒星、行星、卫星）表面高程数据生成及渲染<br>　　[O’N01] O’NEIL S.: Rendering planetary bodies. Gamasutra August 10, 2001 (2001).<br>　　<a href="http://www.gamasutra.com/features/20010810/oneil_01.htm" target="_blank" rel="external">http://www.gamasutra.com/features/20010810/oneil_01.htm</a>.<br>　　　　— 实时大规模过程地形渲染（球面）<br>　　　　— 根据海拔变化的顶点颜色<br>　　　　— 陨石坑地貌修正<br>　　　　— 应用简单光照模型<br>　　- 实现基于当前天文学体系上的过程星球演示Demo<br>　　　　— 一个简单的太阳系  </p>
+<p>　　视频中可以看到，目前仅实现了实时生成的行星、卫星等星体表面，生成了高程数据（随机地形和随机陨石坑地形）和根据海拔变化的表面纹理。在恒心系中（比如演示的太阳系），实现了一个恒星相关的方向光源。所有星体的位置、大小都是按照目前天文学的真实单位和实际值。  </p>
+<p>　　虽然这个星球引擎系统还需要诸如大气散射的光照以及星云背景等支持，但是我计划在之后的几个版本中，将着重TAO系统的AI逻辑架构，因此这个简单的星球渲染引擎为测试宏大的AI以及进化体系做好了准备。</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe002.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">距地球100000公里处</div>    
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe003.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe004.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe005.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe006.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">近地表面</div>      
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe007_moon_20000.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">距离月球20000公里</div>      
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe008.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe009.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">近月表面</div>    
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/10/25/20081025/" data-id="7bd36s1r2m3y0ilt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080903" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/09/03/20080903/" class="article-date">
+  <time datetime="2008-09-03T11:36:45.000Z" itemprop="datePublished">9月 3 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/09/03/20080903/">Tao Project Prototype 0.1.0</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.youtube.com/v/SexwqhI5WXQ" target="_blank" rel="external">星际环境和漫游演示视频</a></p>
+<p>　　上面是一个很简单的演示视频，HIP 61292是一颗绝对星等为1.02的恒星，距太阳系有500光年左右，亮度是太阳的33倍多。我放置了一个模型作为对比，从距该星0.686天文单位处开始，经历一段20秒钟的变速率运动过程到达太阳系。银河系内的星体是按照真实的方式渲染，因此在移动过程中你可以看到群星背景的明显变化（Youtube上的这段视频解析度较低，可能看不清楚，清晰视频可在“<a href="http://www.xf-utpcb.com/xiaop/media/universe_001.wmv”下载）。" target="_blank" rel="external">http://www.xf-utpcb.com/xiaop/media/universe_001.wmv”下载）。</a><br>　　紧接着，我们的镜头在太阳系内移动，首先靠近地球，再靠近月球。可以看到，整个星系、恒星系统、行星系统都具备完整真实的体系，你在空间上、视觉上可以有相当真实的体验，这也是本阶段要达到的基本目的。目前星球暂时用球形模型表示，未来会进一步完成真实的星球外表。  </p>
+<p>　　Prototype 0.1.0 的主要内容如下：<br>　　- 准备代码环境、图像引擎（仅DX）<br>　　- 构建一个简单的基于HLA网络的服务系统<br>　　[IEEE Std 1516.3-2003, 2003]IEEE Recommended Practice for High Level Architecture (HLA) Federation Development and Exection Process(FEDEP)<br>　　[IEEE Std 1516.2-2000, 2001]IEEE standard for modeling and simulation (M&amp;S) high level architecture (HLA)-object model template (OMT) specification<br>　　[IEEE Std 1516.1-2000, 2001]IEEE Standard for Modeling and Simulation [M and S] High Level Architecture [HLA] -Federate Interface Specification  </p>
+<p>　　- 构建CH内容（物质、物体、相互作用）定义体系<br>　　- 构建一个简单的前端服务器和图形客户端用于接入观察<br>　　- 构建一套基于“Celestia”项目(<a href="http://celestia.sourceforge.net/)数据和架构的天文学系统框架" target="_blank" rel="external">http://celestia.sourceforge.net/)数据和架构的天文学系统框架</a><br>　　　　— 恒星系统<br>　　　　— 行星系统<br>　　　　该阶段对图像质量要求不高，达到演示简单宇宙结构即可<br>　　　　- 模拟一个简单的深空飞行器，设定一个简单漫游轨道通过客户端演示Demo</p>
+<div style="text-align:center;"><img src="http://images.cnblogs.com/cnblogs_com/xiaop/universe001.JPG" style="vertical-align:middle;"></div><br><div style="text-align:center;">从一定距离观察太阳，可以看到真实的星空背景。<br><br>背景上的恒星（点）是按照真实的方位、距离、颜色、亮度、尺寸绘制。<br><br>任何一个恒星都是可以实际到达的！Reach any star!</div>  
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/09/03/20080903/" data-id="kmh5tuovcdqzv1y4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080902" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/09/02/20080902/" class="article-date">
+  <time datetime="2008-09-02T08:35:04.000Z" itemprop="datePublished">9月 2 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/09/02/20080902/">What is Tao Project</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://images.cnblogs.com/cnblogs_com/xiaop/createworld.jpg" style="vertical-align:middle;"></div>  
+
+<p>　　Tao系统定位在一个基于互联网的多人在线游戏系统（MMO）上。正如它的名字所表示的（英文是“道”的意思），它的主旨是尽量构造和演绎大自然的环境和行为，从宏大的宇宙尺度到地面上的一棵草、一块石头，它尽可能通过“过程生成”、“仿生”、“分布式计算”、“数据库”等技术进行虚拟和模拟。接入系统的人（角色）与人之间或者和环境之间的交互有多种模式、空间尺度和视角。另外，Tao系统中的世界将像真实世界一样进行演化，你在不同时间地点接入将看到全新的世界。  </p>
+<p>　　“Tao Project”是我为业余时间制作这个游戏系统而制定的长期计划。经过多年来在3D图形图像、网络应用、游戏、AI等领域的调研，有了各方技术的支撑，吾人终于可以开始构造这样一个梦想中的世界了。  </p>
+<p>　　当然，“Tao”也是我名字的拼写。</p>
+<p>======<br>“Tao system” is a Massive-Multiplayer On-Line Game (MMOG). As its name implied(means Taoism in english), its main objective is to construct or simulate the whole nature’s environment and action, from universe scale to a rock or grass on the ground, through technologies such as “Real-Time Procedural World”, “Bionic Computation”, “Distributed computation” and “Database Tech” etc. Every one comes into this system can interact with each other or on environment with different control mode, scale and visual representations. In addition, this system will evolve in real time as same as the real world, and you will face different and novel world when you come here at different time.  </p>
+<p>Tao project is a long time plan which is made to fit my spare time. After many years’ investigation on 3D graphics programming, network applications, games and AI, I finally begin to create my own dreamy world.  </p>
+<p>By the way, Tao is my first name.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/09/02/20080902/" data-id="fu5f3cpcnzeg9lj1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080621" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/06/21/20080621/" class="article-date">
+  <time datetime="2008-06-21T08:35:04.000Z" itemprop="datePublished">6月 21 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/06/21/20080621/">Branches</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://img.blog.163.com/photo/70LkAZO8Em8UTnUA4wEDrA==/1744863380630052287.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">上图是生成的一棵植物，还不错吧</div>      
+
+<p>　　之前在做星球（Planet）生成的时候，星球上的植被一直是个问题，一般方法是采用一些预先生成的纹理或者模型直接放在指定地方。  </p>
+<p>　　这几天在JJ Ventrella的网站<a href="http://www.ventrella.com/上逛，发现他过程植物做得不错。虽然他是用Java写的，但我决定尝试这类算法直接在星球表面生成植物，3D化我相信也不是问题。" target="_blank" rel="external">http://www.ventrella.com/上逛，发现他过程植物做得不错。虽然他是用Java写的，但我决定尝试这类算法直接在星球表面生成植物，3D化我相信也不是问题。</a>  </p>
+<p>　　生成上图中的植物只用了如下几个参数：</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/G8xTKXFZb5yFFPzpDOtv0w==/1744863380630052288.jpg" style="vertical-align:middle;"></div>    
+
+<p>　　如此少量的参数可以使得一棵很大很漂亮的植物数据在网络中轻易传送！而且从其代码（<a href="http://www.ventrella.com/Tweaks/BranchyBranch/BranchesApplet.html可以运行这个代码）可以看出，随机生成这组参数可以产生千变万化的植物。" target="_blank" rel="external">http://www.ventrella.com/Tweaks/BranchyBranch/BranchesApplet.html可以运行这个代码）可以看出，随机生成这组参数可以产生千变万化的植物。</a>  </p>
+<p>　　不同环境的星球可能影响特定的参数，这样，不同的星球其植被特征就非常丰富多彩了。而且更关键的是，植物是从小到大生成的，可以给人一种生长的现象，因此用在游戏中就比较爽了。你隔个把星期再到这个星球上去耍，就会发现那些树那些草已经今非昔比了，不像现在大多数游戏中从你建号一直打到死周围的一花一木都没有变化！  </p>
+<p>　　这里我随机生成了一些其他有趣的植物：</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/glND1JI5VbhstXGmA0yLbQ==/282882351594690826.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">茎很粗枝很小的植物</div><br><div style="text-align:center;"><img src="http://img.blog.163.com/photo/ERbqb1WUQudjuhoUjqMvcQ==/5149021748968932982.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">比较常见的植物</div><br><div style="text-align:center;"><img src="http://img.blog.163.com/photo/lTs5KENVKzktgB-CgvSx3w==/4005670393569752209.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">火热星球的</div><br><div style="text-align:center;"><img src="http://img.blog.163.com/photo/LT63LmDoCLfEtJOiDYaYgA==/4858539573002838280.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">再来个苔藓类的</div>      
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/06/21/20080621/" data-id="tv27ptjxeogx0bph" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080311" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/03/11/20080311/" class="article-date">
+  <time datetime="2008-03-11T05:04:41.000Z" itemprop="datePublished">3月 11 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/03/11/20080311/">【CH世界大事记-5】</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://img.blog.163.com/photo/lb1hj2nLVSTD2IAvAUyc8A==/322007373357570338.jpg" style="vertical-align:middle;"></div>  
+
+
+<p>　　昨天做了一个新的测试场景，结果令人高兴，这段时间的重新编码工作为个体提供了丰富的环境和完备的传感器以及效应器。  </p>
+<p>　　模拟是这样进行的，个体在中心产生，朝向角度随机。适应性的定义仍然统一到一个值——生存时间，影响它的因素（及世界物理规律）有如下几个：<br>　　－－ 个体做直线运动增加hp<br>　　－－ 个体做旋转运动降低hp<br>　　－－ 个体碰撞到砖块降低hp（多）<br>　　－－ hp随时间按一定速率降低<br>　　－－ 场景交互支持碰撞<br>　　很显然，这个环境进化出的最适应者应该是一个较好的漫游者，尽量走动，不频繁拐弯，避开障碍，在大事记中我将这批个体代号记为“漫游者”，机型属于“先驱”系列，因为它们是规范的、可持续设计和进化的第一种个体。  </p>
+<p>　　OK，准备好这个小CH世界，基因数目设置到50，运行系统，个体全部在出生点乱转。20分钟后，我洗完澡回来看，就是上面的样子。仍然有些“漫游者”在原地转，但有一些已经开始往旁边直线走过去然后碰在墙上不再行动，另一些明显在要撞墙之前立即180度转身，然后继续走直线，再转身，再直线……。也观察到少量“漫游者”往左上方向“出口”处走，避开墙壁，沿墙间道路行走，但最终在左墙外侧碰壁，之后就不再行动。系统显示当前的进化次数已有200多次，我估计首次物种爆发（即从随机态到开始学会利用感受器官）的起点可能大大早于200次进化，我相信在之后的某点上物种会再次爆发，从而迅速产生绕全场行动的漫游者。  </p>
+<p>　　这次重新编码也整理了整个个体的模拟架构，规范化了NN输入输出能够采用的感受器和效应器。NNRG采用了下图所示的4种感受器和3种效应器，我在其基础上进行了泛化。和之前的设计一样，感受器输出作为NN网络的输入，网络输出作为效应器的输入，感受器和效应器人为配置，我目前不再研究这些器官的进化（可以参考发育算法以及相关人工生命的论述，例如“人工生命的突现研究及其在互动媒体中的应用，黄文高，2005”），但这些器官可以统一配置和自由增删。系统仅对NN网络进行复杂度递增的进化，采用实时NEAT算法（NEAT: Stanley and Miikkulainen 2002b, 2004a）。</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/OdmP7-skVHr20tUb79FCAA==/322007373357570329.jpg" style="vertical-align:middle;"></div>    
+
+<p>　　通过这个架构，每个CH个体能“看到”想看的物体、判断特定的目标是否在自己面对的方向或者火力方向、检测物体或墙体的可能的碰撞，甚至能够判断出敌人的火力线。网络输出决定了身体移动的方向，决定自己是否拿上某些物品或者使用某些物品，决定是否开火。目前这些配置已经能够满足对多样复杂行为的进化，而且其他类型的行为可以很容易实现，感受器也很容易被修改从而形成新的版本和能力。（explanation in en: Each CH agent can see certain objs, determine whether an target is currently in its heading direction or line of fire, detect objects and walls, and see the direction the enemy is firing. Its outputs specify the direction of movement and whether or not to take obj, use obj or fire. This configuration has been used to evolve varied and complex behaviors; other variations work as well and the standard set of sensors can easily be changed in CH.）  </p>
+<p>　　目前系统已支持以下的3种感受器官，适合绝大部分应用：</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/Aqtj1kioGCzCd_jBgdIB4Q==/322007373357570330.jpg" style="vertical-align:middle;"></div>      
+
+<p>　　个体采用几个Radar感受器将周围360度空间分成一些探测区域，区域内物体和个体的接近程度按比例地激活相应的传感器。对于多个物体，采用他们激励值的和。（explanation in en：Several radar sensors divide the 360 degrees around the agent into slices. Each slice activates a sensor in proportion to how close an specified obj is within that slice. If there is more than one target in it, their activations are summed.）</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/LSsDQFLACrKGyXUKAxOruw==/322007373357570331.jpg" style="vertical-align:middle;"></div>        
+
+
+<p>　　Rangefinders传感器以一定角度从个体中心向外投射射线，射线与最近的物体交点到个体的距离作为传感器的激励值。这种传感器非常适合探测有连续形状的物体，相反的，Radar传感器则适用于探测独立的微小物体。（explanation in english：Rangefinders project rays at several angles from the agent. The distance the ray travels before it hits an object is returned as the value of the sensor. Rangefinders are useful for detecting long contiguous objects whereas radars are appropriate for relatively small, discrete objects.）</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/BsVL9LlFtsqK--fMmDOopg==/322007373357570334.jpg" style="vertical-align:middle;"></div>  
+
+<p>　　目标（on-target）传感器仅有激活和复位两种状态，只要有对应目标在正前方，则传感器就被激活。这类传感器往往可以告诉个体是否应该射击。（explanation in en：The on-target sensor returns full activation only if a ray projected along the front heading of the agents hits an specified object(target). This sensor tells the agent whether it should attempt to shoot.）  </p>
+<p>　　系统支持Driver，Take，Use三种效应器，这些效应器在功能上非常泛化，其激活与否以及行为的对象等等均是由NN网络的输出决定的。例如，Driver需要两个输出神经元激活，Take/Use需要至少3个神经元激活，目前我仅编码了Driver和Take效应器，有待进一步的测试。  </p>
+<p>　　CH世界会越来越有趣啦。。。。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/03/11/20080311/" data-id="85pp6gi380qymyub" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080305" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/03/05/20080305/" class="article-date">
+  <time datetime="2008-03-05T03:33:44.000Z" itemprop="datePublished">3月 5 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/03/05/20080305/">【CH世界大事记-4】</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　采用Tank（坦克大战）的资源，丰富的元素可以构造较为典型场景。地面支持土地、雪地、冰冻地面、冰窟地面，地表阻挡层支持砖墙、混凝土墙、树木、河流、石头、金属墙、关卡。  </p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/A69e0ws9f4d4uoI7Z92Pgg==/4302345019023032335.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">XPeng场景 ^-^</div>    
+
+<p>　　这些场景元素以及整个场景仍然在分布式的服务器上模拟，客户端仅仅是显示而已。由于它们可以简洁高效地和其他模拟个体交互，因此和之前的考查一样，这样的场景天生成为进化神经网络的实验场。并且由于生物个体（tank）的数目可以巨大，而且不同于传统坦克大战规则，我不但让个体有更大的自由度，让个体之间也能够以某种语言（相互作用）交互，我寄希望在这个系统中能观测到较大规模的涌现现象。  </p>
+<p>　　进一步的，突破传统坦克大战的规则，我打算尝试加入RPG的思想，即场景（关卡）之间有某种联系，比如传送门可以在关卡之间漫游，关卡之间将等价于构成了复杂的巨大世界，而且各个关卡可以实现有意义的特色地域，可以为模拟自然选择在不同环境下的进化结果创造条件。个体在这样巨大场景中可以自由漫游，我希望能观测到一些涌现出的群体迁徙、地域特征保留和进化。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/03/05/20080305/" data-id="6nliw9litcfhiln8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080229" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/02/29/20080229/" class="article-date">
+  <time datetime="2008-02-29T08:14:23.000Z" itemprop="datePublished">2月 29 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/02/29/20080229/">游戏人生路，漫漫重谈起</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　豆瓣网真是一个很好的交流平台，没有那些火爆论坛的杂乱不堪，也没有专业论坛的沉重感和谨慎感。找到了一些爱好复杂系统的朋友，我一不小心在自我介绍中竟写了不少东西，整理一下记到这里来吧，也算心情日记了。  </p>
+<p>　　我小时候有很痴迷观察事物的恶习，比如爱躲在被窝里面观察蚂蚁窝。呵呵，没写错，是怕大人看到后恶心地骂，就在被窝里面打着电筒看。我经常嫌不过瘾，把蚂蚁和它们的卵大量挖到我准备的瓶子里，盖上一半土，然后就可以很过瘾很痴迷地看他们如何建巢、如何分享食物，如何维护那些卵、如何在数个小时内就能从新改造好环境组织起自己的家来……   </p>
+<p>　　01年我的工作接触到了网络通信，渐渐开始迷上这个能容纳大千世界蚂蚁们的平台。04年我又完全踏入图形图像处理的领域，渐渐沉溺在诡异的数学和变幻莫测的图形世界中。06年我转到游戏行业工作，立志让人们不分老幼都能融入一个虚拟世界而不能自拔。   </p>
+<p>　　搞网络的时候结下了分布式计算的缘，搞图形的时候我的蚂蚁们有了自己的图形环境，同时我也接触到了大量过程生成技术以及折服于数理世界的相通意境！<br>　　也是最近几年才接触到复杂系统。刚开始由于做游戏项目接触一些简单AI的东西，在AI啊、NN啊、GA啊那些网站上面泡，但一般都陷于程序设计。反而是后来在搜索时来到集智俱乐部，得益于站长的专业导向性论述和优秀的资源收集工作，一下子天窗像开了一样。   </p>
+<p>　　在度过又一段知识爆炸时期后，我也开始把复杂性的应用往游戏方向靠，往实现我儿时的蚂蚁之梦上靠。   </p>
+<p>　　对我个人而言，还是那个习惯，就是喜欢观察，仅仅是看，没有目的。也许我的努力仅仅是想看看这样的世界是怎样的……  </p>
+<p>======<br>　　豆瓣上jake谈到他的研究经历以及和复杂系统、游戏系统的不解之缘。其实很早就拜读过他的文章“涌现与自生性游戏性”，呵呵，我还记得很清楚，是《游戏创造》2006年第1期。我在公司也推荐过他关于“科学的游戏”的PPT，大家也很感兴趣。但对于复杂系统，游戏领域特别是在国内这样的产业环境下目前大多数人还仅限于“好奇”。 对于游戏（重点考虑到网络游戏）更关键的可玩性和交互性，国内外绝大部分游戏公司仍然走的是自上而下的道路。   </p>
+<p>　　实际上，我是在寻求一种解决NPC行为的自适应方法上接触到德州大学的NNRG小组（<a href="http://nn.cs.utexas.edu/），该小组专注于进化神经网络做了很大量的工作。特别是在游戏上的应用，他们的研究颇具成果，我现在自主项目的智能模块设计也主要走他们的路子。" target="_blank" rel="external">http://nn.cs.utexas.edu/），该小组专注于进化神经网络做了很大量的工作。特别是在游戏上的应用，他们的研究颇具成果，我现在自主项目的智能模块设计也主要走他们的路子。</a>  </p>
+<p>　　另外，在我考查NN以及蚁群算法的那段时间，接触到了CA，也正是在这个时候查到了集智（<a href="http://www.swarmagents.com/），我被CA的直观和简洁所吸引，其带给游戏的复杂性思想更加强烈。记得在游戏“Spore”的poptech系列讲座中，Will" target="_blank" rel="external">http://www.swarmagents.com/），我被CA的直观和简洁所吸引，其带给游戏的复杂性思想更加强烈。记得在游戏“Spore”的poptech系列讲座中，Will</a> Wright首先展现在观众面前的就是CA。   </p>
+<p>　　人工生命方面，浙大黄文高博士的“人工生命的突现研究及其在互动媒体中的应用”给了我深刻的印象。只是我认为，以我们目前的网络系统水平，高表现度的人工生命特别是形态进化还不大可能在游戏中有效运用。  </p>
+<p>　　复杂性的网络世界，对于“人”这个元素，我确实有很多需要交流的（咱们有的是时间，呵呵）。这些年来，我的项目中系统对接入者一直坚持不区分人类和AI！主要原因就是考虑到在这样一个复杂系统中，单纯完全的让机器来模拟的话，最终仅仅会成为一个学术或者技术项目，仅仅适合于观察。而且考虑到其运算量，我认为在近期的条件下也不大可能产生普通大众能感兴趣并且能直观理解的世界。因此大量的AI小游戏仅仅能做到让大家“感受”一下、让新人“更有兴趣”而已。  </p>
+<p>　　另一方面，从应用上来讲，我趋向于认为在这样的系统中人和AI是互为因果的。发生在虚拟世界中进化隐含等价于某种交互式进化，没有必要也没有可能仅靠计算机模拟，等其自生性地进化出拟真的世界后“让玩家玩”，换句话说，没有人的加入，这个世界也不会进化得多有趣。  </p>
+<p>　　关于这些话题，我迫切希望和朋友们交流，也许大家有个共同的梦呢……</p>
+<p>======<br>　　豆瓣上xudong (北京)讲了他的经历，虽然已经是一个建功立业的企业家，但仍然不懈追求着对“复杂系统”的理解。他谈到他“自我实现者社区”的想法后，我也想起其实以前有段时间我也很冲动。  </p>
+<p>　　大概在2000年的时候，工作无聊之余我就沉迷在南京“西祠胡同”的社区里面，我发觉，包括我在内的大多数帐号，个人的社区角色融入感都极强。后来又回到学校学习，更多的时间就在教育网上面泡。那时候我发现，很多学校自己的论坛个性都很强，有时感觉我自己几乎就是论坛YY世界的一部分。我写了很多文章很有感染力，但发现一转到别的论坛，几乎就没有多大的内容意义了，相信大家也有这种感觉吧。现在看来，无论豆瓣、猫扑，很多特色论坛均有自己的一个文字（或者人文）组织特征，这些特征可以抽象地描述出一个论坛独有的等价虚拟世界空间来，哪怕是只有Plain Text的（大多数角色也趋向于使用文本构成签名的图像）。<br>　　因此，就xudong的话来说，我能否对“自我实现者社区”更明确地理解为“自组织”社区。文字和角色关系自生性地组织成一个社区世界，这些构件一离开这个社区单独存在就变得几乎没有任何意义，这样社区在内容上几乎是从无到有地完全靠网友自发构建！架构简单、规则极少，内容却极富感染力，自组织性随处可见反应也极其迅速！这样的社区那几年让我很疯狂，很感动，特别是在中国特有的文化下（人文社区这方面国外那是远远不及中国啦）。可以说，这也是我努力实现自己目标的初衷和动力之一！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/02/29/20080229/" data-id="dsv922fgzhq6qa4r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080108" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/01/08/20080108/" class="article-date">
+  <time datetime="2008-01-08T13:28:58.000Z" itemprop="datePublished">1月 8 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/01/08/20080108/">新的编码阶段中。。。。</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　这段时间我在编制新的代码，因此没有多少东西来写博。面对大家提出的一些问题，大多数我在评论中直接讨论过，因此博客上评论文字可能比正文更长^-^。之前在“功能器官（输入输出结构）的进化”上遇到了阻碍，近期大家和我一样关于这点也有不少疑问，为此我做了一些新的计划，明确了一些具体的过程。<br>　　包含输入输出节点以及感受器效应器本身结构（以下简称IO结构）的进化我之前做了试验，效果不怎么好。一是在理论上目前还没有合适的方法并且计算量不可避免的庞大；二是我采用的算法模型还不能很好的延续进化结果，这点解释起来比较困难，简单说就是进化出一个较好的NN结构后，如果不在相同（至少相似）的IO结构上面交叉（即染色体交叉遗传），后代的新结构几乎就没有意义！我之前开过玩笑，做猪还是做人，这种情况下就变成了人和猪的杂交，自然界的规则和我的结果一样，结构保存失败！<br>　　对新IO结构的进化我前面做了些估算，无论如何，基于随机的进化算法在这上面计算量极大，在目前的硬件水平上，我决定要暂时放弃这条好高骛远的路子，换之以另外一个折中的方案。方案类似NNRG的项目，现在我预先设定好个体的IO结构，让基因在该结构上进化，和NNRG及其系列论文中不一样的是，我可以在现有进化结果上增加新的IO结构，然后让它继续进化。比如现在的拥有5个感受器的个体，进化过程到达停滞不前时，它的行为明显还可以更“聪明一点”，那么我用基因编辑器增加它的感受器或者效应器以及对应的输入输出神经元，然后让它进一步进化。结果就是，可以构造出不同潜力身体结构的多样物种。另外由于我的系统走的是分布式模拟路子，因此可以让不同IO结构的物种（即猪和人$!#%$#$%$），在同一个环境中交互发展，就应用上来说，我们仍然可以在场景中看到丰富多变的物种。  </p>
+<p>　　实际上，我现在就正在编码一个分布式模拟的“坦克大战”网络版用于试验这个方案。低级坦克、快速坦克、装甲坦克、红色坦克（非常聪明的）分属于不同的IO结构物种，也就是说它们本身在身体结构上就是不同的，快速坦克可以拥有两个以上驱动效应器，红色坦克则可以拥有高度发达的视觉感受器（十多个吧）。这样，他们进化的行为必然适应于它们自身结构。<br>　　群体智能或者说协作模式也是本次项目的研究目标之一，希望能够被观测到。  </p>
+<p>　　我选择“坦克大战”游戏来做还有另外几个原因：<br>　　- 游戏规模不大，规则统一简洁<br>　　- 环境元素简单单纯，但是种类丰富<br>　　- 坦克行为简单，攻击实时性要求不高<br>　　- 与环境交互上，可以增加新的形状感受器，碰撞感受器，碰撞在“坦克大战”这样的2D轴向场景中也较易实现<br>　　- 易于观测群体行为  </p>
+<pre><code>    （<span class="keyword">Re</span> <span class="number">23105612</span>的问题）：我以前说到结构，可能有些片面甚至有些误导。目前能有效进化的结构主要是指神经网络本身的结构，在输入输出节点（数目、类型）固定的情况下，“生物结构”仅指神经网络的拓扑结构。  
+
+    在此基础上，我们来谈“最优”这个问题，由于之前的Demo仅是用来观察和统计，因此没有一个求出“最优”结果或者说“进化结束”的需求。如果有这个需求时，则可以考虑进化次数（时间）或者在适应度到达某个预定值时结束，这有点像迭代法解方程，可以考虑误差也可以考虑迭代次数。可以看出，实际上无论怎么作，应用上我们并没有要求必须要有个“最优”，适应就行了。我们用在动态的环境上，这个环境和这个世界是一样的，没有结束的时间。
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/01/08/20080108/" data-id="lbflpokooao6mh2t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">58</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/article/">article</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">29</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game-engine/">game engine</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/newworld/">newworld</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/simulation/">simulation</a><span class="tag-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/article/" style="font-size: 20.00px;">article</a><a href="/tags/blog/" style="font-size: 20.00px;">blog</a><a href="/tags/dev/" style="font-size: 16.67px;">dev</a><a href="/tags/game-engine/" style="font-size: 10.00px;">game engine</a><a href="/tags/newworld/" style="font-size: 10.00px;">newworld</a><a href="/tags/simulation/" style="font-size: 13.33px;">simulation</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/06/">June 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/08/">August 2004</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/07/">July 2004</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/06/">June 2002</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/05/">May 2002</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/09/13/20140913/">终于，我们的新产品Fotor Slideshow Maker上线了！！</a>
+          </li>
+        
+          <li>
+            <a href="/2012/05/14/20120514/">一切为了好照片</a>
+          </li>
+        
+          <li>
+            <a href="/2012/02/27/20130227/">总结了一下新手学习Windows 8 Metro App 开发的捷径</a>
+          </li>
+        
+          <li>
+            <a href="/2011/08/08/20110808/">治水</a>
+          </li>
+        
+          <li>
+            <a href="/2011/07/28/20110728/">社交网络完成后的4项重要网络应用元素</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Thromas Pang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

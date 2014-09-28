@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2008/9 | XPeng&#39;s Dream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="scorpion studio's blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XPeng's Dream">
+<meta property="og:url" content="http://blog.scorpionstudio.com/archives/2008/09/">
+<meta property="og:site_name" content="XPeng's Dream">
+<meta property="og:description" content="scorpion studio's blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XPeng's Dream">
+<meta name="twitter:description" content="scorpion studio's blog">
+
+  
+    <link rel="alternative" href="/atom.xml" title="XPeng&#39;s Dream" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XPeng&#39;s Dream</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scorpion studio&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://blog.scorpionstudio.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-20080903" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/09/03/20080903/" class="article-date">
+  <time datetime="2008-09-03T11:36:45.000Z" itemprop="datePublished">9月 3 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/09/03/20080903/">Tao Project Prototype 0.1.0</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.youtube.com/v/SexwqhI5WXQ" target="_blank" rel="external">星际环境和漫游演示视频</a></p>
+<p>　　上面是一个很简单的演示视频，HIP 61292是一颗绝对星等为1.02的恒星，距太阳系有500光年左右，亮度是太阳的33倍多。我放置了一个模型作为对比，从距该星0.686天文单位处开始，经历一段20秒钟的变速率运动过程到达太阳系。银河系内的星体是按照真实的方式渲染，因此在移动过程中你可以看到群星背景的明显变化（Youtube上的这段视频解析度较低，可能看不清楚，清晰视频可在“<a href="http://www.xf-utpcb.com/xiaop/media/universe_001.wmv”下载）。" target="_blank" rel="external">http://www.xf-utpcb.com/xiaop/media/universe_001.wmv”下载）。</a><br>　　紧接着，我们的镜头在太阳系内移动，首先靠近地球，再靠近月球。可以看到，整个星系、恒星系统、行星系统都具备完整真实的体系，你在空间上、视觉上可以有相当真实的体验，这也是本阶段要达到的基本目的。目前星球暂时用球形模型表示，未来会进一步完成真实的星球外表。  </p>
+<p>　　Prototype 0.1.0 的主要内容如下：<br>　　- 准备代码环境、图像引擎（仅DX）<br>　　- 构建一个简单的基于HLA网络的服务系统<br>　　[IEEE Std 1516.3-2003, 2003]IEEE Recommended Practice for High Level Architecture (HLA) Federation Development and Exection Process(FEDEP)<br>　　[IEEE Std 1516.2-2000, 2001]IEEE standard for modeling and simulation (M&amp;S) high level architecture (HLA)-object model template (OMT) specification<br>　　[IEEE Std 1516.1-2000, 2001]IEEE Standard for Modeling and Simulation [M and S] High Level Architecture [HLA] -Federate Interface Specification  </p>
+<p>　　- 构建CH内容（物质、物体、相互作用）定义体系<br>　　- 构建一个简单的前端服务器和图形客户端用于接入观察<br>　　- 构建一套基于“Celestia”项目(<a href="http://celestia.sourceforge.net/)数据和架构的天文学系统框架" target="_blank" rel="external">http://celestia.sourceforge.net/)数据和架构的天文学系统框架</a><br>　　　　— 恒星系统<br>　　　　— 行星系统<br>　　　　该阶段对图像质量要求不高，达到演示简单宇宙结构即可<br>　　　　- 模拟一个简单的深空飞行器，设定一个简单漫游轨道通过客户端演示Demo</p>
+<div style="text-align:center;"><img src="http://images.cnblogs.com/cnblogs_com/xiaop/universe001.JPG" style="vertical-align:middle;"></div><br><div style="text-align:center;">从一定距离观察太阳，可以看到真实的星空背景。<br><br>背景上的恒星（点）是按照真实的方位、距离、颜色、亮度、尺寸绘制。<br><br>任何一个恒星都是可以实际到达的！Reach any star!</div>  
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/09/03/20080903/" data-id="kmh5tuovcdqzv1y4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080902" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/09/02/20080902/" class="article-date">
+  <time datetime="2008-09-02T08:35:04.000Z" itemprop="datePublished">9月 2 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/09/02/20080902/">What is Tao Project</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://images.cnblogs.com/cnblogs_com/xiaop/createworld.jpg" style="vertical-align:middle;"></div>  
+
+<p>　　Tao系统定位在一个基于互联网的多人在线游戏系统（MMO）上。正如它的名字所表示的（英文是“道”的意思），它的主旨是尽量构造和演绎大自然的环境和行为，从宏大的宇宙尺度到地面上的一棵草、一块石头，它尽可能通过“过程生成”、“仿生”、“分布式计算”、“数据库”等技术进行虚拟和模拟。接入系统的人（角色）与人之间或者和环境之间的交互有多种模式、空间尺度和视角。另外，Tao系统中的世界将像真实世界一样进行演化，你在不同时间地点接入将看到全新的世界。  </p>
+<p>　　“Tao Project”是我为业余时间制作这个游戏系统而制定的长期计划。经过多年来在3D图形图像、网络应用、游戏、AI等领域的调研，有了各方技术的支撑，吾人终于可以开始构造这样一个梦想中的世界了。  </p>
+<p>　　当然，“Tao”也是我名字的拼写。</p>
+<p>======<br>“Tao system” is a Massive-Multiplayer On-Line Game (MMOG). As its name implied(means Taoism in english), its main objective is to construct or simulate the whole nature’s environment and action, from universe scale to a rock or grass on the ground, through technologies such as “Real-Time Procedural World”, “Bionic Computation”, “Distributed computation” and “Database Tech” etc. Every one comes into this system can interact with each other or on environment with different control mode, scale and visual representations. In addition, this system will evolve in real time as same as the real world, and you will face different and novel world when you come here at different time.  </p>
+<p>Tao project is a long time plan which is made to fit my spare time. After many years’ investigation on 3D graphics programming, network applications, games and AI, I finally begin to create my own dreamy world.  </p>
+<p>By the way, Tao is my first name.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/09/02/20080902/" data-id="fu5f3cpcnzeg9lj1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">58</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/article/">article</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">29</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game-engine/">game engine</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/newworld/">newworld</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/simulation/">simulation</a><span class="tag-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/article/" style="font-size: 20.00px;">article</a><a href="/tags/blog/" style="font-size: 20.00px;">blog</a><a href="/tags/dev/" style="font-size: 16.67px;">dev</a><a href="/tags/game-engine/" style="font-size: 10.00px;">game engine</a><a href="/tags/newworld/" style="font-size: 10.00px;">newworld</a><a href="/tags/simulation/" style="font-size: 13.33px;">simulation</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/06/">June 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/08/">August 2004</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/07/">July 2004</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/06/">June 2002</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/05/">May 2002</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/09/13/20140913/">终于，我们的新产品Fotor Slideshow Maker上线了！！</a>
+          </li>
+        
+          <li>
+            <a href="/2012/05/14/20120514/">一切为了好照片</a>
+          </li>
+        
+          <li>
+            <a href="/2012/02/27/20130227/">总结了一下新手学习Windows 8 Metro App 开发的捷径</a>
+          </li>
+        
+          <li>
+            <a href="/2011/08/08/20110808/">治水</a>
+          </li>
+        
+          <li>
+            <a href="/2011/07/28/20110728/">社交网络完成后的4项重要网络应用元素</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Thromas Pang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

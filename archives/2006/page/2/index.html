@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2006 | XPeng&#39;s Dream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="scorpion studio's blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XPeng's Dream">
+<meta property="og:url" content="http://blog.scorpionstudio.com/archives/2006/page/2/">
+<meta property="og:site_name" content="XPeng's Dream">
+<meta property="og:description" content="scorpion studio's blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XPeng's Dream">
+<meta name="twitter:description" content="scorpion studio's blog">
+
+  
+    <link rel="alternative" href="/atom.xml" title="XPeng&#39;s Dream" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XPeng&#39;s Dream</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scorpion studio&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://blog.scorpionstudio.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-20060810" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/08/10/20060810/" class="article-date">
+  <time datetime="2006-08-10T13:28:58.000Z" itemprop="datePublished">8月 10 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/08/10/20060810/">脚本困境</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>脚本困境—&gt;对运行时编译型模块更新的思考—&gt;分布式应用模块</strong><br>　　当脚本程序的复杂性和维护开销远大于编译型程序的情况时，我们就应该思考使用脚本是否是必要的了。实际上，我们现在使用脚本的初衷几乎总是出于对程序运行时修改的需求！  </p>
+<p>　　定位在这个需求上，我们应该将脚本的使用范围限制在运行时需要经常更新和维护的地方，比如游戏中的内容层次。当然，还要考虑一些实时性能以及调试的要求。  </p>
+<p>　　更进一步地，让我们换一种方式来想，如果能够在运行时替换编译型的程序模块而不需要停止程序，是不是就能够满足我们对脚本的需求？RPC有时候能做到这一点，但是它的开发相对复杂而且对C++支持不好。  </p>
+<p>　　我们无非就是需要将编译型模块单独运行而且能让它们之间交互通信。那么，在虚拟程序或者游戏的开发上，借助分布式计算的思想，我们是否可以将内容层次或者高维护率的模块单独提取出来，让它们采用C/S模型与其他模块进行进程间通信？只要应用程序在这些分布式模块的效率和实时性上不形成瓶颈，那么，我认为这种方案是可以采用的，并且能够将解释型脚本限制在更局部的范围。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/08/10/20060810/" data-id="8mu0c4tax8ay13ea" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060714" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/07/14/20060714/" class="article-date">
+  <time datetime="2006-07-14T13:28:58.000Z" itemprop="datePublished">7月 14 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/07/14/20060714/">让我把MS学穿</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　有时候，我很想家，我很累。在现实与梦想的徘徊中，我时常不知所措。<br>　　有时候，我很恐惧，我很怕。我的方向到底正确吗？我到底有方向吗？  </p>
+<p>　　很小的时候，我们就觉得这个世界是多么不可思议，而不仅仅是美丽。<br>　　于是，我们走出了自己的家门，唱着歌。<br>　　我们路过高山，路过大海，路过人们的城堡与花园；我们路过了幸福，路过了微笑，路过了人们的痛苦和悲伤。我仍然不知道这世界中什么是冥冥的主宰，很多人一直都在寻找，寻找什么永恒，什么永存。  </p>
+<p>　　我已经很清楚，我探索的不是终极目标，我已经知道这不可能是我一个人的力量能完成的。我探索的是道路，是方法。我只能铺上这条路的开端，让千万的人或者“非人”来走，希望他们能找到答案。<br>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　——我</p>
+<p>　　当一个系统不再是单纯意义上的游戏的时候，它会是什么样的呢？<br>　　首先它的确拥有一个游戏的通常玩法，构造了一个虚拟的非常接近真实的庞大世界，许多人和NPC（“非人”？？）在其中“生活着”。事实上，这个“游戏”在上面的陈述中已经变成了一个不断发展甚至是无法全面理解的世界，另外，请记住，它正在表达我们拥有的文化！所以叫它“游戏”我实在是不情愿，它太完美了！<br>　　第二，这个系统可以融入平面网站的运作（模式）。由于它本身是开放的和可持续发展的，所以它更像是一个平台。这样，那些网站，无论是商业的还是不商业的，门户的还是非门户的，都可以很好的融合在其中。我当然是指融合它们的功能！因为它们在这里 的表现，呵~那将是更眩的，身临其境的感觉以及接近真实世界的交互模式远远超过了HTML的Web页面。商业同样可以在这里进行，在完善的体制保护下，商家可以在虚拟世界中作广告宣传，甚至完成他们的买卖。社区和论坛在这里就有了人性化的意义，人们发表文献参与讨论可以在近乎于真实的学院气氛中，情侣们聊天有了直接意义的角色，社区，这还用说了吗？<br>　　第三，这个系统由于信息的膨胀，本身就可以天然地成为知识工具，它是一本大百科全书，它包含了人类知识的精华；它又是一个文献库，比如你可以很自然地在其中找到你想看的任何文学作品。<br>　　所以在这个网络系统中，我们会看到有微软、摩托罗拉、诺基亚、亚玛逊的参与，会看到ICQ、QQ的通信力度，会看到大英百科全书、剑桥百科全书、Nature、Discovery、金庸全集……，我们也会自动的链接上它们的外部信息存储，跳转到外部焦点。  </p>
+<p>　　在MSRA的学习，很多技术和知识被更新，使我更坚定地确信CH系统面向我们人类的界面会是全3D的，你将以第一或者第三人称在其中漫游。（我决定利用回来的时间将其转到3D用户界面上。）  </p>
+<p>　　以我目前的感觉，如果能做到一个程度，它在第一人称有CS的流畅度，我是指网路的不堵塞、画面的不停顿；第三人称有HomeWorld的表现力度，宏大和震撼，就像我们亲自在扮演《太空堡垒》；整个客户端方面有传奇或者OICQ般的人气（特指中国区^_^）；再加上文化，那些什么西游记三国演义红楼梦，什么玛雅十字军亚特南蒂斯，什么新语丝西祠胡同一塌糊涂，统统在这里自我陶醉；再加上可能的商业化；最后再由于我们的人性，我想我是难以自拔的！  </p>
+<p>　　芒鞋斗笠千年走，万古长空一朝游。这是个何等的世界啊！</p>
+<div style="text-align:right">《让我把MS学穿》</div><br><div style="text-align:right">小P  2004年3月26 于MSRA</div>
+　
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/07/14/20060714/" data-id="v26g26q7bshb9sw4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060713" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/07/13/20060713/" class="article-date">
+  <time datetime="2006-07-13T13:28:58.000Z" itemprop="datePublished">7月 13 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/07/13/20060713/">倚天电子剑，挟之可横行</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　“倚天电子剑，挟之可横行”，这是1991年电子报合订版的开篇语。  </p>
+<p>　　电子技术足足让我疯狂了十多年，我最终却坚决地走上了软件的道路。博客的倚天屠龙系列记录了那些过去、现在与即将到来的种种灵感、认识和能为我所用的东西。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/07/13/20060713/" data-id="lc0m0zi9i8egsz3f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060712" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/07/12/20060712/" class="article-date">
+  <time datetime="2006-07-12T13:28:58.000Z" itemprop="datePublished">7月 12 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/07/12/20060712/">该是游戏的时候了</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　经过几年来在各种应用系统、游戏、研究平台方面的研发工作，我最终决定开发一个高度开放的集成环境，它就是EDS。EDSim（EDS）是Extensible Distributed Simulation Environment的缩写，即可扩展的分布式模拟环境。它可以作为一套适合于海量虚拟内容的创建和模拟以及大规模交互式接入的全方位解决方案。  </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/EDS/EDS_128_64.gif" style="vertical-align:middle;"></div>  
+
+<p>　　该项目主页在<a href="http://www.xf-utpcb.com/xiaop/MyProjects/EDSim.htm" target="_blank" rel="external">http://www.xf-utpcb.com/xiaop/MyProjects/EDSim.htm</a><br>　　另外，我在博客文章中将有几篇详细讲解它的构思和我们的目的！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/07/12/20060712/" data-id="3yc1dgjq9o1wyzpw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060711" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/07/11/20060711/" class="article-date">
+  <time datetime="2006-07-11T13:28:58.000Z" itemprop="datePublished">7月 11 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/07/11/20060711/">2004 To be continued!</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>After <a href="http://xiaop.cnblogs.com/admin/ch2002.htm" target="_blank" rel="external">implementing an  CH investigation system in 2001</a> and making an investigation on MS Mythica and HalfLife 2 system, I’ve started the process of CH project at Jul. 2004.  </p>
+<p>Currently, it’s in the Preproduction Stage! At the end of it, I’ll deliver a prototype of CH.<br>Project link: <a href="http://ch:ch@www.ch-origin.com/ChangHe%20Group/" target="_blank" rel="external">CH Share Point</a>  </p>
+<p>Original intention: <a href="http://www.xf-utpcb.com/xiaop/MyProjects/CH2004/CHDream.pdf" target="_blank" rel="external">My Dream about CH</a>  </p>
+<p>Original Plan – The essential ideas and conception for our design: <a href="http://www.xf-utpcb.com/xiaop/MyProjects/CH2004/CH%20Plan%20V1.0.pdf" target="_blank" rel="external">CH Plan V1.0</a>  </p>
+<p>Common Understanding and Focus Identification – The basic creative vision of the concept, Final version features: <a href="http://www.xf-utpcb.com/xiaop/MyProjects/CH2004/High%20Concept%2020041115_v1.pdf" target="_blank" rel="external">High Concept &amp; Vision</a>  </p>
+<p>Server Architecture: <a href="http://www.xf-utpcb.com/xiaop/MyProjects/CH2004/CH%20Server%20Architecture%20v1.0.pdf" target="_blank" rel="external">CH Server Architecture v1.0</a> ( DO NOT RESHIP OR DISTRIBUTE IT! )</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/07/11/20060711/" data-id="mtzxa87s679q0ms3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060710" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/07/10/20060710/" class="article-date">
+  <time datetime="2006-07-10T13:28:58.000Z" itemprop="datePublished">7月 10 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/07/10/20060710/">世外有天仙 04</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="CH_后记"><center><b>CH 后记</b></center></h1>
+<p>　　2004年在MSRA的时候，我对始于2001年的CH调研活动作了一个总结，对那篇描写我初衷的文章<a href="http://www.xf-utpcb.com/xiaop/MyProjects/CH2004/CHDream.pdf" target="_blank" rel="external">CH Dream</a>进行了修改，并写下一篇后记：  </p>
+<pre><code>    我写这篇初稿的时候，没有那种传奇似的游戏。我对面有位开发人员，他每天从开始工作到结束下班，电脑屏幕的右面都会开着一个叫做ZMUD系统的窗口，当时我也不知道他们为什么会有如此大的瘾。  
+
+    我写这篇初稿的时候，《黑客帝国》这个电影还没有在中国大肆推进。我不得不承认我是个不时尚的人，我在<span class="number">2002</span>年晚些时候才看到这部电影。当时的我相当振奋，这场面描述与我的梦想是多么得相似啊！而且它是在视觉听觉上真实地给我展示了这样一个场面，这是我难以想象的。    
+
+    在<span class="number">2003</span>年，我修改了<span class="number">CH</span>系统，使之更加开放化、模块化、规则化。可以参考我的文档《CHWS总体设计》。    
+
+    在<span class="number">2004</span>年<span class="number">1</span>月的样子，我和几位同学认为可以先在教育网上实现一个虚拟世界，利用教育网络的资源优势进行研究。我们所有的教育网上的同学，都可以通过脚本语言系统成为二次开发人员，你既是玩家，又是物质的创造者，更可以是剧本的编写者。看来，我们起码也要先实现一个虚拟通信楼，再到虚拟电子科大吧^_^。    
+
+    可惜的是，我现在在MSRA做毕业设计，我不能和同学们继续进行了，但我不会停止我的研究。    
+
+      传奇这类游戏仅仅依靠暴力主题就让大部分年轻人们难以自拔，甚至导致在政治法律上产生难题。如果这已足够让我们感受到这样类似系统的力量，那么，如果<span class="number">CH</span>系统的梦想能够实现，我想借用在好莱坞影片《独立日》中，美国总统按下核弹启动按钮前的一句话来表达我的矛盾心理。那就是，<span class="string">"希望下一代不要怪我"</span>。    
+</code></pre><div style="text-align:right">小P 2004年2月 于MSRA</div>
+　
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/07/10/20060710/" data-id="q1u1rlgd7xgv8mqh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/newworld/">newworld</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060614" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/06/14/20060614/" class="article-date">
+  <time datetime="2006-06-14T13:28:58.000Z" itemprop="datePublished">6月 14 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/06/14/20060614/">High Dynamic Range Compression on Programmable Graphics Hardware</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>We present a system for compressing high dynamic range images to fit conventional display devices that are only capable of outputting a low dynamic range. In addition to manipulating the gradient field of luminance image by attenuating the large gradients‘ magnitudes, it can preserve fine details, resulting in an image which provokes the same responses as someone would have viewing the scene in the real world. Specifically, with the whole process built on programmable graphics hardware, we present an efficient algorithm based on GPU acceleration and provide a fast dynamic range compression technique. Furthermore, we describe a framework for rendering high dynamic range images in real time. It not only can be used in image based tone mapping but also is able to be a core technique in interactive graphics applications.</p>
+<p>OK, After Image Processing, High Dynamic Range Compression, Poisson Equation, Programmable Graphics Hardware…I’ve implemented a demo for GPUGHDRC, which is based on Supra Engine.  For MS Confidential, I can not supply the demo.  </p>
+<p>All the algorithms and details of implementation are described in my paper “<a href="http://www.xf-utpcb.com/xiaop/MyProjects/GPUGHDRC/GPUGHDRC.pdf" target="_blank" rel="external">High Dynamic Range Compression on Programmable Graphics Hardware</a>”（Appeared in Microcomputer Development, Issue 9, 2005）.  </p>
+<p>Slides: <a href="http://www.xf-utpcb.com/xiaop/MyProjects/GPUGHDRC/GPUGHDRC_slides.pdf" target="_blank" rel="external">GPUGHDRC_slides.pdf</a></p>
+<p>Detail：<a href="http://www.xf-utpcb.com/xiaop/MyProjects/ghdrc.htm" target="_blank" rel="external">http://www.xf-utpcb.com/xiaop/MyProjects/ghdrc.htm</a></p>
+<p>Screen Shot:</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/GPUGHDRC/hdr1b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">GHDRC with parameters in tweaker</div>
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/GPUGHDRC/hdr2b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">work on HDR memorial scene</div>
+
+
+<p>For the detail,you can see <a href="http://www.xf-utpcb.com/xiaop/MyProjects/ghdrc.htm" target="_blank" rel="external">http://www.xf-utpcb.com/xiaop/MyProjects/ghdrc.htm</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/06/14/20060614/" data-id="hlgxyikd3kmo82ul" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060613" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/06/13/20060613/" class="article-date">
+  <time datetime="2006-06-13T13:28:58.000Z" itemprop="datePublished">6月 13 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/06/13/20060613/">Supra Team</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>For game research in MSRA IG group, we created a great D3D engine on DirectX 9.0c as our own research platform.The whole work about Supra takes three members (one full-time employee, one full-time student, one part-time employee) four weeks.</p>
+<p>Not until the platform had been finished, we all too impatient to wait for transferring and creating our research projects on it, like 3D Snow Creator for MGS, GPU Gradient HDR Compression, etc.  </p>
+<p>At MSRA, We all focus on pure algorithms research for rendering, modeling… other than some basic technology in 3D game. So, many things like Graphic Engine, Debug or Log system, Command console etc. should be integrated in an universal platform.  </p>
+<p>We created the system and named it “Supra”.<br>Still, I can not supply the Demos for SLC or its details because they are MS confidential.</p>
+<p>Screen Shots:</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/Supra/supra3b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">The 3D Snow modeling on Supra</div><br><div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/Supra/supra4b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">The 3D Snow modeling on Supra</div>    
+
+
+<p>Great Supra Engine!<br>I’ll improve it in the future and  almost all of my research work will profit from  “Supra”.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/06/13/20060613/" data-id="xadpyy1yxd4ujbu3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060612" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/06/12/20060612/" class="article-date">
+  <time datetime="2006-06-12T13:28:58.000Z" itemprop="datePublished">6月 12 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/06/12/20060612/">long long river</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Although MGS have canceled its 3D MMORPG “Mythica” in may.5, 2004, I’ll remember the great work about “River model creator” all through.  </p>
+<p>Being a contributor, I improved the user interface and modeling kernel for it.  </p>
+<p>Our aim is to give a satisfied modeling &amp; rendering design with a prototype to put complex water system into a modern game. For this stage, we finished a non-branch river editing system and a river rendering effect.<br>We focus more on kernel part, and the UI prototype was used to demonstrate our ideas.  </p>
+<p>The design was finished on Apr, and the implementation was finished in this month. The whole work takes three members (one full-time employee, one full-time student(it’s me), one part-time employee) seven weeks.  </p>
+<p>This project is valuable at:   </p>
+<p>　　A. Kernel （the components of modeling and rendering core which may be transferred）<br>　　　　• River modeling data structure<br>　　　　• Mesh tessellation/simplification and texture coordinate generation<br>　　　　• Surface rendering  </p>
+<p>　　B. Prototype（a demo framework that shows our ideas and how our kernel works）<br>　　　　• A simple UI<br>　　　　• Polyline editing<br>　　　　• Error report<br>　　　　• Rendering preview<br>　　　　• Terrain editing (simulated by change file) and rendering  </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/River/river_preview1b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">Preview of water rendering</div><br><div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/River/river_preview2b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">Preview of water rendering</div>
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/River/river_designb.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">River Designing</div>
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/River/river_render1b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">River rendering in Preview window</div>  
+
+<p>The link to the detail is: <a href="http://www.xf-utpcb.com/xiaop/MyProjects/river.htm" target="_blank" rel="external">http://www.xf-utpcb.com/xiaop/MyProjects/river.htm</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/06/12/20060612/" data-id="p6a596pjssuj8fw3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060611" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/06/11/20060611/" class="article-date">
+  <time datetime="2006-06-11T13:28:58.000Z" itemprop="datePublished">6月 11 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/06/11/20060611/">新世界</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　2004年春节，我开始了在微软亚洲研究院（MSRA）做访问学生（VS）的生活，我认为这可以算作我第二次技术学习的飞跃。<br>　　在MSRA的日子，我第一次全面地进入了3D世界的开发领域，学到了大量新的知识和技术。更关键的，我学到了学习的方法、研究的方式、MS项目管理的经验，这些才是这段时间里我所获得的真正宝贵的财富。   </p>
+<p>I’d implemented a demo for SubDivision based on Loop algorithm at MSRA, you can easily add some other SubD method into it, see the papers in SIGGRAPH 2000 Course Note “Subdivision for Modeling and Animation”.  </p>
+<p>The demo was implemented on MS DirectX 9.0b.<br>Download this demo: <a href="http://www.xf-utpcb.com/xiaop/MyProjects/SubDivision/SubD_20040311.zip" target="_blank" rel="external">SubD_20040311.zip</a></p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/SubDivision/sd1b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">The original model</div><br><div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/SubDivision/sd2b.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">After Loop sub division once</div>
+
+<pre><code>BTW, This <span class="keyword">is</span> <span class="keyword">my</span> <span class="keyword">first</span> program <span class="keyword">in</span> D3D! ^-^
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/06/11/20060611/" data-id="ji1hc7r2u3x38xyv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2006/">&laquo; Prev</a><a class="page-number" href="/archives/2006/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2006/page/3/">3</a><a class="extend next" rel="next" href="/archives/2006/page/3/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">58</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/article/">article</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">29</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game-engine/">game engine</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/newworld/">newworld</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/simulation/">simulation</a><span class="tag-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/article/" style="font-size: 20.00px;">article</a><a href="/tags/blog/" style="font-size: 20.00px;">blog</a><a href="/tags/dev/" style="font-size: 16.67px;">dev</a><a href="/tags/game-engine/" style="font-size: 10.00px;">game engine</a><a href="/tags/newworld/" style="font-size: 10.00px;">newworld</a><a href="/tags/simulation/" style="font-size: 13.33px;">simulation</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/06/">June 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/08/">August 2004</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/07/">July 2004</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/06/">June 2002</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/05/">May 2002</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/09/13/20140913/">终于，我们的新产品Fotor Slideshow Maker上线了！！</a>
+          </li>
+        
+          <li>
+            <a href="/2012/05/14/20120514/">一切为了好照片</a>
+          </li>
+        
+          <li>
+            <a href="/2012/02/27/20130227/">总结了一下新手学习Windows 8 Metro App 开发的捷径</a>
+          </li>
+        
+          <li>
+            <a href="/2011/08/08/20110808/">治水</a>
+          </li>
+        
+          <li>
+            <a href="/2011/07/28/20110728/">社交网络完成后的4项重要网络应用元素</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Thromas Pang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

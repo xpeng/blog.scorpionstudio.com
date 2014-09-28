@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives | XPeng&#39;s Dream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="scorpion studio's blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XPeng's Dream">
+<meta property="og:url" content="http://blog.scorpionstudio.com/archives/page/3/">
+<meta property="og:site_name" content="XPeng's Dream">
+<meta property="og:description" content="scorpion studio's blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XPeng's Dream">
+<meta name="twitter:description" content="scorpion studio's blog">
+
+  
+    <link rel="alternative" href="/atom.xml" title="XPeng&#39;s Dream" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XPeng&#39;s Dream</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scorpion studio&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://blog.scorpionstudio.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-20080108" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/01/08/20080108/" class="article-date">
+  <time datetime="2008-01-08T13:28:58.000Z" itemprop="datePublished">1月 8 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/01/08/20080108/">新的编码阶段中。。。。</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　这段时间我在编制新的代码，因此没有多少东西来写博。面对大家提出的一些问题，大多数我在评论中直接讨论过，因此博客上评论文字可能比正文更长^-^。之前在“功能器官（输入输出结构）的进化”上遇到了阻碍，近期大家和我一样关于这点也有不少疑问，为此我做了一些新的计划，明确了一些具体的过程。<br>　　包含输入输出节点以及感受器效应器本身结构（以下简称IO结构）的进化我之前做了试验，效果不怎么好。一是在理论上目前还没有合适的方法并且计算量不可避免的庞大；二是我采用的算法模型还不能很好的延续进化结果，这点解释起来比较困难，简单说就是进化出一个较好的NN结构后，如果不在相同（至少相似）的IO结构上面交叉（即染色体交叉遗传），后代的新结构几乎就没有意义！我之前开过玩笑，做猪还是做人，这种情况下就变成了人和猪的杂交，自然界的规则和我的结果一样，结构保存失败！<br>　　对新IO结构的进化我前面做了些估算，无论如何，基于随机的进化算法在这上面计算量极大，在目前的硬件水平上，我决定要暂时放弃这条好高骛远的路子，换之以另外一个折中的方案。方案类似NNRG的项目，现在我预先设定好个体的IO结构，让基因在该结构上进化，和NNRG及其系列论文中不一样的是，我可以在现有进化结果上增加新的IO结构，然后让它继续进化。比如现在的拥有5个感受器的个体，进化过程到达停滞不前时，它的行为明显还可以更“聪明一点”，那么我用基因编辑器增加它的感受器或者效应器以及对应的输入输出神经元，然后让它进一步进化。结果就是，可以构造出不同潜力身体结构的多样物种。另外由于我的系统走的是分布式模拟路子，因此可以让不同IO结构的物种（即猪和人$!#%$#$%$），在同一个环境中交互发展，就应用上来说，我们仍然可以在场景中看到丰富多变的物种。  </p>
+<p>　　实际上，我现在就正在编码一个分布式模拟的“坦克大战”网络版用于试验这个方案。低级坦克、快速坦克、装甲坦克、红色坦克（非常聪明的）分属于不同的IO结构物种，也就是说它们本身在身体结构上就是不同的，快速坦克可以拥有两个以上驱动效应器，红色坦克则可以拥有高度发达的视觉感受器（十多个吧）。这样，他们进化的行为必然适应于它们自身结构。<br>　　群体智能或者说协作模式也是本次项目的研究目标之一，希望能够被观测到。  </p>
+<p>　　我选择“坦克大战”游戏来做还有另外几个原因：<br>　　- 游戏规模不大，规则统一简洁<br>　　- 环境元素简单单纯，但是种类丰富<br>　　- 坦克行为简单，攻击实时性要求不高<br>　　- 与环境交互上，可以增加新的形状感受器，碰撞感受器，碰撞在“坦克大战”这样的2D轴向场景中也较易实现<br>　　- 易于观测群体行为  </p>
+<pre><code>    （<span class="keyword">Re</span> <span class="number">23105612</span>的问题）：我以前说到结构，可能有些片面甚至有些误导。目前能有效进化的结构主要是指神经网络本身的结构，在输入输出节点（数目、类型）固定的情况下，“生物结构”仅指神经网络的拓扑结构。  
+
+    在此基础上，我们来谈“最优”这个问题，由于之前的Demo仅是用来观察和统计，因此没有一个求出“最优”结果或者说“进化结束”的需求。如果有这个需求时，则可以考虑进化次数（时间）或者在适应度到达某个预定值时结束，这有点像迭代法解方程，可以考虑误差也可以考虑迭代次数。可以看出，实际上无论怎么作，应用上我们并没有要求必须要有个“最优”，适应就行了。我们用在动态的环境上，这个环境和这个世界是一样的，没有结束的时间。
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/01/08/20080108/" data-id="lbflpokooao6mh2t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20071201" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2007/12/01/20071201/" class="article-date">
+  <time datetime="2007-12-01T13:28:58.000Z" itemprop="datePublished">12月 1 2007</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/12/01/20071201/">【CH世界大事记-3】——做猪还是做人</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://img.blog.163.com/photo/RnaymfwcwXM2kciUpF_ySQ==/893120101103291989.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;"><img src="http://img.blog.163.com/photo/RItlamVeZP7MBFGcupzR3A==/580401401977791723.jpg" style="vertical-align:middle;"></div>  
+
+<p>　　个体不再被告知有多少种输入输出或者可以选择什么，代之存在一系列通用的效应器和感受器，让个体自发地选择效应器和感受器来构成自己的身体。类似于自然界，生物的结构本身就是进化而来的。个体具备一定的结构后，就可以产生一定的功能性行为，这些结构可以认为是功能性器官在图形上直观的表现出来。       </p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/gKUFcvCQAY_Qr89IakGsdg==/582934676768164292.jpg" style="vertical-align:middle;"><img src="http://img.blog.163.com/photo/b5r5T5EeWMtCEkL46HmuBg==/4294182244698073571.jpg" style="vertical-align:middle;"><img src="http://img.blog.163.com/photo/UCF1P4RfaBe5UX7RDz0dhg==/582934676768164293.jpg" style="vertical-align:middle;"><img src="http://img.blog.163.com/photo/wn9tFp27TCMxAnmK2tiL8w==/582934676768164291.jpg" style="vertical-align:middle;"></div>    
+
+<p>　　上面图形单元表示目前我给予的四种功能器官，物种可以自由选择这些器官（包括种类和个数）构成自己的身体，这些器官产生神经网络的输入或者对神经网络的输出激活某些行为。<br>　　左一表示个体具有速度敏感的感觉器官。有多个这种器官的话，则有多个这种圈出现在个体身上。<br>　　左二的一根细线表示个体装备了一个雷达，或者广义的视觉器官（眼睛），颜色的R分量表示雷达类型（目标敏感型、形状敏感型等等），G分量表示雷达能探测到那种目标，比如探测到个体的雷达目前就没有什么用。B分量表示该感受器生长在生物身体上的位置（角度）。因此从不同颜色可以直观看出个体具有的视觉器官。<br>　　左三是一个可以驱动运动的效应器，相当于生物体的运动器官（腿），一个运动器官需要两个输出神经元来驱动才能生效（左右加力），因此我又称它为“双驱动器”。<br>　　左四是一个取食器官（嘴），可以激活取食的行为。目前取食行为仅对food有效，因此个体的行为模式比较简单，能够分析出来。  </p>
+<p>　　进化中可以看到，个体能进化出多个感觉器官（开始是一两个眼睛，进而越来越多，我相信个体不需要太多眼睛就能适应这个环境），同时能进化出运动器官和取食器官，有的个体还具备多个运动器官（多条腿）或者多张嘴。模拟中可以看到，在目前的场景环境中，对自己速度敏感的感觉器官似乎没有什么用处，也不知道是不是还没有到使用它的时候，即合适的进化阶段还没有到。  </p>
+<p>　　试验中发现，大量个体能够形成不同的物种种群（species）。因此模拟采用了和自然界一样的方法，在个体交配时种内个体交配几率极大大于种间交配。这样既保护了优势基因的进化，同时也提高了进化效率。否则在巨量个体中杂交，还真不知道是做人还是做猪啦，呵呵。  </p>
+<p>　　学术界有种说法，基因本身的表达过程较为重要，即从基因型到表现型的转化。生物界有发育过程，因此计算机模拟可能需要加入发育的过程。基因在发育过程中的某个阶段才能适当表现出来，这点也许是相当重要的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2007/12/01/20071201/" data-id="h0yl1fqpdyj4qhny" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20071130" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2007/11/30/20071130/" class="article-date">
+  <time datetime="2007-11-30T13:28:58.000Z" itemprop="datePublished">11月 30 2007</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/11/30/20071130/">继续抽象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　这几天工作较忙，另外我在设计类似生物通用的感受器和效应器，以期达到个体对输入和输出的进化选择，还不知道是什么效果。因此没有进一步考查复杂的环境（本来说要加入阻挡和攻击行为的）。  </p>
+<p>　　我希望不再定义个体的概念（比如ant,human,warrior等等）、不再整个地将输入输出提供给个体选择（如前所述）。我希望个体能在进化中选择最适合自己的感受器作为输入，最适合自己的效应器作为输出，实际上是选择对环境最适合的。这样就NN而言可以达到最少的输入端和输出端，也可以在某种程度上表现个体的物理差异。如果将不同感受器和不同效应器用外形来美化，则我们可以准确的看到生物外形的变化和能力一致！之后我们可能看到“六条腿的生物”、“特大的生物”、“大量触角的生物”、“坚牙厉嘴的生物”，从直观上就可以给它们命名！我相信一条生物界的原则，任何自然界中的生物，其外形和表现均是为其竞争服务的！  </p>
+<p>　　例如，这几天我将上面的试验抽象出来，个体的感受器可以有两种选择“能检测出特定类型的雷达（type related radar）”，“速度感受器（velocity sensor）”，这些感受器实现类似于NNRG的NERO项目，但是比他们更灵活。效应器有两种选择“驱动器（类似于靠左右加力来获得转角和速度）”，“取食器”。试验开始后，生物最初逐渐随机选择了一些感受器和驱动器，完全一片混乱（有些生物妄图对同伴激活自己的“取食器”，汗）。昨天发现，似乎不选择速度感受器的话，生物则不能较好地控制自己的加力。  </p>
+<p>　　试验还在继续，会在这几天有个结果。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2007/11/30/20071130/" data-id="h613q8qyueh0g1qs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20071126_2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2007/11/26/20071126_2/" class="article-date">
+  <time datetime="2007-11-26T14:28:58.000Z" itemprop="datePublished">11月 26 2007</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/11/26/20071126_2/">【CH世界大事记-2】</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://img.blog.163.com/photo/obFRyzg7nWWmQDCuYkER_g==/2605613859410877889.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">个体增加了“eat”动作，目标“food”可以被吃掉，然后随机在另外一个地方产生</div>  
+
+<p>　　接上回的系统设定，这次我将场景中预置了100个“food”Object，每个food可以被吃掉，吃掉后的food在1秒钟后随机地在另外一个地方重生。个体增加一个输出用以激活“eat”行为，该行为在离最近的一个food 50单位的距离内生效，无效的eat行为会受到减hp的惩罚。eat行为成功后，个体将增加hp。不再以个体靠近food与否进行加分。<br>　　这回我们看能设计出什么样的个体来！由于目前场景和个体行为简单，我们可以人工分析出最后最优个体的行为模式来比对！但是在将来复杂的环境，甚至本身就在进化的环境中，我相信个体行为会让我们大吃一惊的！  </p>
+<p>　　加载上次运行的结果（个体大脑NN的基因），刚开始运行时可以看到大部分个体围着food打转，由于新输出的“eat”行为目前几乎随机产生，因此个体受到惩罚较大，死亡还是较快的。运行一段时间后，可以看到有些个体不但能“吃掉”身边的food，还能够在吃掉后赶紧跑到另外的最近food处继续。  </p>
+<p>　　这里需要说明一下，GNN（进化神经网络）的优势是可以“记忆”之前的进化结果，即之前的基因结构被有效保留，个体在新的环境中可以利用旧的知识进行活动。因此可以看到，该系统中一个环境的逐渐改变能够导致物种的逐渐进化，如果环境突变，个体将大灭绝，这和自然界非常相似！从程序设计的角度讲，不会因为环境新的改变（food要消失并且在他处出现）和个体新的行为（增加eat行为）而从零开始去运行进化程序，个体基因（实际上就是代表该物种的设计）能适当地适应新的环境、正确发出新的行为，并且仍然能有效地继续优化（进化）。  </p>
+<p>　　BTW，在前天的个体输入处理上（视觉传感器），我犯了一个极大的错误，没有考虑进个体当前的方向。现在据我分析，由于food目标的不变以及hp增减的算法固定，因此仍然能够进化出来像昨天那样的结果，即某种局部最优解。今天发现这个问题后我立即修正了ant的视觉传感器，天，其实在昨天的情况下，不到3分钟便能进化出相当高效的行动模式来了，而且更加真实合理。今天的新场景也能够相当快地进化出可观的结果（都是几分钟）。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2007/11/26/20071126_2/" data-id="hyd9o77km1e0lcma" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20071126" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2007/11/26/20071126/" class="article-date">
+  <time datetime="2007-11-26T13:28:58.000Z" itemprop="datePublished">11月 26 2007</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/11/26/20071126/">【CH世界大事记-1】</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://img.blog.163.com/photo/dOhp80ajXj-djisxW48jzg==/1735856181375005278.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">系统开始时的状态</div>  
+
+<div style="text-align:center;"><img width="200px" src="http://img.blog.163.com/photo/NLszkHccYBcyUktn5iQprQ==/3953597522878193421.jpg" style="vertical-align:middle;"> <img width="200px" src="http://img.blog.163.com/photo/j4a9Zi1gyZqpnlkhauDrXw==/349310446098217401.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">10分钟后系统的状态</div>    
+
+<p>　　星期六开始运行这个简单设置的环境，模拟个体所能获得的输入包括周围个体数目、自己的当前速度、角度、HP以及最近目标的相对位置，离目标越近HP减少得越慢，存活时间越长者适应度越高。系统中人口数为100，个体和基因一一对应。<br>　　刚开始的情况是完全随机，模拟个体的大脑完全由各种随机的、最小结构的神经网络支持。  </p>
+<p>　　上面的图是运行大概十分中后的截屏。左边的图中可以看到多于一半的个体开始有向目标移动的趋势，个体速度也由最初的随机值（基本上是很小的速度）趋向于较大值。从场景的分析可以得出，这是向全局最优解靠近的正确方向。  </p>
+<p>　　再运行一段时间后（&gt;1000秒），右边的图中可以看到部分优势个体除了向目标靠近外，到达目标后产生了“刹车”的趋势，以达到徘徊于目标附近的目的。这个结果就该场景而言已经很接近最优解了。  </p>
+<p>　　这次试验发觉，对基本的NN（神经网络）进化而言，程序员仍然有一个工作要做，那就是得依据环境和个体的情况分析出NN的输入和输出，包括其个数和意义！可以联想到游戏中策划的这个工作也正是巨大的，如果设计一个NPC，得事先“规定”好它们的有效行为有哪些，它们的有效输出是什么。策划必须以专业知识指出哪些输入、输出是有用的，而且限于分析和程序承受量，还得尽量以最少的输入输出进行设计，即有效的“Feature Select”。对NN而言，输入和输出的个数增加特别是多余的输入和输出（比如现在我试验中的“周围个体数目”对完成任务的NN来说就是一多余输入），对NN的进化和执行性能均带来巨大负担！因此，FeatureSelect的工作就更加重要和繁重了。<br>　　我尝试在系统中对NN的输入和输出不加以严格定义，将目前我能提供的所有信息全部作为NN的输入（达21个之多），目标位置检测采用在个体360度范围内均匀放置物体传感器（sensor）。类似于昆虫的复眼，每个传感器对相应方向上范围中的物体进行探测。  </p>
+<p>　　根据遗传神经网络算法的特征，可以将“对输入的选择”本身也进行进化，从而找到合理的最小输入集！  </p>
+<p>　　接下来的几天，我将对目标的位置进行随机的变换，看这些个体能否进一步学会追踪不同位置的目标；接着可能给个体增加一个“eat”的行为对应NN的一个新的输出，然后看试验结果。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2007/11/26/20071126/" data-id="2plwocqb6mhsl2rj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20071123" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2007/11/23/20071123/" class="article-date">
+  <time datetime="2007-11-23T13:28:58.000Z" itemprop="datePublished">11月 23 2007</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/11/23/20071123/">进化世界</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/1.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">开始的小测试环境</div>  
+
+<p>　　上图是前天构造的一个测试小环境，模拟个体能够获得（得到输入）自己的当前速度、角度、HP以及最近目标的相对位置，离目标越近HP减少得越慢，存活时间越长者适应度越高。刚开始的情况是完全随机，模拟个体完全在一个随机的最小结构神经网络的支持下处理自己的输入。这样的设置相当简单，程序员几乎不做什么工作！接下来就是运行，运行，再运行。个体会不断地发生变化最终达到这个小环境设计者心里的样子吗？到底明天它会不会自动设计出策划要求去达到这个简单任务的NPC呢？  </p>
+<p>　　几个月前，我为自己的一个实验性项目构建的分布式模拟环境基本就绪。该环境采用了HLA网络结构组建，基本上完成了对HLA核心网进行的二次封装，另外构造了一个广域网的扩展接入系统方便更广泛的人机交互！目前这个体系的基本稳定为我的试验项目奠定下了第一个基础。  </p>
+<p>　　这三年来我一直致力于图形引擎的开发和应用工作，之前在MSRA的纯图形学以及图形硬件的研究工作也奠定了足够的图形基础，因此对这个试验项目而言，一个较为完善的软件研究平台和图形支持系统也很快基本成型，并且能够很方便地投入到研究和设计工作中去。这可以说是试验项目的第二个基础。  </p>
+<p>　　前段时间，我在这个平台上对随机宇宙（过程宇宙——Real-Time Procedural Universe，这方面主要研究自动、随机地生成各类拟真的图形、图像、逻辑内容）的一些基础算法、架构的研究模拟和实现（link），使得我更加确信CH系统在内容上人机交互的支持能力也一定会相当强大，特别是对人机图形界面，任何内容的变化都能实时表现在远程的图形客户端上。  </p>
+<p>　　两个月前，我觉得系统底层的一些必要支持已经基本到位，于是我开始构造这个项目的第三大基础架构（即CH必须是一个智能的、自组织的、演化的系统），另外我也希望能提出一种自下而上的开发方式。我知道，CH这样一个大系统，必然是一个“复杂系统”。对复杂系统的研究目前学术界也仅有几个前沿的方向，比如人工智能、人工生命、神经网络、分形、细胞自动机等理论、模型及算法。既然认为CH系统必须要是一个智能的自组织世界，就必然涉及到这些学科方向。这几年来我一直借助在游戏/网络游戏领域的工作机会，探索它们应用的可行性，但长期来对人工智能的有限应用总是让人找不到方向。要么必须在一些明确的问题域上面求得具体的实现（比如A Star），要么必须要找到游戏内容相关的复杂具体模型（比如路点模型、有限状态机模型等等），这对程序开发人员和策划人员来说实际上都是很痛苦的。严格的说，目前我在游戏上的这些工作还谈不上与复杂系统有什么关系，仅仅是一些自上而下的常规开发策略。  </p>
+<p>　　幸喜的是，早就有不少游戏/软件开发公司开始尝试类似自下而上的开发方式。比如，据说Maxis公司的《模拟城市》近几个系列中就采用了人工神经网络技术；不少单机策略或者射击游戏中，开发公司在设计时也离线进化了不少游戏角色和策略；EA在最新的模拟类游戏Spore（孢子）中也很可能采用了一些进化方面的算法或者技术。  </p>
+<p>　　其实在复杂系统中，细胞自动机、神经网络、进化算法、粒子群算法（比如蚁群算法）等领域都是具有良好的应用前景（当然是什么时候大规模应用我们就不去追究了），开始我打算直接在CH系统中使用人工神经网络（ANN），但是在试验中发现，ANN除了本身需要一个较为难描述的环境模型外（特别是实际游戏应用，网游就更不用说了），如果要达到一个通用的、优秀的、无监督的求解性能的话，ANN的算法也是要相当考究的，目前这方面也正是ANN领域研究的重中之重。应此在游戏应用或者模拟研究中，我觉得不大可能寻求到一个现实的实时自适应ANN系统来满足要求，而且毕竟我们不是搞研究而是搞应用的。</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/2.gif" style="vertical-align:middle;"></div><br><div style="text-align:center;">一个反相传播的神经网络。设计这样一个网络对于复杂输入和输出的环境来说“几乎”是不可能的</div>    
+
+<p>　　为此前段时间我投入到细胞自动机、蚁群算法等领域中去找寻一些应用上的可能点。都怪“元胞自动机（CA）”前不久闹得很火，霍夫曼（自称CA之父）也曾大言不惭CA能颠覆人类得一切科学，谓之“新科学”。拜读其大作以及进行一些试验后，发觉一些思想确实非常新颖独到，很多试验也相当有趣。但是总觉得对CA的研究大多以证明某某理论为结果，没有一点预测能力（即科学的理论总是可以预测的），总有点事后诸葛的感觉。我也很难从CA引出一些能辅助设计的路子来（nb的霍夫曼认为“宇宙就是一巨大的CA，除了实实在在地注视、观看这些规则会如何呈现其结果之外，没有任何办法去预先知道这些结果”，那研究这个理论有个P用啊）。况且它和蚁群算法一样，问题域或者空间维数的增大不可避免地需要庞大的甚至不且实际的计算量（这点蚁群算法还算好些）。</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/3.jpg" style="vertical-align:middle;"></div>  
+
+<p>　　一个有趣的报告是Wolfram公司的Paul Jean做的，他研究基本细胞自动机（Elementary Cellular Automata,ECA）家族中的第146号，发现了一个奇特的现象。以某个特定的初始条件开始，146号ECA在经过300多步演化之后会突然出现一个相变行为：本来随机排列的一些黑白方格在一个时间步内突然集体变成了白色，并且这个白色区域经过几步演化之后逐渐衰退，因而会在时间图上留下一个大的三角形区域。<br>　　这种现象对于146号ECA来说属于一种极其罕见的行为：只有在特定的初始条件才能发现，Paul称这一现象为Monolith，即“独石碑”。Wolfram常常把自己发明的细胞自动机比喻成当年伽利略发明的望远镜，透过先进的工具，我们可以得到一些全新的科学观察。  </p>
+<p>　　Spore这样的游戏让我看到了另外一个可能方向——进化。从Spore的介绍以及细节上看来，似乎不是严格意义上的实时进化，而且也不大可能会有形态上面的进化（形态进化需要更为有效的图形学理论以及强大的计算能力）。游戏过程仍然是处于人为选择或者策划设定的进化模拟，大多数内容仍然是事先设定好的，不过模型的有机化和进化的思想和表现倒是其卖点。Spore的发行一拖再拖，似乎Will Wright（就是开发《模拟城市》和《模拟人生》那个家伙哈）不把它做得完美就不罢休似的，所以最终版本出来是什么样子还不得而知，期待中…… ^-^  </p>
+<p>　　在Spore这个游戏感受的诱惑下，我考查了许多进化相关的游戏或者软件系统的资料和Paper，国际上也有很多的小项目组专门做这方面的探索，从各种复杂系统小程序到Tierra/Avida的代码进化，从Framsticks的形态行为进化到AI.Planet那漂亮的生物乐园。真还没有想到，居然处处都有进化人工生命的影子！ </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/4.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/5.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">Panspermia中进化出来的生物和世界</div>    
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/6.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/7.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/8.jpg" style="vertical-align:middle;"></div>  
+
+<p>Framsticks:   </p>
+<ol>
+<li>A creature made of sticks, each is specialized in some function. You can see three receptors – touch, smell, equilibrium, and a red muscle.   </li>
+<li>Underwater creature seeking energy.  </li>
+<li>Hunt: a creature trying to catch and kill the other one. </li>
+</ol>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/9.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">AI.Planet中丰富的进化世界</div>      
+
+<p>　　对GA（遗传算法）的详细考查过后，我决心将遗传算法简洁高效的进化思想应用到CH系统中来，正巧我已经准备好了一个很好的HLA模拟体系，加上对ANN比较熟悉，我选取了来自NNRG（nerual netwaoks research group）的一些研究成果来进行攻关和改进。NNRG虽然看起来仅是国际上的一个神经网络研究小组（The group is part of the Artificial Intelligence Lab in the Computer Science Department at the University of Texas at Austin），但是从它的研究领域和项目中可以看到，它对基于NN应用的一个很大领域都有涉猎，而且它融入了很多其他领域的成果。NNRG有个NEAT项目，是一个关于自适应地从简单到复杂构造一个满足问题域的神经网络，适应算法上又采用了GA的思想，应此性能和效果都比较好，对我而言它更重要的是还不用关心NN的具体模型和优化细节！有趣的是，NNRG甚至也出了一个游戏，叫NERO，可以离线进化一些很好的策略来进行战斗对抗。<br>　　我现在拥有的HLA核心网络上可以进行较好的分布式模拟，因此我对NEAT进行了改进，将基因的进化和ANN的适应度评估和应用较独立的分开来。应用NEAT的实时进化特性（rtNEAT），加上我对核心网扩展的广域网接入系统，人类（玩家）也可以很好的加入互动，这样设计有利于未来在网络游戏具体项目上的应用。  </p>
+<p>　　由于基因的进化在服务器上进行，并且可以随时保存和重加载，以网络游戏的角度来看，实时进化在不间断的人机互动中可以表现得很好。再从游戏的设计上来看，策划无需设定甚至分析具体的任务实现过程（特别是NPC），程序员不用为实现这个过程煞费苦心做复杂的设计（况且每个程序员设计出来的算法不一定就是最优的，策划也不一定具有相当丰富的专业知识和经验。而遗传算法在理论上来说就可以达到全局最优），所有的设计工作都是在长期的在线运行和与环境（甚至真人）的互动中进化达成；策划也可以设定广泛的游戏环境和属性（这目前是策划大量的工作）而不用再担心诸如增加一个属性就会造成各个系统的相应修正和程序配合修改这种事情（比如NPC从不能攻击到支持攻击，环境中新增加一种叫做“food”的道具）。<br>　　经过这段时间的试验，我想再从策划的角度来看，策划设计一个东西就可以考虑是走自上而下的分析路子，还是较为傻瓜的自下而上的新路子了！目前我只是提出这样一个设计方向，还有待进一步试验来观察它的实际应用效果。  </p>
+<p>　　BTW，由于这个小环境试验前几天才设定好，这几天还没有来得及去运行它，反正进化的基因可以保存和再加载，可以说设计过程是连续的，每天都可以出新花样。所以我在接下来的日子可以经常报告这个CH小世界的情况，多多截屏。比如下周发现新进化出（设计出）了一个光吃不打的farmer类角色或者一个光打不吃的warrior类角色；又或者在下周某天我加入了一种新的食物类obj或者阻挡类obj，他们又会涌现（复杂系统？？）出某些行为模式出来。暂且将之后这类日志归入博客上的“CH世界大事记”一栏吧，嘿嘿。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2007/11/23/20071123/" data-id="ziw3fxhtricroru5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060911" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/09/11/20060911/" class="article-date">
+  <time datetime="2006-09-11T13:28:58.000Z" itemprop="datePublished">9月 11 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/09/11/20060911/">除了随机还要进化——对Infinity进一步的想法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　其实目前随机过程已经可以实现大量东西了，但是和自然界比起来还是不值得一提啦。<br>　　和环形山一样，星球表面在固定点以少量参数甚至可以生成植物、生成建筑物，这可能是下一步的目标，但我最近迷住了进化神经网络，正在考查其在游戏中的应用可能性。<br>　　随机星球，也就是星球引擎，现在已经不少了，各处都有介绍。随机过程的建筑物其实也相当Cool，如果Infinity能让我们俯冲扫射星球表面的建筑物，那是相当的Cool啊！<a href="http://www.vterrain.org/Culture/BldCity/Proc/index.html" target="_blank" rel="external">http://www.vterrain.org/Culture/BldCity/Proc/index.html</a>，这个地址是一个过程建筑物方面的网络节点，大家有兴趣可以去看看。</p>
+<div style="text-align:center;"><img src="http://www.swarmagents.com/vm/articles/nks/structures.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">这是随机方法生成的建筑物</div><br><div style="text-align:center;"><img src="http://www.swarmagents.com/vm/articles/nks/building.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">用在纽约市就是这个样子</div>  
+
+<p>　　植物，Infinity由于专注于太空，对随机植物没有做什么应用，其实如果星球表面采用这个技术的话，也很Cool，目前植物系统有很多方法实现，比如传统的左旋系统即L系统，或者进化方法等等。都非常漂亮，这里我有个网络节点的链接：来自于形态进化算法之父的网站，上面的生物很漂亮：<a href="http://www.genarts.com/karl/panspermia.html" target="_blank" rel="external">http://www.genarts.com/karl/panspermia.html</a></p>
+<div style="text-align:center;"><img src="http://www.biota.org/gallery/jpgs/airh3000.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">这个不是海马，叫“天马”，呵呵，只用了几十个参数吧</div>    
+
+<p>　　大家感兴趣的话可以下载他网站上的视频，就是从宇宙中掉出来的种子，然后变化的图像，全部使用进化算法创建的图像，异常精彩！  </p>
+<p>　　这里也有一篇我目前关于这方面的介绍和我的项目进度：<a href="http://bbs.gameres.com/showthread.asp?threadid=100231" target="_blank" rel="external">http://bbs.gameres.com/showthread.asp?threadid=100231</a>，属于“过程图像”和“复杂系统”领域，其实我的目标主要是能在像Infinity这样的MMO上面应用这种可以自进化或者交互的的人工生命，大家试想如果Infinity不仅仅是图像漂亮和宇宙的宏大，每个NPC（敌方战舰或者星球表面的一群居民）能非常聪明的和你交互（不像现在这样的重复又重复），能够因为你的影响而改变（进化），那是多么“恐怖”的事情啊！^-^</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/09/11/20060911/" data-id="zbj31j91busol2da" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060910" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/09/10/20060910/" class="article-date">
+  <time datetime="2006-09-10T13:28:58.000Z" itemprop="datePublished">9月 10 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/09/10/20060910/">随机宇宙</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　上半年，从构建好一个基础的HLA网络（S方面的计划）以来，我一直在试图创建一种充满着各种星球、星系的宇宙内容体系（R方面的计划）。由于备受Celestia和ONeil的“A Real-Time Procedural Universe”感染，我一直就梦想着能够将随机但接近现实的宇宙图景动态地整合进SRI网络中。加之在我相当喜欢的游戏EVE里，总是有把飞船开向行星表面这样难以忍受的冲动（现在看来，在游戏Infinity中也采用了类似的技术，飞船可以开到星球或者空间上表面上去）。我最终决定让SRI网络在一开始就挑战随机的庞大宇宙！  </p>
+<p>　　Celestia有接近现实的星系际物理体系，数据均来自像NASA这样的宇航机构。而ONeil的过程宇宙，又是从随机函数（比如柏林函数）中得到的灵感。我希望能够在SRI网络中将它们应用上来。</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/celestia.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">Celestia项目目前应该有200万到300万的星体数据了吧！</div>
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/celestia1.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/celestia2.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/celestia3.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">Celestia基于现实宇宙的漫游系统</div>
+
+
+<p>　　基于对柏林函数的理解，我对ONeil的项目进行了一些移植，到目前为止基本上实现了以极少量参数生成一些接近现实的星体并动态地绘制它们，下面是一些实时渲染的截图（所有随机函数均为可预测随机函数）：</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/pu1.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">远处观测地球尺寸的星体，大概用了七八个参数。地形由柏林函数生成，贴图根据高程自动生成。</div>  
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/pu2.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/pu3.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">接近星球表面后，可以看到由另外一种随机函数动态生成的环形山</div>
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/pu4.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">接近地面后可以看到更多的细节，比如用公告板实现的一些草地。该图是应用了阳光在大气中散射后的效果</div>
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/pu5.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">地球的卫星——月球规模的天体</div>
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/pu6.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/pu8.jpg" style="vertical-align:middle;"></div>  
+
+
+<p>　　由于业余条件下开发得非常慢，加之最近迫切想进入下一个更大的目标（I目标，在博客上一篇专门的文章中我将描述这个），我本来想搁下这方面的开发。但最近看了一部日本动画片《英雄时代》，很有感觉，加之做一件事情应该有头有尾，所以我决定还是尽快继续将星体数据（属性）整合进HLA网络收尾，以达到一个能在SRI系统中应用的程度。</p>
+<p>　　目前该渲染模块的性能一般，未来某个时候我回再回来进一步对其进行优化，并且支持星体表面的云层以及大气散射效果。</p>
+<p>　　BTW，从游戏/交互上面来看，我一直以来就有一些想法，基于原来在CH项目中的设计，SRI人类界面的操作模式可以包含第一人称、第三人称、（EVE、魔兽等）和第三人称管理（家园）这三种视觉模式，模式的切换视交互内容的需求而定。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/09/10/20060910/" data-id="7dfq4tb7w0objbjx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060818" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/08/18/20060818/" class="article-date">
+  <time datetime="2006-08-18T13:28:58.000Z" itemprop="datePublished">8月 18 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/08/18/20060818/">EDS（屏幕截图）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　这是到2005年的一些屏幕截图，EDS还在开发中，还没有准备大量的Demo，我将在2006年补上这些。  </p>
+<p>HDRC      </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/EDS/Exp.files/image004.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">2004年基于GPU的高动态图像压缩研究</div>
+
+<p>HDRC    </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/photogallery/photo00016178/hdrc2.JPG" style="vertical-align:middle;"></div><br><div style="text-align:center;">2004年基于GPU的高动态图像压缩研究</div>
+
+
+<p>EDS Client Sample    </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/photogallery/photo00016178/client_1.JPG" style="vertical-align:middle;"></div><br><div style="text-align:center;">一个简单的图形客户端示例</div>
+
+
+<p>EDS Model Editor Sample    </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/photogallery/photo00016178/modeleditor.JPG" style="vertical-align:middle;"></div><br><div style="text-align:center;">一个简单的模型编辑器示例</div>
+
+<p>EDS Server Sample    </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/photogallery/photo00016178/server_1.JPG" style="vertical-align:middle;"></div><br><div style="text-align:center;">一个简单的服务器端示例</div>
+
+
+<p>2D Game Sample    </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/photogallery/photo00016178/2ddemo.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">一个2D游戏示例</div>
+
+
+<p>MS HDR Sample by EDS    </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/photogallery/photo00016178/hdr_sample.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">移植了微软HDR场景的EDS版本</div>
+
+
+<p>2D Tech    </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/photogallery/photo00016178/test_2d.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">EDS 的2D图像能力（剪裁、变换、渐变、透明、缩放）</div>
+
+
+<p>EDS SceneMan    </p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/photogallery/photo00016178/test_sceneman.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">EDS的场景管理模块示例，这是一个采用简单的控制台脚本测试的3D场景、模型加载、骨架动画示例</div>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/08/18/20060818/" data-id="igson2abbsuyh3tl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game-engine/">game engine</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20060817" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2006/08/17/20060817/" class="article-date">
+  <time datetime="2006-08-17T13:28:58.000Z" itemprop="datePublished">8月 17 2006</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/08/17/20060817/">EDS（实例）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2．4 EDSim实例（研发就是搭积木——Toy Bricks Development）    </p>
+<p>　　模块＝组件＝积木！EDSim将任何需要研发的技术模块都作为引擎的一个普通组件进行加载，并根据该组件的CAM定义决定适当的调用逻辑。  </p>
+<p>　　即注即用！研发人员一旦定义好该组件的CAM，即可注册进EDSim引擎，于是该组件将在极其良好的研发调试环境中运行，由于可以自由使用各种支持组件，研发人员可以完全且仅仅投入到该模块技术功能/算法的开发中去。</p>
+<p>2.3.1 实例一（一个服务器系统）  </p>
+<p>　　这是一个简单的单一服务器游戏世界模拟系统，其组件加载顺序可以是这样：</p>
+<pre><code>Console/<span class="keyword">Log</span>
+VarSys
+TimeSys
+
+Pryer (optional)
+DBSys（数据库支持）
+Net（网络支持）
+
+SubManager（物质管理器）
+ObjManager（物件/体管理器）
+AccountManager（帐号管理器）
+
+Sim（虚拟机）
+</code></pre><p>　　这里每一个模块作为一个组件被加载，其中ESM组件（EDSim支持组件）可以在系统任意地方作为Singleton被访问。搭建一个服务器就像积木一样，其代码大致如下：</p>
+<pre><code>    <span class="function">RegisterESM</span>( EDS<span class="value">::CConsole );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CTimeSys );</span>    <span class="comment">//only this one takes frame time</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CPryer );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::DataBase::CDBSys );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Net::CNet );</span>
+
+    <span class="comment">//Data managers</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Server::CSubManager );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Server::CObjManager );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Server::CAccountManager );</span>
+
+    <span class="comment">//Simulator</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Sim::CSim );</span>
+</code></pre><p>　　可以看到，每个组件就对应一行注册代码，EDSim引擎将自动按照注册顺序以适当的调用逻辑进行调用，如下图：</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/EDS/Exp.files/image004.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">图 6. 一个简单服务器</div>
+
+
+<p>2.3.2 实例二（一个客户端系统）</p>
+<p>　　这是一个可以显示上述服务器模拟世界的简单图形客户端，其组件加载顺序可以是这样：</p>
+<pre><code>Console/<span class="keyword">Log</span>
+VarSys
+TimeSys
+
+Net（网络支持）
+ClientSubManager（物质管理器）
+ClientObjManager（物件/体管理器）
+ResourceMan（资源管理器）
+Pryer (optional)
+
+ClientSim（图形世界虚拟机）
+
+MainDXUI（DXUI 界面）
+</code></pre><p>　　其代码大致如下：</p>
+<pre><code>    <span class="function">RegisterESM</span>( EDS<span class="value">::CConsole );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CVarSys );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CTimeSys );</span>    <span class="comment">//only this one takes frame time</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Net::CNet );</span>
+
+    <span class="comment">//Data managers</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Client::CSubManager );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Client::CObjManager );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CResourceMan);</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CPryer);</span>
+
+    <span class="comment">//Simulator</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Sim::CClientSim );</span>
+
+    <span class="comment">//MainUI</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CMainDXUI );</span>
+</code></pre><p>　　运行如下图：</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/EDS/Exp.files/image008.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">图  7. 一个简单客户端</div>  
+
+
+<p>2.3.3 实例三（一个模型编辑器系统）</p>
+<p>　　这是一个可以对上述模拟世界的物质进行编辑的图形编辑器，主要功能在模型渲染编辑组件中开发，其组件加载顺序可以是这样：</p>
+<pre><code>Console/<span class="keyword">Log</span>
+VarSys
+TimeSys
+
+Net（网络组件）
+SubManager（物质管理器）
+ResourceMan（资源管理器）
+
+Pryer (optional)
+RenderModel（模型编辑组件）
+
+MainDXUI（DXUI 界面）
+</code></pre><p>　　其代码大致如下：</p>
+<pre><code>    <span class="function">RegisterESM</span>( EDS<span class="value">::CConsole );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CVarSys );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CTimeSys );</span>    <span class="comment">//only this one takes frame time</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Net::CNet );</span>
+
+    <span class="comment">//Data managers</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Server::CSubManager );</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CResourceMan);</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CPryer);</span>
+
+    <span class="comment">//ModelEditor</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::Sim::CRenderModel);</span>
+
+    <span class="comment">//MainUI</span>
+    <span class="function">RegisterESM</span>( EDS<span class="value">::CMainDXUI );</span>
+</code></pre><p>　　运行如下图：</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/EDS/Exp.files/image012.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">图 8. 一个简单的远程物质编辑器</div>  
+
+
+
+<p>2.3.3 实例四（一个HDR技术模块研究系统）</p>
+<p>　　这是一个对2004年我在<a href="http://www.xf-utpcb.com/xiaop/MyProjects/ghdrc.htm" target="_blank" rel="external">基于GPU加速的图像高动态范围（HDR）压缩技术</a>上的研究系统的EDS移植，加载的组件除了GPUGHDRC模块外，其余模块与积木三用的组件别无二致！</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/MyProjects/EDS/Exp.files/image015.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">图 9. GPU GHDRC 研究系统</div>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2006/08/17/20060817/" data-id="voqpqlx8o7p2o2uo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game-engine/">game engine</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/4/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">58</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/article/">article</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">29</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game-engine/">game engine</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/newworld/">newworld</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/simulation/">simulation</a><span class="tag-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/article/" style="font-size: 20.00px;">article</a><a href="/tags/blog/" style="font-size: 20.00px;">blog</a><a href="/tags/dev/" style="font-size: 16.67px;">dev</a><a href="/tags/game-engine/" style="font-size: 10.00px;">game engine</a><a href="/tags/newworld/" style="font-size: 10.00px;">newworld</a><a href="/tags/simulation/" style="font-size: 13.33px;">simulation</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/06/">June 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/08/">August 2004</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/07/">July 2004</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/06/">June 2002</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/05/">May 2002</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/09/13/20140913/">终于，我们的新产品Fotor Slideshow Maker上线了！！</a>
+          </li>
+        
+          <li>
+            <a href="/2012/05/14/20120514/">一切为了好照片</a>
+          </li>
+        
+          <li>
+            <a href="/2012/02/27/20130227/">总结了一下新手学习Windows 8 Metro App 开发的捷径</a>
+          </li>
+        
+          <li>
+            <a href="/2011/08/08/20110808/">治水</a>
+          </li>
+        
+          <li>
+            <a href="/2011/07/28/20110728/">社交网络完成后的4项重要网络应用元素</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Thromas Pang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

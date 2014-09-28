@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Category: blog | XPeng&#39;s Dream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="scorpion studio's blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XPeng's Dream">
+<meta property="og:url" content="http://blog.scorpionstudio.com/categories/blog/page/2/">
+<meta property="og:site_name" content="XPeng's Dream">
+<meta property="og:description" content="scorpion studio's blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XPeng's Dream">
+<meta name="twitter:description" content="scorpion studio's blog">
+
+  
+    <link rel="alternative" href="/atom.xml" title="XPeng&#39;s Dream" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XPeng&#39;s Dream</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Scorpion studio&#39;s blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://blog.scorpionstudio.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-20100204" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2010/02/04/20100204/" class="article-date">
+  <time datetime="2010-02-04T02:08:14.000Z" itemprop="datePublished">2月 4 2010</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2010/02/04/20100204/">引擎设计与商业模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　<em>这篇文章摘自“免费打工仔”在www.gameres.com上的发言，虽然字数不多，但对几个引擎的评价却一语中的。</em>  </p>
+<h1 id="引擎设计与商业模式"><center><b>引擎设计与商业模式</b></center></h1>
+<p>　　包括我在内的很多朋友都喜欢看国外引擎的代码，并比较引擎之间的优劣。但是你会发现，每种引擎的设计都是于他开发者和用户及其相关，优秀的引擎不仅是设计上的优秀，更重要的是适应自身的商业（社区）模式。在这篇文章里我们着重讨论一下卡马克的Quake 3引擎，Epic的Unreal 3，开源界的Ogre3D图形引擎以及相应的Orz扩展框架。  </p>
+<p>　　<b>一、Quake3=天才模式</b></p>
+<p>　　在很早以前，我们只能接触这款游戏引擎的代码。可以说卡马克是中国游戏图形界的导师。我的很多前辈都是从这款引擎开始学起，并立志开发一款中国人自己的图形引擎。后面介绍的虚幻引擎和Ogre3D引擎都或多或少的被这款引擎所影响。</p>
+<p>　　提起Quake3引擎就不能不了解id公司和他的天才程序员卡马克大神。约翰·卡马克被称为3D游戏之父，因为其开创性的把3D渲染运用到了实时技术中来。他是图形学界的牛顿，所有开发游戏的人的偶像之一（另外一个是宫本茂）。有一本书《Doom启示录》就是讲卡马克和他的id公司的故事。在这本书中，你会发现卡马克对于程序技术的痴迷胜过一起（甚至超过成 人录像带）。</p>
+<p>　　所以Quake3以及其他id公司的图形引擎产品，（曾经）唯一的目的是开发出最棒最新的图形技术，把卡马克的天才发挥到极致。id是卡马克的公司，Quake3也是卡马克的引擎。如同乔布斯和苹果一样，任何人也无法漠视卡马克和Quake3之间的联系。</p>
+<p>　　1 Quake3 极其重视效率，这样可以便于在硬件支持前实现未来的图形效果。</p>
+<p>　　2 Quake3 代码短小精湛，卡马克对其不断优化。</p>
+<p>　　3 Quake3 不如其他引擎注重模块化，卡马克一个人就能搞定。</p>
+<p>　　4 Quake3 不需要重构，卡马克擅长在最短的时间内重写整个引擎。</p>
+<p>　　5 Quake3 对使用者极其简单，但扩展很难。如果需要扩展，卡马克会重写一个引擎。</p>
+<p>　　Quake3以及同系列的引擎，在游戏历史上的价值是无可厚非的。但是你会发现，如果要修改这个引擎，基本上要了解所有的代码。这些东西很紧密，如果你希望换一个图形场景管理算法，你会发现基本上要修改整个引擎。你可以很容易做出和《雷神之锤3》一样的游戏，但是很难把它修改成其他类型游戏。（你会理解当年要卡马克做RPG的时候甚至用辞职来威胁id管理层。）</p>
+<p>　　国内有很多朋友企图模仿Quake3的结构来实现一款图形引擎或者游戏引擎，但大部分都失败了，另外的一部分也没有获得成功（挣扎中）。不是说Quake3引擎不好，是因为中国很难有类似的环境。Quake3的商业环境是，你需要一个靠技术来赚钱而不是靠产品的公司，另外还需要一个天才如卡马克一样的程序大师来驱动。基于这两点，可以说Quake3的成功是无法复制的。</p>
+<p>　　<b>二、Epic的Unreal 3引擎 = 商业模式</b></p>
+<p>　　很多朋友都有Unreal 3引擎的代码，但我没有读过。我只是从一些看过Unreal 3的朋友的口中了解一些相关的信息。这些信息包括，</p>
+<p>　　1 Unreal 3开发游戏，如果不是极其复杂，只需要脚本和编辑器就好了。它有极其强大的脚本和编辑器系统。（上海育碧的一些朋友说的）。</p>
+<p>　　2 Unreal 3代码中有很多违反常规知识的地方，比如充斥着菱形继承（C++虚拟继承）。（一个看过代码的朋友说的）</p>
+<p>　　3 Unreal 3代码写的很难看（一个开发类似Quake国产引擎的朋友说的）。</p>
+<p>　　4 Unreal支持大量平台，图形效果非常好。</p>
+<p>　　上面有很多条款我是没办法证实的，但是我们姑且就认为都是对的。</p>
+<p>　　在《游戏人》中有一段描写Unreal诞生的故事，老板并不看好为《虚幻竞技场》重新开发一款引擎，因为已经有了一款卡马克的了。要超越卡马克的图形技术太困难了。但是他们发现自己在编辑器的功能上可以领先id公司很多。基本上从那往后的10年里，Unreal依靠这一点成为了最成功的商业引擎，在商业领域上击败了卡马克。</p>
+<p>　　1 Unreal 3 具有强大的脚本和编辑器，这是为了给购买引擎的公司节约开发成本。</p>
+<p>　　2 Unreal 3 有一些菱形继承和紧凑的代码。这是为了商业上的紧凑型，就算开放一部分源代码，你也需要得到另外的授权，你无法单独使用。（上面提及的朋友告诉我的）</p>
+<p>　　3 Unreal 3目标是当前的，漂亮的图形效果，更多的平台支持，是最重要的。</p>
+<p>　　这些因素代表了Unreal 3的成功，一些其他的商业引擎，比如GameBro也很注重编辑器，而不是更优秀代码质量。与其提供良好的结构，不如实现更多的效果。他们也都在各自的定位上获得了相应的成功。</p>
+<p>　　<b>三、Ogre3D图形引擎 = 开源模式</b></p>
+<p>　　Ogre3D图形引擎（<a href="http://ogre3d.cn）是开源界最出名的图形引擎（没有之一），包括国内的《天龙八区》、《成吉思汗》等，以及国外的《火炬之光》商业作品都是使用这款图形引擎作为开发基础。和Ogre3D同期的开源游戏引擎，包括IrrLight等，都不如Ogre3D这般成功。" target="_blank" rel="external">http://ogre3d.cn）是开源界最出名的图形引擎（没有之一），包括国内的《天龙八区》、《成吉思汗》等，以及国外的《火炬之光》商业作品都是使用这款图形引擎作为开发基础。和Ogre3D同期的开源游戏引擎，包括IrrLight等，都不如Ogre3D这般成功。</a></p>
+<p>　　Ogre3D最重要的是从设计之初就目标开源社区，而不是商业或者技术。</p>
+<p>　　Ogre3D 好的结构带来更多的功能，而反之则不能。 开源社区需要好的结构让更多的人来参与，而不需要商业引擎的工期，所以有充足的时间发展（十年甚至更多），而不争朝夕。</p>
+<p>　　Ogre3D 采用插件化结构，这样做的好处是让一些社区开发者，不用了解和改变整个引擎，就能扩充其功能，同样开源的Quake3就很难达到这一点。</p>
+<p>　　Ogre3D 只做图形引擎，不做其他部分。</p>
+<p>　　这样做首先是利用了开源社区其他的成果，比如OIS或者CEGUI等良好的开源产品。更重要一点是因为不涉任何游戏逻辑部分，核心模块只有5M左右大小，功能性引擎之间可以组合使用，这样做可以让Ogre3D适应不同领域，不仅是游戏可以使用，在各种仿真领域都可以大展拳脚。同时期的IrrLight反而因为提供太多游戏相关的东西，虽然学期曲线较缓，但是应用领域反而被闲置了。</p>
+<p>　　Ogre3D在技术细节上 实现了场景图中节点和内容分离，场景管理器因此可以作为插件使用，这是Ogre3D设计的初衷。</p>
+<p>　　Ogre3D 因为运用了大量软件工程知识，导致在计算机运算比较差的环境下和其他引擎效率有一些差距。但因为开源引擎的持续性，随着硬件性能的提高，十年后的今天，这些问题已经不再存在。</p>
+<p>　　Ogre3D 和其他开源产品一样，对开发者要求较高（和一些商业领域的产品比较而言），不过Ogre3D也因此吸引了众多开源开发者（黑客）的参与。</p>
+<p>　　基于以上几点，Ogre3D在开源界得到了前所未有的成功，这种引擎开发模式，在商业领域反而不能成功。</p>
+<p>　　<b>四、Orz游戏开发框架 = 分布模式</b></p>
+<p>　　Orz游戏开发框架(<a href="http://bbs.ogre3d.cn)是国内Ogre3D社区开发的游戏框架，他利用了Ogre3D拒绝开发图形之外代码的基础。提供了一系列开发工具以及对各种功能型引擎的粘合。不得不说Orz在游戏引擎中采用了一种极端取巧的办法。他把底层功能性引擎的开发交给了其他开源界的产品，专注于逻辑和接口的实现。相对于其他部分而言，这部分的代码很少会受到硬件升级的影响。所以可以用较少的精力，不断优化已有的代码。但Ogre3D社区内也同时存在诸多开发框架，包括比较出名的yake和Goof等。Orz凭什么能在这些框架中脱颖而出呢？" target="_blank" rel="external">http://bbs.ogre3d.cn)是国内Ogre3D社区开发的游戏框架，他利用了Ogre3D拒绝开发图形之外代码的基础。提供了一系列开发工具以及对各种功能型引擎的粘合。不得不说Orz在游戏引擎中采用了一种极端取巧的办法。他把底层功能性引擎的开发交给了其他开源界的产品，专注于逻辑和接口的实现。相对于其他部分而言，这部分的代码很少会受到硬件升级的影响。所以可以用较少的精力，不断优化已有的代码。但Ogre3D社区内也同时存在诸多开发框架，包括比较出名的yake和Goof等。Orz凭什么能在这些框架中脱颖而出呢？</a></p>
+<p>　　传统上软件开发的组织结构的基本问题是布洛克法则：“在延期的项目添加程序员只会延期更久”。普遍来讲，布洛克法则认为，随着开发人员数目的增加，项目的复杂程度和通讯成本按平方增加，而业绩仅以直线增加。在上面图中左面提供了一个传统开发合作模式的示意图，在这个结构中，因为每个程序员必须了解其他人员开发的模块接口，导致问题随开发者之间通讯路径的数目增加，而后者与开发者数目是平方关系（更准确地说，遵从公式N*(N – 1)/2，这里N是开发者的数目）。依照开源软件的经验，如果你有一个足够大的项目，需要足够多的人合作，你唯一的办法是尽量降低程序员之间的依赖性。</p>
+<p>　　Orz提出一个理想的分布式开发模型。在这个模型中，我们定义了一个公共的知识库，里面定义了交互的规则（消息等信息），所有的程序员按照这里提供的约定完成自己的代码，完全没有和其他程序员的直接交互。在这种情况下，增加程序员的数量并不会导致过度增加开发者之间通讯的成本。</p>
+<p>　　在一些需要确定性结果的程序中，比如科学计算程序，很难达到理想的分布式开发模型，这是因为程序员之间要紧密的配合才能得到一个肯定的结果。然而对于游戏程序而言，它的目的是带来娱乐性和未知现实的模拟，就如同生活一样，你根本不需要（也不可能）知道别人想了什么和做了什么。只要大家遵守相同的规则，那么就是一个不错的体系，甚至越不可预测的结果给人带来的惊喜和愉悦感越大。而这正是我们分布式开发所具有的，比如你写了一只狗，他写了一只猫，我们按照宠物的知识来通信，你根本不用确定它们是成为朋友还是进行战争。就算加入一个宠物猪进来，我们也能正确的和它沟通——只要他遵守规矩。</p>
+<p>　　Orz的目的就是基于这种分布式开发模型而设计，这和它的梦想相一致。顶尖的黑客定义游戏规则，大家来遵守，成千上万的程序员和他们的代码来组成一个真正的虚拟世界。</p>
+<p>　　Orz通过一系列工具和手段来接近这个目的，基于插件来组合程序员们的代码，提供消息系统和ID管理器来确定公共知识库。</p>
+<p>Orz框架是一个可以完成商业产品的游戏开发框架，但却走的更远。它在保证足够运行效率的前提下，尽可能的增加结构的离散性质。所有的游戏内容都可以被定义成不同种类的实体，这些实体可以通过插件系统在运行期动态载入，它们通过“及其强大”的消息系统相互沟通协作。任何一个开发游戏实体的程序员，都不需要了解其他实体的逻辑。只要他们共同遵守一个消息体系，就可以在这个基础上进行协作。</p>
+<p>　　但不得不说，这是一个没有经过证实的理想而已。是否能达到这个目标还让我们拭目以待。</p>
+<p>　　综上所述，所有游戏引擎都需要放置在具体的商业环境中来评价其是否成功。你可以说Quake3写得太僵化，Unreal代码难看，Ogre3D运行速度不快，Orz只是一个东拼西凑的烂番茄。但是他们这些问题都是对他们所在领域的取舍。我认为，就如同人一样，如果排除环境而言，世界上并不存在绝对的完美。引擎也是如此，他们都是希望在各自的环境和条件下尽量完美。如果我们对这些客观的实时视而不见，那么对引擎的评价也是不公正的。</p>
+<p>　　<a href="http://baike.baidu.com/view/1349679.htm?fr=ala0_1" target="_blank" rel="external">虚幻引擎</a></p>
+<p>　　<a href="http://baike.baidu.com/view/751568.htm?fr=ala0_1" target="_blank" rel="external">雷神之锤III</a></p>
+<p>　　<a href="http://ogre3d.cn/" target="_blank" rel="external">Ogre3D图形引擎</a></p>
+<p>　　<a href="http://class.gd/" target="_blank" rel="external">Orz游戏开发框架</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2010/02/04/20100204/" data-id="zt4tv1h2s6gvbnsc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20091128" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2009/11/28/20091128/" class="article-date">
+  <time datetime="2009-11-28T03:29:12.000Z" itemprop="datePublished">11月 28 2009</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2009/11/28/20091128/">新编辑器即将诞生</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　经过一段时间的重构，图形引擎和编辑器都有较大的进展，编辑器的集成度也进一步提高了。</p>
+<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor1.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+
+<p>　　采用了自然天气系统，这是调整到北半球经纬度和我国相近时候的场景，时间大概是早上七点左右：</p>
+<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor2.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+
+<p>　　这是早上6点左右：</p>
+<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor3.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+
+<p>　　这是凌晨3点左右：</p>
+<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor4.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
+
+<p>　　虽然是夜晚，由于地形采用了normal map，在月光影响下的效果仍然显著，由于未加调整，过于强烈了些：</p>
+<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor5.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+
+
+<p>　　早晨的水面：</p>
+<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor6.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor7.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
+
+<p>　　本来在水面之下也有效果，并且像God light这些效果非常漂亮，但由于不需要到水下去，因此就没有做这方面的工作了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2009/11/28/20091128/" data-id="ptdtg1nlfa6gwnzh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20090601" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2009/06/01/20090601/" class="article-date">
+  <time datetime="2009-06-01T02:59:00.000Z" itemprop="datePublished">6月 1 2009</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2009/06/01/20090601/">专注工具的日子</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　商业3D引擎和开源引擎的最大区别其实不在于性能效果，而是在服务项目的配套工具和开发流程（层面）上。我认为一款“有作为”的商业引擎在工具上的开发量不低于整个引擎项目的2/3。  </p>
+<p>　　这段时间我的全部精力都投入到新3D引擎项目上了，很久都没有更新博客，包括Tao System在内的所有业余项目均停工了很长时间。这段时间的心情其实是很兴奋的，效率也是无以复加的高，我计算了一下，我和一个实习生投入其中的完全工作量不超过2个月，结果提交了一个从3D引擎到基础编辑器的一个完整架构，美术也开始使用编辑器一段时间了。  </p>
+<p>　　这期间我确实很忙，我也非常乐意于此。看到编辑器略见雏形，越来越明确引擎的位置和方向，越来越明确这个编辑器在后期项目上的作用和前景，有时候是不得不兴奋的。这个项目不仅仅关系到后期项目和Money，它也能成为未来一个更好的研发平台，推动TaoSystem的发展更是不言而喻的。</p>
+<div style="text-align:center;"><img src="http://img.bimg.126.net/photo/63aotQNktcVSyMTc8NE2Aw==/5666935706116016323.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+
+<p>　　这套引擎在架构上延续了长期以来我们一直探索的研发平台骨架（从微软的研发平台一直到之前的EDS），慎重借鉴了当前项目的稳定技术和各种经验教训（比如游戏《魔法火枪团》）。虽然在3D图形上，引擎咋一看可能比不上现在一个二流的商业引擎，但我们对引擎和工具各个层次和方面的熟悉程度，这点更是我乐意去拥有的，反而我觉得它比其他都重要！BigWorld引擎的学习代价是两年，但如果学完了发现不好用或者不适用就得不偿失！购买的引擎如果立即上手，新项目需求不能让我在五分钟之内明确出“使用引擎哪一个功能”或者“引擎哪一个地方需要扩展”甚至是“引擎哪一个地方有Bug”，我认为这样的开发将是一场噩梦。  </p>
+<p>　　这段工作量三分之二强的时间我全花在编辑器上，而且会有更多的时间花在这个上面。策划、美术迫切需要的是一个容易操作的工具，一个极易实现他们想法的平台，一个图像再棒的图形引擎是没有实际意义的。</p>
+<div style="text-align:center;"><img src="http://img.bimg.126.net/photo/4BX4ociT7mUrjZkhydLS4w==/5666935706116016319.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://img.bimg.126.net/photo/3FnBrLoqNwmb0g0kNwNHxw==/5666935706116016324.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
+
+<p>　　开发编辑器之前我就定下了编辑器的开发原则和发展方向。All In One就是其中之一，这个不是说图形效果要一应俱全，而是说对于新项目而言，高层的编辑功能均能集成在这一个编辑器中。全部采用插件方式能够让开发的人更专注于功能，让使用的人更专注于领域。由于是单一编辑框架，功能可以做到较强的相关性，比如角色建模、角色设定和场景编辑这三样工作虽然由不同的开发人员设计，使用不同插件配置下的编辑器去完成，但是可以很容易融合在一起彼此考察效果。这种工作以前往往是“地形编辑器”、“特效编辑器”、“角色编辑器”……啊，噩梦！</p>
+<div style="text-align:center;"><img src="http://img.bimg.126.net/photo/W6LAolEj04nAFh6JHvs8GQ==/5666935706116016321.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://img.bimg.126.net/photo/O1Q7qJpyYNfkboOoeCHRgg==/5666935706116016322.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+
+<p>　　新引擎在效果没有担心的必要，扩展只是时间问题，因为我们很熟悉，很熟悉！我经常拿一些“第三方”的技术Demo给大家看，市面上大量的第三方效果、改进项目等等非常适合我们的引擎架构，移植和扩展都是非常容易的。比如GPU的水、后处理特效、生成植被、HDR、SSAO、物理扩展、脚本扩展等等，可以说代码都能信手拈来且不做修改，看到这些，一定会信心十足的！^-^</p>
+<div style="text-align:center;"><img src="http://img.bimg.126.net/photo/6_IEtt2OPMLoBJwyLE4e1A==/5684668629649227769.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://img.bimg.126.net/photo/DXR5LIyGg57Opx0mO7DdLw==/5689172229276167473.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2009/06/01/20090601/" data-id="rbmfhxsa64zhrxkl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20081025" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/10/25/20081025/" class="article-date">
+  <time datetime="2008-10-24T17:13:34.000Z" itemprop="datePublished">10月 25 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/10/25/20081025/">Tao Project Prototype 0.2.0</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.youtube.com/v/yL_QeM0VAPY" target="_blank" rel="external">星际环境和漫游演示视频</a></p>
+<p>　　该阶段为降落、漫游到星球表面做准备。在当前的天文学体系上，实现基于“Sean O’Neil”的“Real-Time Procedural Universe Project”的星球渲染引擎，主要应用在客户端图形上，并尝试用于模拟服务器的碰撞检测问题上。<br>　　主要内容如下：<br>　　- 过程星球（恒星、行星、卫星）表面高程数据生成及渲染<br>　　[O’N01] O’NEIL S.: Rendering planetary bodies. Gamasutra August 10, 2001 (2001).<br>　　<a href="http://www.gamasutra.com/features/20010810/oneil_01.htm" target="_blank" rel="external">http://www.gamasutra.com/features/20010810/oneil_01.htm</a>.<br>　　　　— 实时大规模过程地形渲染（球面）<br>　　　　— 根据海拔变化的顶点颜色<br>　　　　— 陨石坑地貌修正<br>　　　　— 应用简单光照模型<br>　　- 实现基于当前天文学体系上的过程星球演示Demo<br>　　　　— 一个简单的太阳系  </p>
+<p>　　视频中可以看到，目前仅实现了实时生成的行星、卫星等星体表面，生成了高程数据（随机地形和随机陨石坑地形）和根据海拔变化的表面纹理。在恒心系中（比如演示的太阳系），实现了一个恒星相关的方向光源。所有星体的位置、大小都是按照目前天文学的真实单位和实际值。  </p>
+<p>　　虽然这个星球引擎系统还需要诸如大气散射的光照以及星云背景等支持，但是我计划在之后的几个版本中，将着重TAO系统的AI逻辑架构，因此这个简单的星球渲染引擎为测试宏大的AI以及进化体系做好了准备。</p>
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe002.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">距地球100000公里处</div>    
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe003.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe004.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe005.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe006.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">近地表面</div>      
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe007_moon_20000.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">距离月球20000公里</div>      
+
+<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe008.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe009.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">近月表面</div>    
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/10/25/20081025/" data-id="7bd36s1r2m3y0ilt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080903" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/09/03/20080903/" class="article-date">
+  <time datetime="2008-09-03T11:36:45.000Z" itemprop="datePublished">9月 3 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/09/03/20080903/">Tao Project Prototype 0.1.0</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.youtube.com/v/SexwqhI5WXQ" target="_blank" rel="external">星际环境和漫游演示视频</a></p>
+<p>　　上面是一个很简单的演示视频，HIP 61292是一颗绝对星等为1.02的恒星，距太阳系有500光年左右，亮度是太阳的33倍多。我放置了一个模型作为对比，从距该星0.686天文单位处开始，经历一段20秒钟的变速率运动过程到达太阳系。银河系内的星体是按照真实的方式渲染，因此在移动过程中你可以看到群星背景的明显变化（Youtube上的这段视频解析度较低，可能看不清楚，清晰视频可在“<a href="http://www.xf-utpcb.com/xiaop/media/universe_001.wmv”下载）。" target="_blank" rel="external">http://www.xf-utpcb.com/xiaop/media/universe_001.wmv”下载）。</a><br>　　紧接着，我们的镜头在太阳系内移动，首先靠近地球，再靠近月球。可以看到，整个星系、恒星系统、行星系统都具备完整真实的体系，你在空间上、视觉上可以有相当真实的体验，这也是本阶段要达到的基本目的。目前星球暂时用球形模型表示，未来会进一步完成真实的星球外表。  </p>
+<p>　　Prototype 0.1.0 的主要内容如下：<br>　　- 准备代码环境、图像引擎（仅DX）<br>　　- 构建一个简单的基于HLA网络的服务系统<br>　　[IEEE Std 1516.3-2003, 2003]IEEE Recommended Practice for High Level Architecture (HLA) Federation Development and Exection Process(FEDEP)<br>　　[IEEE Std 1516.2-2000, 2001]IEEE standard for modeling and simulation (M&amp;S) high level architecture (HLA)-object model template (OMT) specification<br>　　[IEEE Std 1516.1-2000, 2001]IEEE Standard for Modeling and Simulation [M and S] High Level Architecture [HLA] -Federate Interface Specification  </p>
+<p>　　- 构建CH内容（物质、物体、相互作用）定义体系<br>　　- 构建一个简单的前端服务器和图形客户端用于接入观察<br>　　- 构建一套基于“Celestia”项目(<a href="http://celestia.sourceforge.net/)数据和架构的天文学系统框架" target="_blank" rel="external">http://celestia.sourceforge.net/)数据和架构的天文学系统框架</a><br>　　　　— 恒星系统<br>　　　　— 行星系统<br>　　　　该阶段对图像质量要求不高，达到演示简单宇宙结构即可<br>　　　　- 模拟一个简单的深空飞行器，设定一个简单漫游轨道通过客户端演示Demo</p>
+<div style="text-align:center;"><img src="http://images.cnblogs.com/cnblogs_com/xiaop/universe001.JPG" style="vertical-align:middle;"></div><br><div style="text-align:center;">从一定距离观察太阳，可以看到真实的星空背景。<br><br>背景上的恒星（点）是按照真实的方位、距离、颜色、亮度、尺寸绘制。<br><br>任何一个恒星都是可以实际到达的！Reach any star!</div>  
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/09/03/20080903/" data-id="kmh5tuovcdqzv1y4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080902" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/09/02/20080902/" class="article-date">
+  <time datetime="2008-09-02T08:35:04.000Z" itemprop="datePublished">9月 2 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/09/02/20080902/">What is Tao Project</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://images.cnblogs.com/cnblogs_com/xiaop/createworld.jpg" style="vertical-align:middle;"></div>  
+
+<p>　　Tao系统定位在一个基于互联网的多人在线游戏系统（MMO）上。正如它的名字所表示的（英文是“道”的意思），它的主旨是尽量构造和演绎大自然的环境和行为，从宏大的宇宙尺度到地面上的一棵草、一块石头，它尽可能通过“过程生成”、“仿生”、“分布式计算”、“数据库”等技术进行虚拟和模拟。接入系统的人（角色）与人之间或者和环境之间的交互有多种模式、空间尺度和视角。另外，Tao系统中的世界将像真实世界一样进行演化，你在不同时间地点接入将看到全新的世界。  </p>
+<p>　　“Tao Project”是我为业余时间制作这个游戏系统而制定的长期计划。经过多年来在3D图形图像、网络应用、游戏、AI等领域的调研，有了各方技术的支撑，吾人终于可以开始构造这样一个梦想中的世界了。  </p>
+<p>　　当然，“Tao”也是我名字的拼写。</p>
+<p>======<br>“Tao system” is a Massive-Multiplayer On-Line Game (MMOG). As its name implied(means Taoism in english), its main objective is to construct or simulate the whole nature’s environment and action, from universe scale to a rock or grass on the ground, through technologies such as “Real-Time Procedural World”, “Bionic Computation”, “Distributed computation” and “Database Tech” etc. Every one comes into this system can interact with each other or on environment with different control mode, scale and visual representations. In addition, this system will evolve in real time as same as the real world, and you will face different and novel world when you come here at different time.  </p>
+<p>Tao project is a long time plan which is made to fit my spare time. After many years’ investigation on 3D graphics programming, network applications, games and AI, I finally begin to create my own dreamy world.  </p>
+<p>By the way, Tao is my first name.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/09/02/20080902/" data-id="fu5f3cpcnzeg9lj1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080621" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/06/21/20080621/" class="article-date">
+  <time datetime="2008-06-21T08:35:04.000Z" itemprop="datePublished">6月 21 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/06/21/20080621/">Branches</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://img.blog.163.com/photo/70LkAZO8Em8UTnUA4wEDrA==/1744863380630052287.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">上图是生成的一棵植物，还不错吧</div>      
+
+<p>　　之前在做星球（Planet）生成的时候，星球上的植被一直是个问题，一般方法是采用一些预先生成的纹理或者模型直接放在指定地方。  </p>
+<p>　　这几天在JJ Ventrella的网站<a href="http://www.ventrella.com/上逛，发现他过程植物做得不错。虽然他是用Java写的，但我决定尝试这类算法直接在星球表面生成植物，3D化我相信也不是问题。" target="_blank" rel="external">http://www.ventrella.com/上逛，发现他过程植物做得不错。虽然他是用Java写的，但我决定尝试这类算法直接在星球表面生成植物，3D化我相信也不是问题。</a>  </p>
+<p>　　生成上图中的植物只用了如下几个参数：</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/G8xTKXFZb5yFFPzpDOtv0w==/1744863380630052288.jpg" style="vertical-align:middle;"></div>    
+
+<p>　　如此少量的参数可以使得一棵很大很漂亮的植物数据在网络中轻易传送！而且从其代码（<a href="http://www.ventrella.com/Tweaks/BranchyBranch/BranchesApplet.html可以运行这个代码）可以看出，随机生成这组参数可以产生千变万化的植物。" target="_blank" rel="external">http://www.ventrella.com/Tweaks/BranchyBranch/BranchesApplet.html可以运行这个代码）可以看出，随机生成这组参数可以产生千变万化的植物。</a>  </p>
+<p>　　不同环境的星球可能影响特定的参数，这样，不同的星球其植被特征就非常丰富多彩了。而且更关键的是，植物是从小到大生成的，可以给人一种生长的现象，因此用在游戏中就比较爽了。你隔个把星期再到这个星球上去耍，就会发现那些树那些草已经今非昔比了，不像现在大多数游戏中从你建号一直打到死周围的一花一木都没有变化！  </p>
+<p>　　这里我随机生成了一些其他有趣的植物：</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/glND1JI5VbhstXGmA0yLbQ==/282882351594690826.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">茎很粗枝很小的植物</div><br><div style="text-align:center;"><img src="http://img.blog.163.com/photo/ERbqb1WUQudjuhoUjqMvcQ==/5149021748968932982.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">比较常见的植物</div><br><div style="text-align:center;"><img src="http://img.blog.163.com/photo/lTs5KENVKzktgB-CgvSx3w==/4005670393569752209.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">火热星球的</div><br><div style="text-align:center;"><img src="http://img.blog.163.com/photo/LT63LmDoCLfEtJOiDYaYgA==/4858539573002838280.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">再来个苔藓类的</div>      
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/06/21/20080621/" data-id="tv27ptjxeogx0bph" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080311" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/03/11/20080311/" class="article-date">
+  <time datetime="2008-03-11T05:04:41.000Z" itemprop="datePublished">3月 11 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/03/11/20080311/">【CH世界大事记-5】</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="text-align:center;"><img src="http://img.blog.163.com/photo/lb1hj2nLVSTD2IAvAUyc8A==/322007373357570338.jpg" style="vertical-align:middle;"></div>  
+
+
+<p>　　昨天做了一个新的测试场景，结果令人高兴，这段时间的重新编码工作为个体提供了丰富的环境和完备的传感器以及效应器。  </p>
+<p>　　模拟是这样进行的，个体在中心产生，朝向角度随机。适应性的定义仍然统一到一个值——生存时间，影响它的因素（及世界物理规律）有如下几个：<br>　　－－ 个体做直线运动增加hp<br>　　－－ 个体做旋转运动降低hp<br>　　－－ 个体碰撞到砖块降低hp（多）<br>　　－－ hp随时间按一定速率降低<br>　　－－ 场景交互支持碰撞<br>　　很显然，这个环境进化出的最适应者应该是一个较好的漫游者，尽量走动，不频繁拐弯，避开障碍，在大事记中我将这批个体代号记为“漫游者”，机型属于“先驱”系列，因为它们是规范的、可持续设计和进化的第一种个体。  </p>
+<p>　　OK，准备好这个小CH世界，基因数目设置到50，运行系统，个体全部在出生点乱转。20分钟后，我洗完澡回来看，就是上面的样子。仍然有些“漫游者”在原地转，但有一些已经开始往旁边直线走过去然后碰在墙上不再行动，另一些明显在要撞墙之前立即180度转身，然后继续走直线，再转身，再直线……。也观察到少量“漫游者”往左上方向“出口”处走，避开墙壁，沿墙间道路行走，但最终在左墙外侧碰壁，之后就不再行动。系统显示当前的进化次数已有200多次，我估计首次物种爆发（即从随机态到开始学会利用感受器官）的起点可能大大早于200次进化，我相信在之后的某点上物种会再次爆发，从而迅速产生绕全场行动的漫游者。  </p>
+<p>　　这次重新编码也整理了整个个体的模拟架构，规范化了NN输入输出能够采用的感受器和效应器。NNRG采用了下图所示的4种感受器和3种效应器，我在其基础上进行了泛化。和之前的设计一样，感受器输出作为NN网络的输入，网络输出作为效应器的输入，感受器和效应器人为配置，我目前不再研究这些器官的进化（可以参考发育算法以及相关人工生命的论述，例如“人工生命的突现研究及其在互动媒体中的应用，黄文高，2005”），但这些器官可以统一配置和自由增删。系统仅对NN网络进行复杂度递增的进化，采用实时NEAT算法（NEAT: Stanley and Miikkulainen 2002b, 2004a）。</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/OdmP7-skVHr20tUb79FCAA==/322007373357570329.jpg" style="vertical-align:middle;"></div>    
+
+<p>　　通过这个架构，每个CH个体能“看到”想看的物体、判断特定的目标是否在自己面对的方向或者火力方向、检测物体或墙体的可能的碰撞，甚至能够判断出敌人的火力线。网络输出决定了身体移动的方向，决定自己是否拿上某些物品或者使用某些物品，决定是否开火。目前这些配置已经能够满足对多样复杂行为的进化，而且其他类型的行为可以很容易实现，感受器也很容易被修改从而形成新的版本和能力。（explanation in en: Each CH agent can see certain objs, determine whether an target is currently in its heading direction or line of fire, detect objects and walls, and see the direction the enemy is firing. Its outputs specify the direction of movement and whether or not to take obj, use obj or fire. This configuration has been used to evolve varied and complex behaviors; other variations work as well and the standard set of sensors can easily be changed in CH.）  </p>
+<p>　　目前系统已支持以下的3种感受器官，适合绝大部分应用：</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/Aqtj1kioGCzCd_jBgdIB4Q==/322007373357570330.jpg" style="vertical-align:middle;"></div>      
+
+<p>　　个体采用几个Radar感受器将周围360度空间分成一些探测区域，区域内物体和个体的接近程度按比例地激活相应的传感器。对于多个物体，采用他们激励值的和。（explanation in en：Several radar sensors divide the 360 degrees around the agent into slices. Each slice activates a sensor in proportion to how close an specified obj is within that slice. If there is more than one target in it, their activations are summed.）</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/LSsDQFLACrKGyXUKAxOruw==/322007373357570331.jpg" style="vertical-align:middle;"></div>        
+
+
+<p>　　Rangefinders传感器以一定角度从个体中心向外投射射线，射线与最近的物体交点到个体的距离作为传感器的激励值。这种传感器非常适合探测有连续形状的物体，相反的，Radar传感器则适用于探测独立的微小物体。（explanation in english：Rangefinders project rays at several angles from the agent. The distance the ray travels before it hits an object is returned as the value of the sensor. Rangefinders are useful for detecting long contiguous objects whereas radars are appropriate for relatively small, discrete objects.）</p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/BsVL9LlFtsqK--fMmDOopg==/322007373357570334.jpg" style="vertical-align:middle;"></div>  
+
+<p>　　目标（on-target）传感器仅有激活和复位两种状态，只要有对应目标在正前方，则传感器就被激活。这类传感器往往可以告诉个体是否应该射击。（explanation in en：The on-target sensor returns full activation only if a ray projected along the front heading of the agents hits an specified object(target). This sensor tells the agent whether it should attempt to shoot.）  </p>
+<p>　　系统支持Driver，Take，Use三种效应器，这些效应器在功能上非常泛化，其激活与否以及行为的对象等等均是由NN网络的输出决定的。例如，Driver需要两个输出神经元激活，Take/Use需要至少3个神经元激活，目前我仅编码了Driver和Take效应器，有待进一步的测试。  </p>
+<p>　　CH世界会越来越有趣啦。。。。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/03/11/20080311/" data-id="85pp6gi380qymyub" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080305" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/03/05/20080305/" class="article-date">
+  <time datetime="2008-03-05T03:33:44.000Z" itemprop="datePublished">3月 5 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/03/05/20080305/">【CH世界大事记-4】</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　采用Tank（坦克大战）的资源，丰富的元素可以构造较为典型场景。地面支持土地、雪地、冰冻地面、冰窟地面，地表阻挡层支持砖墙、混凝土墙、树木、河流、石头、金属墙、关卡。  </p>
+<div style="text-align:center;"><img src="http://img.blog.163.com/photo/A69e0ws9f4d4uoI7Z92Pgg==/4302345019023032335.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">XPeng场景 ^-^</div>    
+
+<p>　　这些场景元素以及整个场景仍然在分布式的服务器上模拟，客户端仅仅是显示而已。由于它们可以简洁高效地和其他模拟个体交互，因此和之前的考查一样，这样的场景天生成为进化神经网络的实验场。并且由于生物个体（tank）的数目可以巨大，而且不同于传统坦克大战规则，我不但让个体有更大的自由度，让个体之间也能够以某种语言（相互作用）交互，我寄希望在这个系统中能观测到较大规模的涌现现象。  </p>
+<p>　　进一步的，突破传统坦克大战的规则，我打算尝试加入RPG的思想，即场景（关卡）之间有某种联系，比如传送门可以在关卡之间漫游，关卡之间将等价于构成了复杂的巨大世界，而且各个关卡可以实现有意义的特色地域，可以为模拟自然选择在不同环境下的进化结果创造条件。个体在这样巨大场景中可以自由漫游，我希望能观测到一些涌现出的群体迁徙、地域特征保留和进化。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/03/05/20080305/" data-id="6nliw9litcfhiln8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20080229" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2008/02/29/20080229/" class="article-date">
+  <time datetime="2008-02-29T08:14:23.000Z" itemprop="datePublished">2月 29 2008</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2008/02/29/20080229/">游戏人生路，漫漫重谈起</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　豆瓣网真是一个很好的交流平台，没有那些火爆论坛的杂乱不堪，也没有专业论坛的沉重感和谨慎感。找到了一些爱好复杂系统的朋友，我一不小心在自我介绍中竟写了不少东西，整理一下记到这里来吧，也算心情日记了。  </p>
+<p>　　我小时候有很痴迷观察事物的恶习，比如爱躲在被窝里面观察蚂蚁窝。呵呵，没写错，是怕大人看到后恶心地骂，就在被窝里面打着电筒看。我经常嫌不过瘾，把蚂蚁和它们的卵大量挖到我准备的瓶子里，盖上一半土，然后就可以很过瘾很痴迷地看他们如何建巢、如何分享食物，如何维护那些卵、如何在数个小时内就能从新改造好环境组织起自己的家来……   </p>
+<p>　　01年我的工作接触到了网络通信，渐渐开始迷上这个能容纳大千世界蚂蚁们的平台。04年我又完全踏入图形图像处理的领域，渐渐沉溺在诡异的数学和变幻莫测的图形世界中。06年我转到游戏行业工作，立志让人们不分老幼都能融入一个虚拟世界而不能自拔。   </p>
+<p>　　搞网络的时候结下了分布式计算的缘，搞图形的时候我的蚂蚁们有了自己的图形环境，同时我也接触到了大量过程生成技术以及折服于数理世界的相通意境！<br>　　也是最近几年才接触到复杂系统。刚开始由于做游戏项目接触一些简单AI的东西，在AI啊、NN啊、GA啊那些网站上面泡，但一般都陷于程序设计。反而是后来在搜索时来到集智俱乐部，得益于站长的专业导向性论述和优秀的资源收集工作，一下子天窗像开了一样。   </p>
+<p>　　在度过又一段知识爆炸时期后，我也开始把复杂性的应用往游戏方向靠，往实现我儿时的蚂蚁之梦上靠。   </p>
+<p>　　对我个人而言，还是那个习惯，就是喜欢观察，仅仅是看，没有目的。也许我的努力仅仅是想看看这样的世界是怎样的……  </p>
+<p>======<br>　　豆瓣上jake谈到他的研究经历以及和复杂系统、游戏系统的不解之缘。其实很早就拜读过他的文章“涌现与自生性游戏性”，呵呵，我还记得很清楚，是《游戏创造》2006年第1期。我在公司也推荐过他关于“科学的游戏”的PPT，大家也很感兴趣。但对于复杂系统，游戏领域特别是在国内这样的产业环境下目前大多数人还仅限于“好奇”。 对于游戏（重点考虑到网络游戏）更关键的可玩性和交互性，国内外绝大部分游戏公司仍然走的是自上而下的道路。   </p>
+<p>　　实际上，我是在寻求一种解决NPC行为的自适应方法上接触到德州大学的NNRG小组（<a href="http://nn.cs.utexas.edu/），该小组专注于进化神经网络做了很大量的工作。特别是在游戏上的应用，他们的研究颇具成果，我现在自主项目的智能模块设计也主要走他们的路子。" target="_blank" rel="external">http://nn.cs.utexas.edu/），该小组专注于进化神经网络做了很大量的工作。特别是在游戏上的应用，他们的研究颇具成果，我现在自主项目的智能模块设计也主要走他们的路子。</a>  </p>
+<p>　　另外，在我考查NN以及蚁群算法的那段时间，接触到了CA，也正是在这个时候查到了集智（<a href="http://www.swarmagents.com/），我被CA的直观和简洁所吸引，其带给游戏的复杂性思想更加强烈。记得在游戏“Spore”的poptech系列讲座中，Will" target="_blank" rel="external">http://www.swarmagents.com/），我被CA的直观和简洁所吸引，其带给游戏的复杂性思想更加强烈。记得在游戏“Spore”的poptech系列讲座中，Will</a> Wright首先展现在观众面前的就是CA。   </p>
+<p>　　人工生命方面，浙大黄文高博士的“人工生命的突现研究及其在互动媒体中的应用”给了我深刻的印象。只是我认为，以我们目前的网络系统水平，高表现度的人工生命特别是形态进化还不大可能在游戏中有效运用。  </p>
+<p>　　复杂性的网络世界，对于“人”这个元素，我确实有很多需要交流的（咱们有的是时间，呵呵）。这些年来，我的项目中系统对接入者一直坚持不区分人类和AI！主要原因就是考虑到在这样一个复杂系统中，单纯完全的让机器来模拟的话，最终仅仅会成为一个学术或者技术项目，仅仅适合于观察。而且考虑到其运算量，我认为在近期的条件下也不大可能产生普通大众能感兴趣并且能直观理解的世界。因此大量的AI小游戏仅仅能做到让大家“感受”一下、让新人“更有兴趣”而已。  </p>
+<p>　　另一方面，从应用上来讲，我趋向于认为在这样的系统中人和AI是互为因果的。发生在虚拟世界中进化隐含等价于某种交互式进化，没有必要也没有可能仅靠计算机模拟，等其自生性地进化出拟真的世界后“让玩家玩”，换句话说，没有人的加入，这个世界也不会进化得多有趣。  </p>
+<p>　　关于这些话题，我迫切希望和朋友们交流，也许大家有个共同的梦呢……</p>
+<p>======<br>　　豆瓣上xudong (北京)讲了他的经历，虽然已经是一个建功立业的企业家，但仍然不懈追求着对“复杂系统”的理解。他谈到他“自我实现者社区”的想法后，我也想起其实以前有段时间我也很冲动。  </p>
+<p>　　大概在2000年的时候，工作无聊之余我就沉迷在南京“西祠胡同”的社区里面，我发觉，包括我在内的大多数帐号，个人的社区角色融入感都极强。后来又回到学校学习，更多的时间就在教育网上面泡。那时候我发现，很多学校自己的论坛个性都很强，有时感觉我自己几乎就是论坛YY世界的一部分。我写了很多文章很有感染力，但发现一转到别的论坛，几乎就没有多大的内容意义了，相信大家也有这种感觉吧。现在看来，无论豆瓣、猫扑，很多特色论坛均有自己的一个文字（或者人文）组织特征，这些特征可以抽象地描述出一个论坛独有的等价虚拟世界空间来，哪怕是只有Plain Text的（大多数角色也趋向于使用文本构成签名的图像）。<br>　　因此，就xudong的话来说，我能否对“自我实现者社区”更明确地理解为“自组织”社区。文字和角色关系自生性地组织成一个社区世界，这些构件一离开这个社区单独存在就变得几乎没有任何意义，这样社区在内容上几乎是从无到有地完全靠网友自发构建！架构简单、规则极少，内容却极富感染力，自组织性随处可见反应也极其迅速！这样的社区那几年让我很疯狂，很感动，特别是在中国特有的文化下（人文社区这方面国外那是远远不及中国啦）。可以说，这也是我努力实现自己目标的初衷和动力之一！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.scorpionstudio.com/2008/02/29/20080229/" data-id="dsv922fgzhq6qa4r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/categories/blog/">&laquo; Prev</a><a class="page-number" href="/categories/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/categories/blog/page/3/">3</a><a class="page-number" href="/categories/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/categories/blog/page/6/">6</a><a class="extend next" rel="next" href="/categories/blog/page/3/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">58</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/article/">article</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">58</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev/">dev</a><span class="tag-list-count">29</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game-engine/">game engine</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/newworld/">newworld</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/simulation/">simulation</a><span class="tag-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/article/" style="font-size: 20.00px;">article</a><a href="/tags/blog/" style="font-size: 20.00px;">blog</a><a href="/tags/dev/" style="font-size: 16.67px;">dev</a><a href="/tags/game-engine/" style="font-size: 10.00px;">game engine</a><a href="/tags/newworld/" style="font-size: 10.00px;">newworld</a><a href="/tags/simulation/" style="font-size: 13.33px;">simulation</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/07/">July 2010</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/06/">June 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/02/">February 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/09/">September 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/08/">August 2004</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2004/07/">July 2004</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/06/">June 2002</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2002/05/">May 2002</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/09/13/20140913/">终于，我们的新产品Fotor Slideshow Maker上线了！！</a>
+          </li>
+        
+          <li>
+            <a href="/2012/05/14/20120514/">一切为了好照片</a>
+          </li>
+        
+          <li>
+            <a href="/2012/02/27/20130227/">总结了一下新手学习Windows 8 Metro App 开发的捷径</a>
+          </li>
+        
+          <li>
+            <a href="/2011/08/08/20110808/">治水</a>
+          </li>
+        
+          <li>
+            <a href="/2011/07/28/20110728/">社交网络完成后的4项重要网络应用元素</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Thromas Pang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
