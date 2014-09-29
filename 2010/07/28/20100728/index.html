@@ -21,9 +21,9 @@
 
 客户端中文支持
 　　中文支持分为客户端和服务器两个">
-<meta property="og:image" content="http://www.xf-utpcb.com/xiaop/ryzom/cn_screen.jpg">
-<meta property="og:image" content="http://www.xf-utpcb.com/xiaop/ryzom/dir_bin.jpg">
-<meta property="og:image" content="http://www.xf-utpcb.com/xiaop/ryzom/cn_input.jpg">
+<meta property="og:image" content="http://blog.scorpionstudio.com/cn_screen.jpg">
+<meta property="og:image" content="http://blog.scorpionstudio.com/dir_bin.jpg">
+<meta property="og:image" content="http://blog.scorpionstudio.com/cn_input.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ryzom简易汉化教程">
 <meta name="twitter:description" content="本教程并不想助长未经Ryzom许可的私服或者汉化游戏出现，仅仅作为研究和学习Ryzom系统的一种方式！  
@@ -111,17 +111,17 @@
       
         <p>　　<em>本教程并不想助长未经Ryzom许可的私服或者汉化游戏出现，仅仅作为研究和学习Ryzom系统的一种方式！</em>  </p>
 <p>　　Ryzom其实很容易汉化，因为它先天就支持Unicode编码，并且在资源设计上也充分考虑到本地化的需求。<br>　　现在简单来说明一下怎么让Ryzom的内容（包括界面、输入、服务器数据）支持中文。</p>
-<div style="text-align:center;"><img width="500px" src="http://www.xf-utpcb.com/xiaop/ryzom/cn_screen.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">中文Ryzom的一次尝试</div>        
+<div style="text-align:center;"><img width="500px" src="http://blog.scorpionstudio.com/cn_screen.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">中文Ryzom的一次尝试</div>        
 
 <p><b>客户端中文支持</b></p>
 <p>　　中文支持分为客户端和服务器两个方向，首先来说说客户端，客户端编译后的结果目录内容一般如下所示（详见在Win32上的编译教程），其中bin下的资源文件直接解压自官方提供的ryzom_client_open.7z文件，而exe和相关dll文件则可以是自己编译的结果。</p>
-<div style="text-align:center;"><img width="500px" src="http://www.xf-utpcb.com/xiaop/ryzom/dir_bin.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+<div style="text-align:center;"><img width="500px" src="http://blog.scorpionstudio.com/dir_bin.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
 
 <p>　　首先，用记事本打开client_default.cfg，找到：<br>　　　　LanguageCode = “en”;  // english<br>　　改为：<br>　　　　LanguageCode = “cn”;  // chinese  </p>
 <p>　　这样，客户端启动后界面文字会自动取自相关的中文配置文件，而也会通知服务器使用中文内容。当然如果服务器还没有增加汉化文件时，很多对话框、标签里面的文字将会是无效的默认文本。<br>　　那么客户端中文界面配置文件在何处呢？打开你客户端的data目录，下面有个gamedev.bnp文件是不是，所有界面语言文件就在这个文件里面。使用bnp_make_r.exe工具可以解开这个文件（编译成功后该工具应该在code\nel\tools\misc\bnp_make目录下找到）。解开后会生成一个gamedev文件夹，里面有个en.uxt，复制它为cn.uxt，然后用记事本打开，里面每一项的值就表示各种界面的文字内容，也正是你需要翻译的东西，放心的翻译它吧，这个文件是unicode编码的。翻译好后，再用bnp_make工具对gamedev目录打包即可。当然，只要你愿意，你可以保留gamedev这个目录，因为客户端是优先读取磁盘文件的。  </p>
 <p>　　接着就是中文字体的问题，data\fonts目录下的字体默认是没有支持中文的（如果你打中文，会变成….），本来可以在gamedev的配置中设置字体，但我采用了更简便的办法，直接覆盖ryzom.ttf，比如上面的截屏就使用了微软雅黑字体文件来替换ryzom.ttf。  </p>
 <p>　　关于聊天框的中文输入，这个我没有测试过，但据群里的人说，字体这些都配置好了后，自然中文输入也就没有问题了。</p>
-<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/ryzom/cn_input.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">群里的截图</div>            
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/cn_input.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">群里的截图</div>            
 
 <p>　　到此为止，客户端的汉化支持工作就算完成。  </p>
 <p><b>服务器中文支持</b>  </p>
@@ -131,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/28/20100728/" data-id="gncks70h4ht9yky6" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/28/20100728/" data-id="3aoe5otaexkejy3t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>

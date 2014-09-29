@@ -94,11 +94,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　花了大半年时间，使用纯网页技术全新打造的首个交互式Slideshow产品终于上线了，现在是<a href="http://slideshow.fotor.com" target="_blank" rel="external">http://slideshow.fotor.com</a>，希望能尽快推出中文版！</p>
-<div style="text-align:center;"><img width="600px" src="http://blog.fotor.com/wp-content/uploads/2014/09/slidess.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"><a href="http://blog.fotor.com/introducing-slideshow/" target="_blank" rel="external">http://blog.fotor.com/introducing-slideshow/</a></div>      
+<div style="text-align:center;"><img width="600px" src="http://blog.scorpionstudio.com/slidess.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"><a href="http://blog.fotor.com/introducing-slideshow/" target="_blank" rel="external">http://blog.fotor.com/introducing-slideshow/</a></div>      
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2014/09/13/20140913/" data-id="k0qorjcvrvzwyggn" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2014/09/13/20140913/" data-id="nfohubpjlkqh4kd1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -144,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2012/02/27/20130227/" data-id="lu2ii6oijlnqnq3h" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2012/02/27/20130227/" data-id="gzscczl1r3v91nzy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -184,17 +184,17 @@
       
         <p>　　<em>本教程并不想助长未经Ryzom许可的私服或者汉化游戏出现，仅仅作为研究和学习Ryzom系统的一种方式！</em>  </p>
 <p>　　Ryzom其实很容易汉化，因为它先天就支持Unicode编码，并且在资源设计上也充分考虑到本地化的需求。<br>　　现在简单来说明一下怎么让Ryzom的内容（包括界面、输入、服务器数据）支持中文。</p>
-<div style="text-align:center;"><img width="500px" src="http://www.xf-utpcb.com/xiaop/ryzom/cn_screen.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">中文Ryzom的一次尝试</div>        
+<div style="text-align:center;"><img width="500px" src="http://blog.scorpionstudio.com/cn_screen.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">中文Ryzom的一次尝试</div>        
 
 <p><b>客户端中文支持</b></p>
 <p>　　中文支持分为客户端和服务器两个方向，首先来说说客户端，客户端编译后的结果目录内容一般如下所示（详见在Win32上的编译教程），其中bin下的资源文件直接解压自官方提供的ryzom_client_open.7z文件，而exe和相关dll文件则可以是自己编译的结果。</p>
-<div style="text-align:center;"><img width="500px" src="http://www.xf-utpcb.com/xiaop/ryzom/dir_bin.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+<div style="text-align:center;"><img width="500px" src="http://blog.scorpionstudio.com/dir_bin.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
 
 <p>　　首先，用记事本打开client_default.cfg，找到：<br>　　　　LanguageCode = “en”;  // english<br>　　改为：<br>　　　　LanguageCode = “cn”;  // chinese  </p>
 <p>　　这样，客户端启动后界面文字会自动取自相关的中文配置文件，而也会通知服务器使用中文内容。当然如果服务器还没有增加汉化文件时，很多对话框、标签里面的文字将会是无效的默认文本。<br>　　那么客户端中文界面配置文件在何处呢？打开你客户端的data目录，下面有个gamedev.bnp文件是不是，所有界面语言文件就在这个文件里面。使用bnp_make_r.exe工具可以解开这个文件（编译成功后该工具应该在code\nel\tools\misc\bnp_make目录下找到）。解开后会生成一个gamedev文件夹，里面有个en.uxt，复制它为cn.uxt，然后用记事本打开，里面每一项的值就表示各种界面的文字内容，也正是你需要翻译的东西，放心的翻译它吧，这个文件是unicode编码的。翻译好后，再用bnp_make工具对gamedev目录打包即可。当然，只要你愿意，你可以保留gamedev这个目录，因为客户端是优先读取磁盘文件的。  </p>
 <p>　　接着就是中文字体的问题，data\fonts目录下的字体默认是没有支持中文的（如果你打中文，会变成….），本来可以在gamedev的配置中设置字体，但我采用了更简便的办法，直接覆盖ryzom.ttf，比如上面的截屏就使用了微软雅黑字体文件来替换ryzom.ttf。  </p>
 <p>　　关于聊天框的中文输入，这个我没有测试过，但据群里的人说，字体这些都配置好了后，自然中文输入也就没有问题了。</p>
-<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/ryzom/cn_input.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">群里的截图</div>            
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/cn_input.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">群里的截图</div>            
 
 <p>　　到此为止，客户端的汉化支持工作就算完成。  </p>
 <p><b>服务器中文支持</b>  </p>
@@ -204,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/28/20100728/" data-id="gncks70h4ht9yky6" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/28/20100728/" data-id="3aoe5otaexkejy3t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -249,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722_3/" data-id="7eqe42oegm3tabsa" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722_3/" data-id="b0lwdm6v6m31az85" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -288,19 +288,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　严格来说，官方现在有两个大型的项目在并行进行，一个是Nel引擎，一个就是Ryzom Core项目。这里重点明确一下这两个官方项目的目的和情况，以避免开发者和翻译人员常见的误区。  </p>
-<p>　　Nel引擎（<a href="http://dev.ryzom.com/wiki/nel）是一个独立的完整的多人在线虚拟系统解决方案，包含了从3D引擎到网络客户端、网络服务器的所有技术组件，一般在项目代码根目录中的nel、nelns、snowballs2、tool子目录是属于Nel的。其中snowballs2基本上是一个完整应用nel相关技术的MMODemo，研究nel可以从这个游戏demo入手。" target="_blank" rel="external">http://dev.ryzom.com/wiki/nel）是一个独立的完整的多人在线虚拟系统解决方案，包含了从3D引擎到网络客户端、网络服务器的所有技术组件，一般在项目代码根目录中的nel、nelns、snowballs2、tool子目录是属于Nel的。其中snowballs2基本上是一个完整应用nel相关技术的MMODemo，研究nel可以从这个游戏demo入手。</a>  </p>
-<p>　　Ryzom Core（<a href="http://dev.ryzom.com/）则是和Ryzom游戏相关的一个大型项目，请注意项目的名称是“Ryzom" target="_blank" rel="external">http://dev.ryzom.com/）则是和Ryzom游戏相关的一个大型项目，请注意项目的名称是“Ryzom</a> Core”而不是“Ryzom”，很多人认为既然Ryzom开源了就是官方Ryzom游戏所有的内容都公开，其实是不准确的。Ryzom的开源包含了开发出官方商业Ryzom游戏的基础代码（即Ryzom Core），还包含了开发商业Ryzom游戏使用的大部分资源（Asset），他并不包含现在官服上面的一些实际内容，比如任务内容、用户/账户数据库（这个都公开了还得了！）等等，但这对开源世界来说足够了。<br>　　因此研究Ryzom Core的主要目的并不是把Ryzom游戏改成什么样子，或者翻译成某种语言来运营（当然这是有些组织或者公司的事情），而是领悟它的技术、利用它的技术并融合进自己的技术来开发崭新的虚拟游戏系统。<br>     基于这个原则，世界范围内已经出现了很多Ryzom相关的开源项目，我这里列举出sourceforge和google code上面的一些项目仅供参考，目的是在大家扩展Ryzom Core的时候不要重复造车。当然，也欢迎大家回帖补充其他的开源项目。  </p>
-<p>　　Dungeon Walker（<a href="http://sourceforge.net/projects/dungeonwalker/）是一个基于Ryzom" target="_blank" rel="external">http://sourceforge.net/projects/dungeonwalker/）是一个基于Ryzom</a> Core的游戏Demo，刚刚开始没有多久。  </p>
-<p>　　Rally（<a href="http://sourceforge.net/projects/rally/" target="_blank" rel="external">http://sourceforge.net/projects/rally/</a> ）是一个用Python写的安装程序，用于简化Ryzom的安装，比较早的项目，基本上已经停止更新了。  </p>
-<p>　　Atysian Translator（<a href="http://sourceforge.net/projects/atystranslator/）这个早期项目有点意思，是一个帮助翻译Atys四大种族自己语言的工具。" target="_blank" rel="external">http://sourceforge.net/projects/atystranslator/）这个早期项目有点意思，是一个帮助翻译Atys四大种族自己语言的工具。</a>  </p>
-<p>　　CEB（<a href="http://code.google.com/p/cebmtpchat/）是一个跨平台的聊天工具，支持Ryzom的聊天服务器，使用Qt开发。" target="_blank" rel="external">http://code.google.com/p/cebmtpchat/）是一个跨平台的聊天工具，支持Ryzom的聊天服务器，使用Qt开发。</a>  </p>
-<p>　　object-viewer-qt（<a href="http://code.google.com/p/object-viewer-qt/）则是目前一个活跃度相当高的项目，它是Nel" target="_blank" rel="external">http://code.google.com/p/object-viewer-qt/）则是目前一个活跃度相当高的项目，它是Nel</a> Object Viewer工具使用Qt4重写的版本，增加很多新的功能，并且当然是跨平台的。  </p>
-<p>　　georges-editor-qt（<a href="http://code.google.com/p/georges-editor-qt/）是对旧Georges" target="_blank" rel="external">http://code.google.com/p/georges-editor-qt/）是对旧Georges</a> Editor项目的Qt4重写版本，也是一个Ryzom Core的重要工具，使用Qt后界面就很漂亮了。</p>
+<p>　　<a href="http://dev.ryzom.com/wiki/nel" target="_blank" rel="external">Nel引擎</a>是一个独立的完整的多人在线虚拟系统解决方案，包含了从3D引擎到网络客户端、网络服务器的所有技术组件，一般在项目代码根目录中的nel、nelns、snowballs2、tool子目录是属于Nel的。其中snowballs2基本上是一个完整应用nel相关技术的MMODemo，研究nel可以从这个游戏demo入手。  </p>
+<p>　　<a href="http://dev.ryzom.com/" target="_blank" rel="external">Ryzom Core</a>则是和Ryzom游戏相关的一个大型项目，请注意项目的名称是“Ryzom Core”而不是“Ryzom”，很多人认为既然Ryzom开源了就是官方Ryzom游戏所有的内容都公开，其实是不准确的。Ryzom的开源包含了开发出官方商业Ryzom游戏的基础代码（即Ryzom Core），还包含了开发商业Ryzom游戏使用的大部分资源（Asset），他并不包含现在官服上面的一些实际内容，比如任务内容、用户/账户数据库（这个都公开了还得了！）等等，但这对开源世界来说足够了。<br>　　因此研究Ryzom Core的主要目的并不是把Ryzom游戏改成什么样子，或者翻译成某种语言来运营（当然这是有些组织或者公司的事情），而是领悟它的技术、利用它的技术并融合进自己的技术来开发崭新的虚拟游戏系统。<br>     基于这个原则，世界范围内已经出现了很多Ryzom相关的开源项目，我这里列举出sourceforge和google code上面的一些项目仅供参考，目的是在大家扩展Ryzom Core的时候不要重复造车。当然，也欢迎大家回帖补充其他的开源项目。  </p>
+<p>　　<a href="http://sourceforge.net/projects/dungeonwalker/" target="_blank" rel="external">Dungeon Walker</a>是一个基于Ryzom Core的游戏Demo，刚刚开始没有多久。  </p>
+<p>　　<a href="http://sourceforge.net/projects/rally/" target="_blank" rel="external">Rally</a>是一个用Python写的安装程序，用于简化Ryzom的安装，比较早的项目，基本上已经停止更新了。  </p>
+<p>　　<a href="http://sourceforge.net/projects/atystranslator/" target="_blank" rel="external">Atysian Translator</a>这个早期项目有点意思，是一个帮助翻译Atys四大种族自己语言的工具。  </p>
+<p>　　<a href="http://code.google.com/p/cebmtpchat/" target="_blank" rel="external">CEB</a>是一个跨平台的聊天工具，支持Ryzom的聊天服务器，使用Qt开发。  </p>
+<p>　　<a href="http://code.google.com/p/object-viewer-qt/" target="_blank" rel="external">object-viewer-qt</a>则是目前一个活跃度相当高的项目，它是Nel Object Viewer工具使用Qt4重写的版本，增加很多新的功能，并且当然是跨平台的。  </p>
+<p>　　<a href="http://code.google.com/p/georges-editor-qt/" target="_blank" rel="external">georges-editor-qt</a>是对旧Georges Editor项目的Qt4重写版本，也是一个Ryzom Core的重要工具，使用Qt后界面就很漂亮了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722_2/" data-id="4sbr6zbyfofziqmo" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722_2/" data-id="1u76ei716ptnyny4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -338,21 +338,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div style="text-align:center;"><img src="http://games.qq.com/images/netgame/2004/04/04/ry/s/38.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+        <div style="text-align:center;"><img src="http://blog.scorpionstudio.com/38.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
 
 <p>　　Ryzom的开源着实让我震惊和激动了一把！<br>　　Ryzom Core项目现在基于GPL协议，开放了包括客户端、服务器全部源代码、编辑器全部源代码、游戏数据、美术资源等等，这是2009年到2010年开源社区的一件大事情，也是<a href="http://www.fsf.org/" target="_blank" rel="external">自由软件基金会</a>最近很高优先级的项目。本来一直找不到好平台来做研究的CH系统（见<a href="">CH大事记系列文章</a>），现在又可以以Ryzom Core为基础得到一次巨大的发展机会，看来之后一段时间里我的生活又将是非常有趣的。另外一方面，<a href="">Tao Project</a>的梦想看来又找到了更多的支持和基础设施，毕竟站在巨人的肩上能看得更远，更避免了不断闭门造车！  </p>
 <p>　　在国内还找不到一个讨论Ryzom游戏设计的及其Nel引擎的地方（有一个QQ群，群号是69537392），我发现在中文社区其实有很多可以贡献的力量，不排除Ryzom发展出中文版的可能性，我也申请了一个专门研究RyzomCore的论坛（即<a href="http://ryzomcn.5d6d.com/" target="_blank" rel="external">Ryzom中文开发论坛</a>）来寻求众多的爱好者和开源游戏的拥护者一起构建该领域的中文社区氛围。</p>
-<div style="text-align:center;"><img src="http://games.qq.com/images/netgame/2004/04/04/ry/s/37.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/37.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
 
 <p>　　多说一点Ryzom开源这件事情，其实它是很有意义的。经历多年的自由软件运动之后，我们在操作系统、数据库、计算机网络、应用服务器等各个技术领域都取得了丰硕的成果。不过在计算机游戏领域，还没有什么大的进展。现在流行的MMORPG游戏Ryzom则为我们提供了一个宝贵的机会，我也希望我们能跟进国外的领先技术，第一时间将欧美最新的MMO游戏技术引入中国游戏社区，推动国内技术的发展。  </p>
-<div style="text-align:center;"><img src="http://games.qq.com/images/netgame/2004/04/04/ry/s/41.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/41.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
 
 <p>　　现在流行的大型网络游戏都是由专有软件公司开发，所以网络游戏的发展也都是由专有软件公司控制，而不是用户。不过我们认为，既然用户能够参与现实社会的发展，那么也同样有权力参与网上虚拟社会的建设。玩家是游戏虚拟社会里的公民，网络游戏应该属于全体玩家，所以他们有权力和机会实现自己在虚拟社会里的梦想，这就需要有自由的网络游戏。自由软件基金会认为收购Ryzom游戏是一个高优先级的自由软件项目，所以决定资助此项目6万美金，并最终帮助筹集到20万欧元左右，能够买下Ryzom游戏，将其变成一个自由软件。Ryzom的官方网站为<a href="www.ryzom.com">www.ryzom.com</a>，现在已经有英、德、法、俄等国家的语言版本和社区，我希望也能产生中文的社区环境。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722/" data-id="fce66zlavh59ixk3" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722/" data-id="4posdl8k618uocjx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -417,7 +417,7 @@
 <p>　　3 Unreal 3目标是当前的，漂亮的图形效果，更多的平台支持，是最重要的。</p>
 <p>　　这些因素代表了Unreal 3的成功，一些其他的商业引擎，比如GameBro也很注重编辑器，而不是更优秀代码质量。与其提供良好的结构，不如实现更多的效果。他们也都在各自的定位上获得了相应的成功。</p>
 <p>　　<b>三、Ogre3D图形引擎 = 开源模式</b></p>
-<p>　　Ogre3D图形引擎（<a href="http://ogre3d.cn）是开源界最出名的图形引擎（没有之一），包括国内的《天龙八区》、《成吉思汗》等，以及国外的《火炬之光》商业作品都是使用这款图形引擎作为开发基础。和Ogre3D同期的开源游戏引擎，包括IrrLight等，都不如Ogre3D这般成功。" target="_blank" rel="external">http://ogre3d.cn）是开源界最出名的图形引擎（没有之一），包括国内的《天龙八区》、《成吉思汗》等，以及国外的《火炬之光》商业作品都是使用这款图形引擎作为开发基础。和Ogre3D同期的开源游戏引擎，包括IrrLight等，都不如Ogre3D这般成功。</a></p>
+<p>　　<a href="http://ogre3d.cn" target="_blank" rel="external">Ogre3D图形引擎</a>是开源界最出名的图形引擎（没有之一），包括国内的《天龙八区》、《成吉思汗》等，以及国外的《火炬之光》商业作品都是使用这款图形引擎作为开发基础。和Ogre3D同期的开源游戏引擎，包括IrrLight等，都不如Ogre3D这般成功。</p>
 <p>　　Ogre3D最重要的是从设计之初就目标开源社区，而不是商业或者技术。</p>
 <p>　　Ogre3D 好的结构带来更多的功能，而反之则不能。 开源社区需要好的结构让更多的人来参与，而不需要商业引擎的工期，所以有充足的时间发展（十年甚至更多），而不争朝夕。</p>
 <p>　　Ogre3D 采用插件化结构，这样做的好处是让一些社区开发者，不用了解和改变整个引擎，就能扩充其功能，同样开源的Quake3就很难达到这一点。</p>
@@ -428,7 +428,7 @@
 <p>　　Ogre3D 和其他开源产品一样，对开发者要求较高（和一些商业领域的产品比较而言），不过Ogre3D也因此吸引了众多开源开发者（黑客）的参与。</p>
 <p>　　基于以上几点，Ogre3D在开源界得到了前所未有的成功，这种引擎开发模式，在商业领域反而不能成功。</p>
 <p>　　<b>四、Orz游戏开发框架 = 分布模式</b></p>
-<p>　　Orz游戏开发框架(<a href="http://bbs.ogre3d.cn)是国内Ogre3D社区开发的游戏框架，他利用了Ogre3D拒绝开发图形之外代码的基础。提供了一系列开发工具以及对各种功能型引擎的粘合。不得不说Orz在游戏引擎中采用了一种极端取巧的办法。他把底层功能性引擎的开发交给了其他开源界的产品，专注于逻辑和接口的实现。相对于其他部分而言，这部分的代码很少会受到硬件升级的影响。所以可以用较少的精力，不断优化已有的代码。但Ogre3D社区内也同时存在诸多开发框架，包括比较出名的yake和Goof等。Orz凭什么能在这些框架中脱颖而出呢？" target="_blank" rel="external">http://bbs.ogre3d.cn)是国内Ogre3D社区开发的游戏框架，他利用了Ogre3D拒绝开发图形之外代码的基础。提供了一系列开发工具以及对各种功能型引擎的粘合。不得不说Orz在游戏引擎中采用了一种极端取巧的办法。他把底层功能性引擎的开发交给了其他开源界的产品，专注于逻辑和接口的实现。相对于其他部分而言，这部分的代码很少会受到硬件升级的影响。所以可以用较少的精力，不断优化已有的代码。但Ogre3D社区内也同时存在诸多开发框架，包括比较出名的yake和Goof等。Orz凭什么能在这些框架中脱颖而出呢？</a></p>
+<p>　　<a href="http://bbs.ogre3d.cn" target="_blank" rel="external">Orz游戏开发框架</a>是国内Ogre3D社区开发的游戏框架，他利用了Ogre3D拒绝开发图形之外代码的基础。提供了一系列开发工具以及对各种功能型引擎的粘合。不得不说Orz在游戏引擎中采用了一种极端取巧的办法。他把底层功能性引擎的开发交给了其他开源界的产品，专注于逻辑和接口的实现。相对于其他部分而言，这部分的代码很少会受到硬件升级的影响。所以可以用较少的精力，不断优化已有的代码。但Ogre3D社区内也同时存在诸多开发框架，包括比较出名的yake和Goof等。Orz凭什么能在这些框架中脱颖而出呢？</p>
 <p>　　传统上软件开发的组织结构的基本问题是布洛克法则：“在延期的项目添加程序员只会延期更久”。普遍来讲，布洛克法则认为，随着开发人员数目的增加，项目的复杂程度和通讯成本按平方增加，而业绩仅以直线增加。在上面图中左面提供了一个传统开发合作模式的示意图，在这个结构中，因为每个程序员必须了解其他人员开发的模块接口，导致问题随开发者之间通讯路径的数目增加，而后者与开发者数目是平方关系（更准确地说，遵从公式N*(N – 1)/2，这里N是开发者的数目）。依照开源软件的经验，如果你有一个足够大的项目，需要足够多的人合作，你唯一的办法是尽量降低程序员之间的依赖性。</p>
 <p>　　Orz提出一个理想的分布式开发模型。在这个模型中，我们定义了一个公共的知识库，里面定义了交互的规则（消息等信息），所有的程序员按照这里提供的约定完成自己的代码，完全没有和其他程序员的直接交互。在这种情况下，增加程序员的数量并不会导致过度增加开发者之间通讯的成本。</p>
 <p>　　在一些需要确定性结果的程序中，比如科学计算程序，很难达到理想的分布式开发模型，这是因为程序员之间要紧密的配合才能得到一个肯定的结果。然而对于游戏程序而言，它的目的是带来娱乐性和未知现实的模拟，就如同生活一样，你根本不需要（也不可能）知道别人想了什么和做了什么。只要大家遵守相同的规则，那么就是一个不错的体系，甚至越不可预测的结果给人带来的惊喜和愉悦感越大。而这正是我们分布式开发所具有的，比如你写了一只狗，他写了一只猫，我们按照宠物的知识来通信，你根本不用确定它们是成为朋友还是进行战争。就算加入一个宠物猪进来，我们也能正确的和它沟通——只要他遵守规矩。</p>
@@ -445,7 +445,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/02/04/20100204/" data-id="zt4tv1h2s6gvbnsc" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/02/04/20100204/" data-id="d1tbtkmsaw5ya8iw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -484,30 +484,30 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　经过一段时间的重构，图形引擎和编辑器都有较大的进展，编辑器的集成度也进一步提高了。</p>
-<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor1.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+<div style="text-align:center;"><img width="600px" src="http://blog.scorpionstudio.com/editor1.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
 
 <p>　　采用了自然天气系统，这是调整到北半球经纬度和我国相近时候的场景，时间大概是早上七点左右：</p>
-<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor2.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+<div style="text-align:center;"><img width="600px" src="http://blog.scorpionstudio.com/editor2.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
 
 <p>　　这是早上6点左右：</p>
-<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor3.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+<div style="text-align:center;"><img width="600px" src="http://blog.scorpionstudio.com/editor3.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
 
 <p>　　这是凌晨3点左右：</p>
-<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor4.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
+<div style="text-align:center;"><img width="600px" src="http://blog.scorpionstudio.com/editor4.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
 
 <p>　　虽然是夜晚，由于地形采用了normal map，在月光影响下的效果仍然显著，由于未加调整，过于强烈了些：</p>
-<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor5.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+<div style="text-align:center;"><img width="600px" src="http://blog.scorpionstudio.com/editor5.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
 
 
 <p>　　早晨的水面：</p>
-<div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor6.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img width="600px" src="http://www.xf-utpcb.com/xiaop/img/ppe3d/editor7.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
+<div style="text-align:center;"><img width="600px" src="http://blog.scorpionstudio.com/editor6.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img width="600px" src="http://blog.scorpionstudio.com/editor7.JPG" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
 
 <p>　　本来在水面之下也有效果，并且像God light这些效果非常漂亮，但由于不需要到水下去，因此就没有做这方面的工作了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2009/11/28/20091128/" data-id="ptdtg1nlfa6gwnzh" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2009/11/28/20091128/" data-id="4qxfpdaekjkp0wtr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -548,22 +548,22 @@
         <p>　　商业3D引擎和开源引擎的最大区别其实不在于性能效果，而是在服务项目的配套工具和开发流程（层面）上。我认为一款“有作为”的商业引擎在工具上的开发量不低于整个引擎项目的2/3。  </p>
 <p>　　这段时间我的全部精力都投入到新3D引擎项目上了，很久都没有更新博客，包括Tao System在内的所有业余项目均停工了很长时间。这段时间的心情其实是很兴奋的，效率也是无以复加的高，我计算了一下，我和一个实习生投入其中的完全工作量不超过2个月，结果提交了一个从3D引擎到基础编辑器的一个完整架构，美术也开始使用编辑器一段时间了。  </p>
 <p>　　这期间我确实很忙，我也非常乐意于此。看到编辑器略见雏形，越来越明确引擎的位置和方向，越来越明确这个编辑器在后期项目上的作用和前景，有时候是不得不兴奋的。这个项目不仅仅关系到后期项目和Money，它也能成为未来一个更好的研发平台，推动TaoSystem的发展更是不言而喻的。</p>
-<div style="text-align:center;"><img src="http://img.bimg.126.net/photo/63aotQNktcVSyMTc8NE2Aw==/5666935706116016323.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/20090601_1.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
 
 <p>　　这套引擎在架构上延续了长期以来我们一直探索的研发平台骨架（从微软的研发平台一直到之前的EDS），慎重借鉴了当前项目的稳定技术和各种经验教训（比如游戏《魔法火枪团》）。虽然在3D图形上，引擎咋一看可能比不上现在一个二流的商业引擎，但我们对引擎和工具各个层次和方面的熟悉程度，这点更是我乐意去拥有的，反而我觉得它比其他都重要！BigWorld引擎的学习代价是两年，但如果学完了发现不好用或者不适用就得不偿失！购买的引擎如果立即上手，新项目需求不能让我在五分钟之内明确出“使用引擎哪一个功能”或者“引擎哪一个地方需要扩展”甚至是“引擎哪一个地方有Bug”，我认为这样的开发将是一场噩梦。  </p>
 <p>　　这段工作量三分之二强的时间我全花在编辑器上，而且会有更多的时间花在这个上面。策划、美术迫切需要的是一个容易操作的工具，一个极易实现他们想法的平台，一个图像再棒的图形引擎是没有实际意义的。</p>
-<div style="text-align:center;"><img src="http://img.bimg.126.net/photo/4BX4ociT7mUrjZkhydLS4w==/5666935706116016319.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://img.bimg.126.net/photo/3FnBrLoqNwmb0g0kNwNHxw==/5666935706116016324.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/20090601_2.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://blog.scorpionstudio.com/20090601_3.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
 
 <p>　　开发编辑器之前我就定下了编辑器的开发原则和发展方向。All In One就是其中之一，这个不是说图形效果要一应俱全，而是说对于新项目而言，高层的编辑功能均能集成在这一个编辑器中。全部采用插件方式能够让开发的人更专注于功能，让使用的人更专注于领域。由于是单一编辑框架，功能可以做到较强的相关性，比如角色建模、角色设定和场景编辑这三样工作虽然由不同的开发人员设计，使用不同插件配置下的编辑器去完成，但是可以很容易融合在一起彼此考察效果。这种工作以前往往是“地形编辑器”、“特效编辑器”、“角色编辑器”……啊，噩梦！</p>
-<div style="text-align:center;"><img src="http://img.bimg.126.net/photo/W6LAolEj04nAFh6JHvs8GQ==/5666935706116016321.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://img.bimg.126.net/photo/O1Q7qJpyYNfkboOoeCHRgg==/5666935706116016322.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/20090601_4.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://blog.scorpionstudio.com/20090601_5.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
 
 <p>　　新引擎在效果没有担心的必要，扩展只是时间问题，因为我们很熟悉，很熟悉！我经常拿一些“第三方”的技术Demo给大家看，市面上大量的第三方效果、改进项目等等非常适合我们的引擎架构，移植和扩展都是非常容易的。比如GPU的水、后处理特效、生成植被、HDR、SSAO、物理扩展、脚本扩展等等，可以说代码都能信手拈来且不做修改，看到这些，一定会信心十足的！^-^</p>
-<div style="text-align:center;"><img src="http://img.bimg.126.net/photo/6_IEtt2OPMLoBJwyLE4e1A==/5684668629649227769.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://img.bimg.126.net/photo/DXR5LIyGg57Opx0mO7DdLw==/5689172229276167473.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/20090601_6.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div><br><div style="text-align:center;"><img src="http://blog.scorpionstudio.com/20090601_7.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2009/06/01/20090601/" data-id="rbmfhxsa64zhrxkl" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2009/06/01/20090601/" data-id="d0ulnirkhowb5l2j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -605,17 +605,17 @@
 <p>　　该阶段为降落、漫游到星球表面做准备。在当前的天文学体系上，实现基于“Sean O’Neil”的“Real-Time Procedural Universe Project”的星球渲染引擎，主要应用在客户端图形上，并尝试用于模拟服务器的碰撞检测问题上。<br>　　主要内容如下：<br>　　- 过程星球（恒星、行星、卫星）表面高程数据生成及渲染<br>　　[O’N01] O’NEIL S.: Rendering planetary bodies. Gamasutra August 10, 2001 (2001).<br>　　<a href="http://www.gamasutra.com/features/20010810/oneil_01.htm" target="_blank" rel="external">http://www.gamasutra.com/features/20010810/oneil_01.htm</a>.<br>　　　　— 实时大规模过程地形渲染（球面）<br>　　　　— 根据海拔变化的顶点颜色<br>　　　　— 陨石坑地貌修正<br>　　　　— 应用简单光照模型<br>　　- 实现基于当前天文学体系上的过程星球演示Demo<br>　　　　— 一个简单的太阳系  </p>
 <p>　　视频中可以看到，目前仅实现了实时生成的行星、卫星等星体表面，生成了高程数据（随机地形和随机陨石坑地形）和根据海拔变化的表面纹理。在恒心系中（比如演示的太阳系），实现了一个恒星相关的方向光源。所有星体的位置、大小都是按照目前天文学的真实单位和实际值。  </p>
 <p>　　虽然这个星球引擎系统还需要诸如大气散射的光照以及星云背景等支持，但是我计划在之后的几个版本中，将着重TAO系统的AI逻辑架构，因此这个简单的星球渲染引擎为测试宏大的AI以及进化体系做好了准备。</p>
-<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe002.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">距地球100000公里处</div>    
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/universe002.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">距地球100000公里处</div>    
 
-<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe003.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe004.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe005.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe006.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">近地表面</div>      
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/universe003.jpg" style="vertical-align:middle;"><img src="http://blog.scorpionstudio.com/universe004.jpg" style="vertical-align:middle;"><img src="http://blog.scorpionstudio.com/universe005.jpg" style="vertical-align:middle;"><img src="http://blog.scorpionstudio.com/universe006.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">近地表面</div>      
 
-<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe007_moon_20000.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">距离月球20000公里</div>      
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/universe007_moon_20000.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">距离月球20000公里</div>      
 
-<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/img/universe008.jpg" style="vertical-align:middle;"><img src="http://www.xf-utpcb.com/xiaop/img/universe009.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">近月表面</div>    
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/universe008.jpg" style="vertical-align:middle;"><img src="http://blog.scorpionstudio.com/universe009.jpg" style="vertical-align:middle;"></div><br><div style="text-align:center;">近月表面</div>    
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2008/10/25/20081025/" data-id="7bd36s1r2m3y0ilt" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2008/10/25/20081025/" data-id="17afap4e7rh72yf1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simulation/">simulation</a></li></ul>

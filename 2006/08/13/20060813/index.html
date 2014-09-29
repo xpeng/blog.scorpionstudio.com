@@ -5,18 +5,18 @@
   
   <title>大型数据库扩展及性能：簇、存储过程等等 | XPeng&#39;s Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SQL Server大型服务器：伸缩性、可用性与易管理性：    
-    摘要 Microsoft SQL Server已经发展为能够支持巨型数据库和应用程序，其中包括可供数百万人使用的数吉字节数据库。SQL Server通过在对称多处理器（SMP）系统上支持向上扩展（允许用户添加处理器、内存、磁盘、网络带宽等资源以建立单一大型节点）或向外扩展为多节点群集（允许巨型数据库在服务器群集中进行分">
+  <meta name="description" content="SQL Server大型服务器：伸缩性、可用性与易管理性:
+　　摘要 Microsoft SQL Server已经发展为能够支持巨型数据库和应用程序，其中包括可供数百万人使用的数吉字节数据库。SQL Server通过在对称多处理器（SMP）系统上支持向上扩展（允许用户添加处理器、内存、磁盘、网络带宽等资源以建立单一大型节点）或向外扩展为多节点群集（允许巨型数据库在服务器群集中进行分区，每台服务">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大型数据库扩展及性能：簇、存储过程等等">
 <meta property="og:url" content="http://blog.scorpionstudio.com/2006/08/13/20060813/">
 <meta property="og:site_name" content="XPeng's Dream">
-<meta property="og:description" content="SQL Server大型服务器：伸缩性、可用性与易管理性：    
-    摘要 Microsoft SQL Server已经发展为能够支持巨型数据库和应用程序，其中包括可供数百万人使用的数吉字节数据库。SQL Server通过在对称多处理器（SMP）系统上支持向上扩展（允许用户添加处理器、内存、磁盘、网络带宽等资源以建立单一大型节点）或向外扩展为多节点群集（允许巨型数据库在服务器群集中进行分">
+<meta property="og:description" content="SQL Server大型服务器：伸缩性、可用性与易管理性:
+　　摘要 Microsoft SQL Server已经发展为能够支持巨型数据库和应用程序，其中包括可供数百万人使用的数吉字节数据库。SQL Server通过在对称多处理器（SMP）系统上支持向上扩展（允许用户添加处理器、内存、磁盘、网络带宽等资源以建立单一大型节点）或向外扩展为多节点群集（允许巨型数据库在服务器群集中进行分区，每台服务">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大型数据库扩展及性能：簇、存储过程等等">
-<meta name="twitter:description" content="SQL Server大型服务器：伸缩性、可用性与易管理性：    
-    摘要 Microsoft SQL Server已经发展为能够支持巨型数据库和应用程序，其中包括可供数百万人使用的数吉字节数据库。SQL Server通过在对称多处理器（SMP）系统上支持向上扩展（允许用户添加处理器、内存、磁盘、网络带宽等资源以建立单一大型节点）或向外扩展为多节点群集（允许巨型数据库在服务器群集中进行分">
+<meta name="twitter:description" content="SQL Server大型服务器：伸缩性、可用性与易管理性:
+　　摘要 Microsoft SQL Server已经发展为能够支持巨型数据库和应用程序，其中包括可供数百万人使用的数吉字节数据库。SQL Server通过在对称多处理器（SMP）系统上支持向上扩展（允许用户添加处理器、内存、磁盘、网络带宽等资源以建立单一大型节点）或向外扩展为多节点群集（允许巨型数据库在服务器群集中进行分区，每台服务">
 
   
     <link rel="alternative" href="/atom.xml" title="XPeng&#39;s Dream" type="application/atom+xml">
@@ -94,29 +94,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　SQL Server大型服务器：伸缩性、可用性与易管理性：    </p>
-<pre><code>    摘要 Microsoft SQL <span class="built_in">Server</span>已经发展为能够支持巨型数据库和应用程序，其中包括可供数百万人使用的数吉字节数据库。SQL <span class="built_in">Server</span>通过在对称多处理器（SMP）系统上支持向上扩展（允许用户添加处理器、内存、磁盘、网络带宽等资源以建立单一大型节点）或向外扩展为多节点群集（允许巨型数据库在服务器群集中进行分区，每台服务器存储整套数据库的一部分并完成部分工作，同时确保数据库对外以一个整体的形式提供访问）的方式实现这种伸缩能力。通过向外扩展，SQL <span class="built_in">Server</span> <span class="number">2000</span>在事务处理委员会基准测试C（TPC-C）中创造了以往任何平台上的任何数据库系统均未达到过的顶级性能指标。  
-    .NET服务器与SQL <span class="built_in">Server</span>群集提供了高度可用性和自动管理机制。SQL <span class="built_in">Server</span>通过内建的故障转移与复制技术来支持高可用性。同时，SQL <span class="built_in">Server</span>还提供了基于用户接口、向导程序、重复性任务作业调度以及面向脚本化应用操作的SQL-DMO的强大管理模型。SQL <span class="built_in">Server</span>的体系结构适合模块化增长、自动化配置、维护以及大型服务器区的编程实现。  
-</code></pre><p>link：<a href="http://www.microsoft.com/china/technet/prodtechnol/sql/2000/plan/ssmsam.mspx" target="_blank" rel="external">http://www.microsoft.com/china/technet/prodtechnol/sql/2000/plan/ssmsam.mspx</a></p>
-<p>　　MySQL簇：  </p>
-<pre><code>    摘要：MySQL簇是MySQL适合于分布式计算环境的高实用、高冗余版本。它采用了NDB簇存储引擎，允许在<span class="number">1</span>个簇中运行多个MySQL服务器。在MySQL <span class="number">5.1</span>二进制版本中、以及与最新的Linux版本兼容的RPM中提供了该存储引擎。（注意，要想获得MySQL簇的功能，必须安装mysql-server和mysql-<span class="built_in">max</span> RPM）。  
-    目前能够运行MySQL簇的操作系统有Linux、Mac OS <span class="keyword">X</span>和Solaris。（一些用户通报成功地在FreeBSD上运行了MySQL簇，但MySQL AB公司尚未正式支持该特性）。我们正在努力，以便使MySQL簇能运行在MySQL支持的所有操作系统上，包括Windows，而且当支持新的平台时，将更新该页面。  
-</code></pre><p>link：<a href="http://dev.mysql.com/doc/refman/5.1/zh/ndbcluster.html" target="_blank" rel="external">http://dev.mysql.com/doc/refman/5.1/zh/ndbcluster.html</a></p>
-<p>　　SQL Server联机丛书：存储过程及其创建：</p>
-<pre><code>    摘要：存储过程可以使得对数据库的管理、以及显示关于数据库及其用户信息的工作容易得多。存储过程是 SQL 语句和可选控制流语句的预编译集合，以一个名称存储并作为一个单元处理。存储过程存储在数据库内，可由应用程序通过一个调用执行，而且允许用户声明变量、有条件执行以及其它强大的编程功能。  
-    存储过程可包含程序流、逻辑以及对数据库的查询。它们可以接受参数、输出参数、返回单个或多个结果集以及返回值。  
-
-    可以出于任何使用 SQL 语句的目的来使用存储过程，它具有以下优点：  
-    可以在单个存储过程中执行一系列 SQL 语句。  
-    可以从自己的存储过程内引用其它存储过程，这可以简化一系列复杂语句。  
-    存储过程在创建时即在服务器上进行编译，所以执行起来比单个 SQL 语句快。  
-    存储过程的功能取决于数据库所提供的功能。  
-</code></pre><p>link：<a href="http://www.soudie.net/top_62523_cat_15/" target="_blank" rel="external">http://www.soudie.net/top_62523_cat_15/</a></p>
+        <p>　　<strong>SQL Server大型服务器：伸缩性、可用性与易管理性:</strong></p>
+<p>　　摘要 Microsoft SQL Server已经发展为能够支持巨型数据库和应用程序，其中包括可供数百万人使用的数吉字节数据库。SQL Server通过在对称多处理器（SMP）系统上支持向上扩展（允许用户添加处理器、内存、磁盘、网络带宽等资源以建立单一大型节点）或向外扩展为多节点群集（允许巨型数据库在服务器群集中进行分区，每台服务器存储整套数据库的一部分并完成部分工作，同时确保数据库对外以一个整体的形式提供访问）的方式实现这种伸缩能力。通过向外扩展，SQL Server 2000在事务处理委员会基准测试C（TPC-C）中创造了以往任何平台上的任何数据库系统均未达到过的顶级性能指标。<br>　　.NET服务器与SQL Server群集提供了高度可用性和自动管理机制。SQL Server通过内建的故障转移与复制技术来支持高可用性。同时，SQL Server还提供了基于用户接口、向导程序、重复性任务作业调度以及面向脚本化应用操作的SQL-DMO的强大管理模型。SQL Server的体系结构适合模块化增长、自动化配置、维护以及大型服务器区的编程实现。<br>link：<a href="http://www.microsoft.com/china/technet/prodtechnol/sql/2000/plan/ssmsam.mspx" target="_blank" rel="external">http://www.microsoft.com/china/technet/prodtechnol/sql/2000/plan/ssmsam.mspx</a></p>
+<p>　　<strong>MySQL簇：</strong>  </p>
+<p>　　摘要：MySQL簇是MySQL适合于分布式计算环境的高实用、高冗余版本。它采用了NDB簇存储引擎，允许在1个簇中运行多个MySQL服务器。在MySQL 5.1二进制版本中、以及与最新的Linux版本兼容的RPM中提供了该存储引擎。（注意，要想获得MySQL簇的功能，必须安装mysql-server和mysql-max RPM）。<br>　　目前能够运行MySQL簇的操作系统有Linux、Mac OS X和Solaris。（一些用户通报成功地在FreeBSD上运行了MySQL簇，但MySQL AB公司尚未正式支持该特性）。我们正在努力，以便使MySQL簇能运行在MySQL支持的所有操作系统上，包括Windows，而且当支持新的平台时，将更新该页面。<br>link：<a href="http://dev.mysql.com/doc/refman/5.1/zh/ndbcluster.html" target="_blank" rel="external">http://dev.mysql.com/doc/refman/5.1/zh/ndbcluster.html</a></p>
+<p>　　<strong>SQL Server联机丛书：存储过程及其创建：</strong></p>
+<p>　　摘要：存储过程可以使得对数据库的管理、以及显示关于数据库及其用户信息的工作容易得多。存储过程是 SQL 语句和可选控制流语句的预编译集合，以一个名称存储并作为一个单元处理。存储过程存储在数据库内，可由应用程序通过一个调用执行，而且允许用户声明变量、有条件执行以及其它强大的编程功能。<br>　　存储过程可包含程序流、逻辑以及对数据库的查询。它们可以接受参数、输出参数、返回单个或多个结果集以及返回值。  </p>
+<p>　　可以出于任何使用 SQL 语句的目的来使用存储过程，它具有以下优点：<br>　　可以在单个存储过程中执行一系列 SQL 语句。<br>　　可以从自己的存储过程内引用其它存储过程，这可以简化一系列复杂语句。<br>　　存储过程在创建时即在服务器上进行编译，所以执行起来比单个 SQL 语句快。<br>　　存储过程的功能取决于数据库所提供的功能。<br>link：<a href="http://www.soudie.net/top_62523_cat_15/" target="_blank" rel="external">http://www.soudie.net/top_62523_cat_15/</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2006/08/13/20060813/" data-id="fy33qgvyroxus115" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2006/08/13/20060813/" data-id="siolofxz1ovn97d4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>

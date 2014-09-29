@@ -95,17 +95,17 @@
       
         <p>　　<em>本教程并不想助长未经Ryzom许可的私服或者汉化游戏出现，仅仅作为研究和学习Ryzom系统的一种方式！</em>  </p>
 <p>　　Ryzom其实很容易汉化，因为它先天就支持Unicode编码，并且在资源设计上也充分考虑到本地化的需求。<br>　　现在简单来说明一下怎么让Ryzom的内容（包括界面、输入、服务器数据）支持中文。</p>
-<div style="text-align:center;"><img width="500px" src="http://www.xf-utpcb.com/xiaop/ryzom/cn_screen.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">中文Ryzom的一次尝试</div>        
+<div style="text-align:center;"><img width="500px" src="http://blog.scorpionstudio.com/cn_screen.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">中文Ryzom的一次尝试</div>        
 
 <p><b>客户端中文支持</b></p>
 <p>　　中文支持分为客户端和服务器两个方向，首先来说说客户端，客户端编译后的结果目录内容一般如下所示（详见在Win32上的编译教程），其中bin下的资源文件直接解压自官方提供的ryzom_client_open.7z文件，而exe和相关dll文件则可以是自己编译的结果。</p>
-<div style="text-align:center;"><img width="500px" src="http://www.xf-utpcb.com/xiaop/ryzom/dir_bin.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+<div style="text-align:center;"><img width="500px" src="http://blog.scorpionstudio.com/dir_bin.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
 
 <p>　　首先，用记事本打开client_default.cfg，找到：<br>　　　　LanguageCode = “en”;  // english<br>　　改为：<br>　　　　LanguageCode = “cn”;  // chinese  </p>
 <p>　　这样，客户端启动后界面文字会自动取自相关的中文配置文件，而也会通知服务器使用中文内容。当然如果服务器还没有增加汉化文件时，很多对话框、标签里面的文字将会是无效的默认文本。<br>　　那么客户端中文界面配置文件在何处呢？打开你客户端的data目录，下面有个gamedev.bnp文件是不是，所有界面语言文件就在这个文件里面。使用bnp_make_r.exe工具可以解开这个文件（编译成功后该工具应该在code\nel\tools\misc\bnp_make目录下找到）。解开后会生成一个gamedev文件夹，里面有个en.uxt，复制它为cn.uxt，然后用记事本打开，里面每一项的值就表示各种界面的文字内容，也正是你需要翻译的东西，放心的翻译它吧，这个文件是unicode编码的。翻译好后，再用bnp_make工具对gamedev目录打包即可。当然，只要你愿意，你可以保留gamedev这个目录，因为客户端是优先读取磁盘文件的。  </p>
 <p>　　接着就是中文字体的问题，data\fonts目录下的字体默认是没有支持中文的（如果你打中文，会变成….），本来可以在gamedev的配置中设置字体，但我采用了更简便的办法，直接覆盖ryzom.ttf，比如上面的截屏就使用了微软雅黑字体文件来替换ryzom.ttf。  </p>
 <p>　　关于聊天框的中文输入，这个我没有测试过，但据群里的人说，字体这些都配置好了后，自然中文输入也就没有问题了。</p>
-<div style="text-align:center;"><img src="http://www.xf-utpcb.com/xiaop/ryzom/cn_input.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">群里的截图</div>            
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/cn_input.jpg" style="vertical-align:middle;"></div><div style="text-align:center;">群里的截图</div>            
 
 <p>　　到此为止，客户端的汉化支持工作就算完成。  </p>
 <p><b>服务器中文支持</b>  </p>
@@ -115,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/28/20100728/" data-id="gncks70h4ht9yky6" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/28/20100728/" data-id="3aoe5otaexkejy3t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -160,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722_3/" data-id="7eqe42oegm3tabsa" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722_3/" data-id="b0lwdm6v6m31az85" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -199,19 +199,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　严格来说，官方现在有两个大型的项目在并行进行，一个是Nel引擎，一个就是Ryzom Core项目。这里重点明确一下这两个官方项目的目的和情况，以避免开发者和翻译人员常见的误区。  </p>
-<p>　　Nel引擎（<a href="http://dev.ryzom.com/wiki/nel）是一个独立的完整的多人在线虚拟系统解决方案，包含了从3D引擎到网络客户端、网络服务器的所有技术组件，一般在项目代码根目录中的nel、nelns、snowballs2、tool子目录是属于Nel的。其中snowballs2基本上是一个完整应用nel相关技术的MMODemo，研究nel可以从这个游戏demo入手。" target="_blank" rel="external">http://dev.ryzom.com/wiki/nel）是一个独立的完整的多人在线虚拟系统解决方案，包含了从3D引擎到网络客户端、网络服务器的所有技术组件，一般在项目代码根目录中的nel、nelns、snowballs2、tool子目录是属于Nel的。其中snowballs2基本上是一个完整应用nel相关技术的MMODemo，研究nel可以从这个游戏demo入手。</a>  </p>
-<p>　　Ryzom Core（<a href="http://dev.ryzom.com/）则是和Ryzom游戏相关的一个大型项目，请注意项目的名称是“Ryzom" target="_blank" rel="external">http://dev.ryzom.com/）则是和Ryzom游戏相关的一个大型项目，请注意项目的名称是“Ryzom</a> Core”而不是“Ryzom”，很多人认为既然Ryzom开源了就是官方Ryzom游戏所有的内容都公开，其实是不准确的。Ryzom的开源包含了开发出官方商业Ryzom游戏的基础代码（即Ryzom Core），还包含了开发商业Ryzom游戏使用的大部分资源（Asset），他并不包含现在官服上面的一些实际内容，比如任务内容、用户/账户数据库（这个都公开了还得了！）等等，但这对开源世界来说足够了。<br>　　因此研究Ryzom Core的主要目的并不是把Ryzom游戏改成什么样子，或者翻译成某种语言来运营（当然这是有些组织或者公司的事情），而是领悟它的技术、利用它的技术并融合进自己的技术来开发崭新的虚拟游戏系统。<br>     基于这个原则，世界范围内已经出现了很多Ryzom相关的开源项目，我这里列举出sourceforge和google code上面的一些项目仅供参考，目的是在大家扩展Ryzom Core的时候不要重复造车。当然，也欢迎大家回帖补充其他的开源项目。  </p>
-<p>　　Dungeon Walker（<a href="http://sourceforge.net/projects/dungeonwalker/）是一个基于Ryzom" target="_blank" rel="external">http://sourceforge.net/projects/dungeonwalker/）是一个基于Ryzom</a> Core的游戏Demo，刚刚开始没有多久。  </p>
-<p>　　Rally（<a href="http://sourceforge.net/projects/rally/" target="_blank" rel="external">http://sourceforge.net/projects/rally/</a> ）是一个用Python写的安装程序，用于简化Ryzom的安装，比较早的项目，基本上已经停止更新了。  </p>
-<p>　　Atysian Translator（<a href="http://sourceforge.net/projects/atystranslator/）这个早期项目有点意思，是一个帮助翻译Atys四大种族自己语言的工具。" target="_blank" rel="external">http://sourceforge.net/projects/atystranslator/）这个早期项目有点意思，是一个帮助翻译Atys四大种族自己语言的工具。</a>  </p>
-<p>　　CEB（<a href="http://code.google.com/p/cebmtpchat/）是一个跨平台的聊天工具，支持Ryzom的聊天服务器，使用Qt开发。" target="_blank" rel="external">http://code.google.com/p/cebmtpchat/）是一个跨平台的聊天工具，支持Ryzom的聊天服务器，使用Qt开发。</a>  </p>
-<p>　　object-viewer-qt（<a href="http://code.google.com/p/object-viewer-qt/）则是目前一个活跃度相当高的项目，它是Nel" target="_blank" rel="external">http://code.google.com/p/object-viewer-qt/）则是目前一个活跃度相当高的项目，它是Nel</a> Object Viewer工具使用Qt4重写的版本，增加很多新的功能，并且当然是跨平台的。  </p>
-<p>　　georges-editor-qt（<a href="http://code.google.com/p/georges-editor-qt/）是对旧Georges" target="_blank" rel="external">http://code.google.com/p/georges-editor-qt/）是对旧Georges</a> Editor项目的Qt4重写版本，也是一个Ryzom Core的重要工具，使用Qt后界面就很漂亮了。</p>
+<p>　　<a href="http://dev.ryzom.com/wiki/nel" target="_blank" rel="external">Nel引擎</a>是一个独立的完整的多人在线虚拟系统解决方案，包含了从3D引擎到网络客户端、网络服务器的所有技术组件，一般在项目代码根目录中的nel、nelns、snowballs2、tool子目录是属于Nel的。其中snowballs2基本上是一个完整应用nel相关技术的MMODemo，研究nel可以从这个游戏demo入手。  </p>
+<p>　　<a href="http://dev.ryzom.com/" target="_blank" rel="external">Ryzom Core</a>则是和Ryzom游戏相关的一个大型项目，请注意项目的名称是“Ryzom Core”而不是“Ryzom”，很多人认为既然Ryzom开源了就是官方Ryzom游戏所有的内容都公开，其实是不准确的。Ryzom的开源包含了开发出官方商业Ryzom游戏的基础代码（即Ryzom Core），还包含了开发商业Ryzom游戏使用的大部分资源（Asset），他并不包含现在官服上面的一些实际内容，比如任务内容、用户/账户数据库（这个都公开了还得了！）等等，但这对开源世界来说足够了。<br>　　因此研究Ryzom Core的主要目的并不是把Ryzom游戏改成什么样子，或者翻译成某种语言来运营（当然这是有些组织或者公司的事情），而是领悟它的技术、利用它的技术并融合进自己的技术来开发崭新的虚拟游戏系统。<br>     基于这个原则，世界范围内已经出现了很多Ryzom相关的开源项目，我这里列举出sourceforge和google code上面的一些项目仅供参考，目的是在大家扩展Ryzom Core的时候不要重复造车。当然，也欢迎大家回帖补充其他的开源项目。  </p>
+<p>　　<a href="http://sourceforge.net/projects/dungeonwalker/" target="_blank" rel="external">Dungeon Walker</a>是一个基于Ryzom Core的游戏Demo，刚刚开始没有多久。  </p>
+<p>　　<a href="http://sourceforge.net/projects/rally/" target="_blank" rel="external">Rally</a>是一个用Python写的安装程序，用于简化Ryzom的安装，比较早的项目，基本上已经停止更新了。  </p>
+<p>　　<a href="http://sourceforge.net/projects/atystranslator/" target="_blank" rel="external">Atysian Translator</a>这个早期项目有点意思，是一个帮助翻译Atys四大种族自己语言的工具。  </p>
+<p>　　<a href="http://code.google.com/p/cebmtpchat/" target="_blank" rel="external">CEB</a>是一个跨平台的聊天工具，支持Ryzom的聊天服务器，使用Qt开发。  </p>
+<p>　　<a href="http://code.google.com/p/object-viewer-qt/" target="_blank" rel="external">object-viewer-qt</a>则是目前一个活跃度相当高的项目，它是Nel Object Viewer工具使用Qt4重写的版本，增加很多新的功能，并且当然是跨平台的。  </p>
+<p>　　<a href="http://code.google.com/p/georges-editor-qt/" target="_blank" rel="external">georges-editor-qt</a>是对旧Georges Editor项目的Qt4重写版本，也是一个Ryzom Core的重要工具，使用Qt后界面就很漂亮了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722_2/" data-id="4sbr6zbyfofziqmo" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722_2/" data-id="1u76ei716ptnyny4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
@@ -249,21 +249,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div style="text-align:center;"><img src="http://games.qq.com/images/netgame/2004/04/04/ry/s/38.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
+        <div style="text-align:center;"><img src="http://blog.scorpionstudio.com/38.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>      
 
 <p>　　Ryzom的开源着实让我震惊和激动了一把！<br>　　Ryzom Core项目现在基于GPL协议，开放了包括客户端、服务器全部源代码、编辑器全部源代码、游戏数据、美术资源等等，这是2009年到2010年开源社区的一件大事情，也是<a href="http://www.fsf.org/" target="_blank" rel="external">自由软件基金会</a>最近很高优先级的项目。本来一直找不到好平台来做研究的CH系统（见<a href="">CH大事记系列文章</a>），现在又可以以Ryzom Core为基础得到一次巨大的发展机会，看来之后一段时间里我的生活又将是非常有趣的。另外一方面，<a href="">Tao Project</a>的梦想看来又找到了更多的支持和基础设施，毕竟站在巨人的肩上能看得更远，更避免了不断闭门造车！  </p>
 <p>　　在国内还找不到一个讨论Ryzom游戏设计的及其Nel引擎的地方（有一个QQ群，群号是69537392），我发现在中文社区其实有很多可以贡献的力量，不排除Ryzom发展出中文版的可能性，我也申请了一个专门研究RyzomCore的论坛（即<a href="http://ryzomcn.5d6d.com/" target="_blank" rel="external">Ryzom中文开发论坛</a>）来寻求众多的爱好者和开源游戏的拥护者一起构建该领域的中文社区氛围。</p>
-<div style="text-align:center;"><img src="http://games.qq.com/images/netgame/2004/04/04/ry/s/37.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/37.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>        
 
 <p>　　多说一点Ryzom开源这件事情，其实它是很有意义的。经历多年的自由软件运动之后，我们在操作系统、数据库、计算机网络、应用服务器等各个技术领域都取得了丰硕的成果。不过在计算机游戏领域，还没有什么大的进展。现在流行的MMORPG游戏Ryzom则为我们提供了一个宝贵的机会，我也希望我们能跟进国外的领先技术，第一时间将欧美最新的MMO游戏技术引入中国游戏社区，推动国内技术的发展。  </p>
-<div style="text-align:center;"><img src="http://games.qq.com/images/netgame/2004/04/04/ry/s/41.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
+<div style="text-align:center;"><img src="http://blog.scorpionstudio.com/41.jpg" style="vertical-align:middle;"></div><div style="text-align:center;"></div>          
 
 <p>　　现在流行的大型网络游戏都是由专有软件公司开发，所以网络游戏的发展也都是由专有软件公司控制，而不是用户。不过我们认为，既然用户能够参与现实社会的发展，那么也同样有权力参与网上虚拟社会的建设。玩家是游戏虚拟社会里的公民，网络游戏应该属于全体玩家，所以他们有权力和机会实现自己在虚拟社会里的梦想，这就需要有自由的网络游戏。自由软件基金会认为收购Ryzom游戏是一个高优先级的自由软件项目，所以决定资助此项目6万美金，并最终帮助筹集到20万欧元左右，能够买下Ryzom游戏，将其变成一个自由软件。Ryzom的官方网站为<a href="www.ryzom.com">www.ryzom.com</a>，现在已经有英、德、法、俄等国家的语言版本和社区，我希望也能产生中文的社区环境。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722/" data-id="fce66zlavh59ixk3" class="article-share-link">Share</a>
+      <a data-url="http://blog.scorpionstudio.com/2010/07/22/20100722/" data-id="4posdl8k618uocjx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article/">article</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
